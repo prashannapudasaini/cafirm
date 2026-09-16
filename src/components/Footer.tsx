@@ -21,12 +21,24 @@ const Footer = () => {
             <p className="text-text-secondary mb-8 leading-relaxed max-w-sm text-sm">
               Helping businesses navigate audit, tax, compliance, and financial success with confidence. Trusted by industry leaders.
             </p>
+            <div className="flex flex-col space-y-2 mb-8">
+              <a href="tel:+9779851311960" className="text-white hover:text-royal-blue transition-colors font-medium flex items-center">
+                <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mr-3">
+                  <Globe className="w-4 h-4" /> {/* Or Phone icon if available, but let's stick to what we import */}
+                </span>
+                +977 9851311960
+              </a>
+              <a href="mailto:info@jayajay.com.np" className="text-white hover:text-royal-blue transition-colors font-medium flex items-center">
+                <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mr-3">
+                  <Mail className="w-4 h-4" />
+                </span>
+                info@jayajay.com.np
+              </a>
+            </div>
+            
             <div className="flex space-x-3">
               <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:text-royal-blue">
                 <Globe className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:text-royal-blue">
-                <Mail className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:text-royal-blue">
                 <MessageCircle className="w-5 h-5" />
