@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
@@ -40,13 +40,15 @@ const navLinks = [
     path: '/industries',
     desc: 'Deep industry expertise across key sectors driving the Nepalese economy.',
     dropdown: [
-      { name: 'Banking & Finance', path: '/industries/banking' },
-      { name: 'Manufacturing', path: '/industries/manufacturing' },
-      { name: 'Healthcare', path: '/industries/healthcare' },
-      { name: 'Education', path: '/industries/education' },
-      { name: 'Technology', path: '/industries/technology' },
-      { name: 'Hospitality', path: '/industries/hospitality' },
-      { name: 'Real Estate', path: '/industries/real-estate' },
+      { name: 'Banking & Finance', path: '/industries/banking-finance' },
+      { name: 'Manufacturing', path: '/industries/manufacturing-trading' },
+      { name: 'Healthcare', path: '/industries/healthcare-pharma' },
+      { name: 'Education', path: '/industries/education-institutions' },
+      { name: 'Technology', path: '/industries/technology-startups' },
+      { name: 'Hospitality', path: '/industries/tourism-hospitality' },
+      { name: 'Real Estate', path: '/industries/real-estate-construction' },
+      { name: 'NGOs & INGOs', path: '/industries/ngo-ingo' },
+      { name: 'Energy', path: '/industries/hydropower-renewable' },
     ],
   },
   {
@@ -75,59 +77,70 @@ const navLinks = [
 ];
 
 const MegaMenu = ({
-  category,
-  desc,
-  items,
+  data,
   isOpen,
   onMouseEnter,
-  onMouseLeave,
-  onLinkClick
+  onLinkClick,
+  onExited
 }: {
-  category: string;
-  desc?: string;
-  items: { name: string; path: string }[];
+  data: typeof navLinks[0];
   isOpen: boolean;
   onMouseEnter: () => void;
-  onMouseLeave: () => void;
   onLinkClick: (path: string) => void;
+  onExited: () => void;
 }) => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!menuRef.current) return;
+    
+    // Kill any existing animations to prevent conflicts between rapidly changing states
+    gsap.killTweensOf(menuRef.current);
+
     if (isOpen) {
       gsap.fromTo(menuRef.current,
-        { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' }
+        { opacity: 0, y: -10 },
+        { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }
       );
     } else {
-      gsap.to(menuRef.current, { opacity: 0, y: -20, duration: 0.2, ease: 'power2.in' });
+      gsap.to(menuRef.current, { 
+        opacity: 0, 
+        y: -10, 
+        duration: 0.2, 
+        ease: 'power2.in',
+        onComplete: onExited 
+      });
     }
-  }, [isOpen]);
+    
+    return () => {
+      if (menuRef.current) gsap.killTweensOf(menuRef.current);
+    };
+  }, [isOpen, onExited]);
 
-  const mid = Math.ceil(items.length / 2);
-  const col1 = items.slice(0, mid);
-  const col2 = items.slice(mid);
+  if (!data || !data.dropdown) return null;
+
+  const mid = Math.ceil(data.dropdown.length / 2);
+  const col1 = data.dropdown.slice(0, mid);
+  const col2 = data.dropdown.slice(mid);
 
   return (
     <div
       ref={menuRef}
       onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
       className={cn(
-        "fixed top-[100px] left-1/2 -translate-x-1/2 w-[90vw] max-w-5xl bg-primary-dark-blue border border-white/10 rounded-3xl shadow-2xl p-10 z-[60] opacity-0 pointer-events-none before:absolute before:-top-6 before:left-0 before:right-0 before:h-6 before:bg-transparent",
-        isOpen && "pointer-events-auto"
+        "absolute top-[85px] left-1/2 -translate-x-1/2 w-[90vw] max-w-5xl bg-primary-dark-blue border border-white/10 rounded-3xl shadow-2xl p-10 z-[60] before:absolute before:-top-6 before:left-0 before:right-0 before:h-6 before:bg-transparent",
+        !isOpen && "pointer-events-none"
       )}
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="col-span-1 md:border-r border-white/10 md:pr-8 flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl font-heading font-semibold text-white mb-4">{category}</h2>
+            <h2 className="text-3xl font-heading font-semibold text-white mb-4">{data.name}</h2>
             <p className="text-text-secondary text-sm leading-relaxed mb-8">
-              {desc || 'Explore our comprehensive professional services and resources.'}
+              {data.desc || 'Explore our comprehensive professional services and resources.'}
             </p>
           </div>
-          <Link to={navLinks.find(l => l.name === category)?.path || '/'} onClick={() => onLinkClick(navLinks.find(l => l.name === category)?.path || '/')} className="inline-flex items-center text-royal-blue font-medium hover:text-white transition-colors">
+          <Link to={data.path} onClick={() => onLinkClick(data.path)} className="inline-flex items-center text-royal-blue font-medium hover:text-white transition-colors">
             Explore All <ArrowRight className="ml-2 w-4 h-4" />
           </Link>
         </div>
@@ -155,15 +168,18 @@ const MegaMenu = ({
 };
 
 const Navbar = () => {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [renderedMenu, setRenderedMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
   const location = useLocation();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    setActiveDropdown(null);
+    setActiveMenu(null);
+    setRenderedMenu(null);
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
@@ -180,7 +196,7 @@ const Navbar = () => {
       lastScrollY.current = currentScrollY;
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Check initial state
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -188,93 +204,108 @@ const Navbar = () => {
     if (location.pathname === path) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    setActiveMenu(null);
   };
-
-  const timeoutIdRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = (name: string) => {
-    if (timeoutIdRef.current) {
-      clearTimeout(timeoutIdRef.current);
-    }
-    setActiveDropdown(name);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setActiveMenu(name);
+    if (name) setRenderedMenu(name);
   };
 
-  const handleMouseLeave = (name: string) => {
-    timeoutIdRef.current = setTimeout(() => {
-      setActiveDropdown((prev) => (prev === name ? null : prev));
-    }, 250); // Increased delay slightly to make diagonal mouse movement more forgiving
+  const handleMouseLeave = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setActiveMenu(null);
+    }, 150);
   };
+
+  const handleExited = useCallback(() => {
+    setRenderedMenu(null);
+  }, []);
+
+  const activeData = navLinks.find(l => l.name === activeMenu);
+  const renderedData = navLinks.find(l => l.name === renderedMenu);
+  
+  const isOpen = !!(activeData && activeData.dropdown);
+  const displayData = isOpen ? activeData : renderedData;
 
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-[100] px-6 py-4 flex justify-center transition-transform duration-300",
       !isVisible ? "-translate-y-full" : "translate-y-0"
     )}>
-      <nav className={cn(
-        "w-full max-w-7xl rounded-full px-6 h-[72px] flex items-center justify-between transition-all duration-500",
-        isScrolled
-          ? "bg-gradient-to-r from-white from-5% via-royal-blue via-20% to-primary-dark-blue shadow-2xl border border-white/10"
-          : "bg-gradient-to-r from-white/95 from-5% via-royal-blue/95 via-20% to-primary-dark-blue/95 backdrop-blur-md border border-white/10"
-      )}>
-        <Link to="/" onClick={() => handleLinkClick('/')} className="flex items-center shrink-0">
-          <img src={logo} alt="Jay & Ajay Associates" className="h-18 sm:h-12 w-auto relative z-10" />
-        </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center space-x-2">
-          {navLinks.map((link) => (
-            <div
-              key={link.name}
-              onMouseEnter={() => link.dropdown ? handleMouseEnter(link.name) : handleMouseEnter('')}
-              onMouseLeave={() => handleMouseLeave(link.name)}
-            >
-              <Link
-                to={link.path}
-                onClick={() => handleLinkClick(link.path)}
-                className={cn(
-                  "flex items-center space-x-1 px-5 py-2 text-base font-semibold transition-all duration-300 rounded-full",
-                  activeDropdown === link.name ? "text-white bg-white/20 shadow-sm" : "text-white/95 hover:text-white hover:bg-white/15"
-                )}
-              >
-                <span>{link.name}</span>
-                {link.dropdown && <ChevronDown className="w-4 h-4 opacity-50" />}
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <div className="hidden lg:block shrink-0">
-          <Link
-            to="/contact"
-            className="px-6 py-2.5 text-sm font-medium bg-white text-primary-dark-blue hover:bg-text-secondary rounded-full transition-all hover:scale-105 active:scale-95 shadow-sm"
-          >
-            Schedule Consultation
+      <div 
+        className="w-full max-w-7xl mx-auto relative flex flex-col items-center"
+        onMouseLeave={handleMouseLeave}
+      >
+        <nav className={cn(
+          "w-full rounded-full px-6 h-[72px] flex items-center justify-between transition-all duration-500",
+          isScrolled
+            ? "bg-gradient-to-r from-white from-5% via-royal-blue via-20% to-primary-dark-blue shadow-2xl border border-white/10"
+            : "bg-gradient-to-r from-white/95 from-5% via-royal-blue/95 via-20% to-primary-dark-blue/95 backdrop-blur-md border border-white/10"
+        )}>
+          <Link to="/" onClick={() => handleLinkClick('/')} className="flex items-center shrink-0">
+            <img src={logo} alt="Jay & Ajay Associates" className="h-18 sm:h-12 w-auto relative z-10" />
           </Link>
-        </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden p-2 text-white"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
-      </nav>
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center space-x-2">
+            {navLinks.map((link) => (
+              <div
+                key={link.name}
+                onMouseEnter={() => handleMouseEnter(link.dropdown ? link.name : '')}
+              >
+                <Link
+                  to={link.path}
+                  onClick={() => handleLinkClick(link.path)}
+                  className={cn(
+                    "flex items-center space-x-1 px-5 py-2 text-base font-semibold transition-all duration-300 rounded-full",
+                    activeMenu === link.name ? "text-white bg-white/20 shadow-sm" : "text-white/95 hover:text-white hover:bg-white/15"
+                  )}
+                >
+                  <span>{link.name}</span>
+                  {link.dropdown && (
+                    <ChevronDown className={cn(
+                      "w-4 h-4 transition-transform duration-300", 
+                      activeMenu === link.name && "rotate-180"
+                    )} />
+                  )}
+                </Link>
+              </div>
+            ))}
+          </div>
 
-      {/* Mega Menus Rendered Outside Nav for Fixed Positioning */}
-      {navLinks.map(link => link.dropdown && (
-        <MegaMenu
-          key={`mega-${link.name}`}
-          category={link.name}
-          desc={link.desc}
-          items={link.dropdown}
-          isOpen={activeDropdown === link.name}
-          onMouseEnter={() => handleMouseEnter(link.name)}
-          onMouseLeave={() => handleMouseLeave(link.name)}
-          onLinkClick={handleLinkClick}
-        />
-      ))}
+          {/* CTA */}
+          <div className="hidden lg:block shrink-0">
+            <Link
+              to="/contact"
+              className="px-6 py-2.5 text-sm font-medium bg-white text-primary-dark-blue hover:bg-text-secondary rounded-full transition-all hover:scale-105 active:scale-95 shadow-sm"
+            >
+              Schedule Consultation
+            </Link>
+          </div>
+
+          {/* Mobile Toggle */}
+          <button
+            className="lg:hidden p-2 text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </nav>
+
+        {/* Mega Menu Container */}
+        {displayData && displayData.dropdown && (
+          <MegaMenu
+            data={displayData}
+            isOpen={isOpen}
+            onMouseEnter={() => handleMouseEnter(displayData.name)}
+            onLinkClick={handleLinkClick}
+            onExited={handleExited}
+          />
+        )}
+      </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
