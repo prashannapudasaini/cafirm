@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark-blue: #031B4E;
+  --color-deep-navy: #0A2342;
+  --color-royal-blue: #0F52BA;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #DCE8FF;
+  --color-background-light: #F8FBFF;
+  --color-glass-white: rgba(255, 255, 255, 0.12);
+  
+  --font-heading: 'Clash Display', 'General Sans', 'Satoshi', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --animate-marquee: marquee 30s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+  @import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+
+  :root {
+    --text-primary: #FFFFFF;
+    --text-secondary: #DCE8FF;
+    --bg-dark: #031B4E;
+    --bg-navy: #0A2342;
+    --bg-light: #F8FBFF;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  body {
+    @apply bg-primary-dark-blue text-text-primary font-sans antialiased overflow-x-hidden;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #0A2342 0%, #0F52BA 50%, #5DA9FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass-panel {
+    @apply backdrop-blur-[24px] bg-white/8 border border-white/12 shadow-[0_8px_40px_rgba(15,82,186,0.12)];
+  }
+
+  .glass-card {
+    @apply backdrop-blur-[24px] bg-white/5 border border-white/10 shadow-[0_8px_40px_rgba(15,82,186,0.08)] transition-all duration-300;
+  }
+
+  .glass-card:hover {
+    @apply bg-white/10 border-white/20 shadow-[0_16px_60px_rgba(15,82,186,0.2)];
+    transform: translateY(-5px);
+  }
+
+  .glass-card:active {
+    @apply bg-white/15 shadow-[0_4px_20px_rgba(15,82,186,0.3)];
+    transform: scale(0.97);
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+  }
+
+  .section-padding {
+    @apply py-10 md:py-14 lg:py-20;
+  }
+}
