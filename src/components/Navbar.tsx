@@ -97,11 +97,11 @@ const MegaMenu = ({
     if (!menuRef.current) return;
     if (isOpen) {
       gsap.fromTo(menuRef.current,
-        { opacity: 0, y: -20, pointerEvents: 'none' },
-        { opacity: 1, y: 0, pointerEvents: 'auto', duration: 0.4, ease: 'power3.out' }
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' }
       );
     } else {
-      gsap.to(menuRef.current, { opacity: 0, y: -20, pointerEvents: 'none', duration: 0.2, ease: 'power2.in' });
+      gsap.to(menuRef.current, { opacity: 0, y: -20, duration: 0.2, ease: 'power2.in' });
     }
   }, [isOpen]);
 
@@ -190,17 +190,19 @@ const Navbar = () => {
     }
   };
 
-  let timeoutId: ReturnType<typeof setTimeout>;
+  const timeoutIdRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = (name: string) => {
-    clearTimeout(timeoutId);
+    if (timeoutIdRef.current) {
+      clearTimeout(timeoutIdRef.current);
+    }
     setActiveDropdown(name);
   };
 
-  const handleMouseLeave = () => {
-    timeoutId = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150); // Small delay to prevent flickering when moving to the menu
+  const handleMouseLeave = (name: string) => {
+    timeoutIdRef.current = setTimeout(() => {
+      setActiveDropdown((prev) => (prev === name ? null : prev));
+    }, 250); // Increased delay slightly to make diagonal mouse movement more forgiving
   };
 
   return (
@@ -224,7 +226,7 @@ const Navbar = () => {
             <div
               key={link.name}
               onMouseEnter={() => link.dropdown ? handleMouseEnter(link.name) : handleMouseEnter('')}
-              onMouseLeave={handleMouseLeave}
+              onMouseLeave={() => handleMouseLeave(link.name)}
             >
               <Link
                 to={link.path}
@@ -269,7 +271,7 @@ const Navbar = () => {
           items={link.dropdown}
           isOpen={activeDropdown === link.name}
           onMouseEnter={() => handleMouseEnter(link.name)}
-          onMouseLeave={handleMouseLeave}
+          onMouseLeave={() => handleMouseLeave(link.name)}
           onLinkClick={handleLinkClick}
         />
       ))}
