@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { Briefcase, TrendingUp, Users, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Briefcase, TrendingUp, Users, Award, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const benefits = [
