@@ -28,14 +28,14 @@ const Footer = () => {
                 </span>
                 +977 9851311960
               </a>
-              <a href="mailto:info@jayajay.com.np" className="text-white hover:text-royal-blue transition-colors font-medium flex items-center">
+              <a href="mailto:info@jaa.com.np" className="text-white hover:text-royal-blue transition-colors font-medium flex items-center">
                 <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mr-3">
                   <Mail className="w-4 h-4" />
                 </span>
-                info@jayajay.com.np
+                info@jaa.com.np
               </a>
             </div>
-            
+
             <div className="flex space-x-3">
               <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:text-royal-blue">
                 <Globe className="w-5 h-5" />
