@@ -54,7 +54,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <strong className="block text-primary-dark-blue mb-1">Phone</strong>
-                    <p className="text-gray-600 text-sm">+977 9851311960<br/>+977 1 4233211</p>
+                    <p className="text-gray-600 text-sm">+977 9851311960</p>
                   </div>
                 </div>
 
@@ -64,7 +64,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <strong className="block text-primary-dark-blue mb-1">Email</strong>
-                    <p className="text-gray-600 text-sm">info@jaa.com.np<br/>advisory@jaa.com.np</p>
+                    <p className="text-gray-600 text-sm">info@jaa.com.np</p>
                   </div>
                 </div>
 
