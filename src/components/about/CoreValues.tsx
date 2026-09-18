@@ -53,9 +53,8 @@ const CoreValues = () => {
         '.value-card',
         { opacity: 0, y: 20 },
         {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
+          opacity: 1, y: 0, filter: 'blur(0px)',
+          duration: 1,
           stagger: 0.1,
           ease: 'power2.out',
           scrollTrigger: {

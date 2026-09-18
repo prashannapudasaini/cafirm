@@ -55,11 +55,10 @@ const OurProcess = () => {
       // Card reveals
       gsap.fromTo(
         '.process-step',
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: 40, filter: 'blur(8px)' },
         {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
+          opacity: 1, y: 0, filter: 'blur(0px)',
+          duration: 1,
           stagger: 0.2,
           ease: 'power3.out',
           scrollTrigger: {

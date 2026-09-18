@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { Download, Calculator, BookOpen, HelpCircle, ArrowRight, FileText } from 'lucide-react';
+import { Download, Calculator, BookOpen, HelpCircle, ArrowRight, FileText, Bell } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const resourceCategories = [
@@ -35,6 +35,14 @@ const resourceCategories = [
     items: ['Tax Filing Deadlines', 'Audit Requirements for Pvt. Ltd.', 'Foreign Investment Thresholds', 'VAT Registration Threshold'],
     color: 'bg-orange-50 text-orange-600',
     path: '/resources/faqs'
+  },
+  {
+    title: 'Regulatory Updates',
+    icon: Bell,
+    description: 'Latest directives, compliance notices, and circulars from IRD, NRB, OCR, and DOI.',
+    items: ['IRD Tax Notices', 'NRB Unified Directives', 'OCR Circulars', 'DOI Policy Updates'],
+    color: 'bg-red-50 text-red-600',
+    path: '/resources/regulatory-updates'
   }
 ];
 
@@ -46,7 +54,7 @@ export default function Resources() {
     const ctx = gsap.context(() => {
       gsap.fromTo('.animate-up', 
         { opacity: 0, y: 40 }, 
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, stagger: 0.15, ease: 'power3.out' }
       );
     }, containerRef);
     return () => ctx.revert();

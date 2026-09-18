@@ -1,444 +1,206 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ArrowRight, CheckCircle2, TrendingUp, Network, Lightbulb, Briefcase, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Briefcase, TrendingUp, Network } from 'lucide-react';
+
+import { ServiceHero } from '../../components/services/shared/ServiceHero';
+import { BusinessChallenges } from '../../components/services/shared/BusinessChallenges';
+import { ServiceBlocks } from '../../components/services/shared/ServiceBlocks';
+import { AdvisoryProcess } from '../../components/services/shared/AdvisoryProcess';
+import { BusinessOutcomes } from '../../components/services/shared/BusinessOutcomes';
+import { IndustryExpertise } from '../../components/services/shared/IndustryExpertise';
+import { FAQSection } from '../../components/services/shared/FAQSection';
+import { ContactCTA } from '../../components/services/shared/ContactCTA';
+import { TrustCredibility } from '../../components/services/shared/TrustCredibility';
 
 /* 
   SEO RECOMMENDATIONS
-  Title: Corporate Advisory & Business Restructuring in Nepal | Premium CA Firm
-  Meta Description: Expert corporate advisory for M&A, business restructuring, and strategic growth in Nepal. Navigate the Companies Act and NRB directives with our senior advisors.
-  H1: Corporate Advisory: Architecting Strategic Growth
+  Title: Business Advisory & Corporate Consulting | Premium CA Firm Nepal
+  Meta Description: Expert business advisory, corporate restructuring, and strategic management consulting for Nepalese enterprises. Drive growth and operational excellence with our elite advisors.
+  H1: Business Advisory & Corporate Consulting
 */
 
 const faqs = [
   {
-    q: "How do you navigate the regulatory complexities of Mergers and Acquisitions (M&A) in Nepal?",
-    a: "M&A in Nepal requires orchestration across multiple regulatory bodies. Beyond the standard Companies Act 2063 requirements at the OCR, sector-specific approvals are mandatory. For instance, BFIs require Nepal Rastra Bank (NRB) approval, while insurance firms must navigate the Nepal Insurance Authority’s directives. We manage this entire cross-agency approval matrix, ensuring compliance without stalling deal momentum."
+    q: "What exactly does your Business Advisory service entail?",
+    a: "Unlike traditional accounting which looks backward, our Business Advisory looks forward. We act as strategic partners to the CEO and Board. This entails corporate restructuring, designing scalable operational frameworks, engineering financial turnarounds for distressed assets, and providing high-level management consulting to drive sustainable market expansion."
   },
   {
-    q: "What role does your firm play in corporate restructuring?",
-    a: "Corporate restructuring is often triggered by the need to optimize capital, prepare for an IPO, or untangle complex family-owned conglomerates. We evaluate your current operational model, identify tax-efficient restructuring pathways under Section 57 of the Income Tax Act, and manage the legal execution of demergers or holding company formations, ensuring seamless continuity of business."
+    q: "How can you help a family-owned business transition to a corporate structure?",
+    a: "Many successful enterprises in Nepal are family-run but eventually hit a growth ceiling due to informal governance. We facilitate this critical transition. We draft family charters, establish professional Boards of Directors, implement rigorous corporate governance protocols, and restructure the equity holding to ensure smooth succession planning and attract institutional capital."
   },
   {
-    q: "Can you assist with raising capital or securing debt financing?",
-    a: "Yes. Lenders and institutional investors require rigorous financial models and feasibility studies before deploying capital. We prepare bankable detailed project reports (DPRs), conduct stress-tested financial modeling, and assist management in negotiating term sheets with a consortium of banks or private equity firms operating in Nepal."
+    q: "Do you assist with Mergers and Acquisitions (M&A)?",
+    a: "Yes. We provide end-to-end M&A advisory. This ranges from identifying strategic targets or buyers, conducting exhaustive financial and tax due diligence, engineering the deal structure to optimize tax incidence, and guiding you through the complex regulatory approvals required by the OCR, NRB, or SEBON."
   },
   {
-    q: "How do you approach designing a corporate governance framework?",
-    a: "We move beyond boilerplate 'Code of Conduct' documents. We design bespoke governance architectures that define clear board mandates, establish active audit and risk committees, and create transparent reporting lines. This is particularly crucial for companies planning to list on the Nepal Stock Exchange (NEPSE) or seeking foreign institutional investment."
+    q: "What is corporate restructuring, and when is it necessary?",
+    a: "Corporate restructuring involves reorganizing the legal, ownership, operational, or other structures of a company to make it more profitable or better organized. It is critical when preparing for an IPO, absorbing a merger, navigating a severe financial crisis, or separating distinct business units (e.g., spinning off a manufacturing arm from a trading arm) to unlock shareholder value."
   },
   {
-    q: "Do you advise on joint venture (JV) structuring?",
-    a: "Absolutely. Successful JVs require more than just a shared vision; they require meticulous legal and financial structuring to protect both parties. We advise on equity splits, profit repatriation mechanisms (especially in FDI scenarios under FITTA), dispute resolution frameworks, and exit strategies, ensuring the JV agreement is robust and enforceable under Nepalese law."
+    q: "How do you approach a financial turnaround for a struggling enterprise?",
+    a: "We deploy a rapid diagnostic team to halt cash burn immediately. We then restructure existing debt facilities with BFIs, renegotiate vendor contracts, divest non-core toxic assets, and implement stringent cost-control mechanisms. Simultaneously, we rebuild the revenue model to ensure long-term solvency."
   },
   {
-    q: "What is your approach to operational performance improvement?",
-    a: "We deploy a data-driven approach to identify bottlenecks eroding your EBITDA margins. This involves deep-dive analyses of your cost structures, supply chain inefficiencies, and working capital cycles. We then work alongside your management team to implement stringent financial controls and KPI monitoring systems that drive sustainable profitability."
+    q: "Can you advise on expanding operations outside of Nepal?",
+    a: "While the Foreign Investment and Technology Transfer Act (FITTA) and NRB regulations heavily restrict outward foreign investment from Nepal, there are highly specific, legally permissible avenues for tech companies or exporters (e.g., establishing branch offices for export promotion). We provide the definitive legal and financial roadmap for these complex maneuvers."
   },
   {
-    q: "How do you manage the valuation aspects during a corporate transaction?",
-    a: "Valuation is a critical friction point in any transaction. While we offer a standalone Due Diligence & Valuation service, within our corporate advisory scope, we utilize internationally recognized methodologies (DCF, Net Asset Value, Comparable Multiples) adjusted for Nepal's specific risk premiums to establish a defensible, objective enterprise value that withstands OCR and IRD scrutiny."
+    q: "Do you provide advisory for establishing Joint Ventures (JVs)?",
+    a: "Absolutely. We negotiate and draft robust Joint Venture agreements, clearly defining capital contributions, profit-sharing ratios, IP ownership, and exit mechanisms. We ensure the JV structure complies perfectly with the Companies Act and provides an equitable, highly functional framework for both local and foreign partners."
   },
   {
-    q: "At what stage of a business lifecycle should we engage your corporate advisory services?",
-    a: "We advise clients across the entire lifecycle. Whether you are a high-growth startup navigating Series A funding, a mature enterprise considering diversification, or a legacy conglomerate requiring succession planning and restructuring, our strategic interventions are tailored to your specific growth phase and overarching business objectives."
+    q: "How do you ensure your strategic advice is actually implemented?",
+    a: "We do not deliver theoretical reports and walk away. Our advisory process includes an 'Implementation Support' phase where our consultants work directly alongside your management team. We establish KPIs, monitor progress through executive dashboards, and drive the change management required to turn strategy into reality."
   }
 ];
 
 export default function CorporateAdvisory() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   useEffect(() => {
     if (!containerRef.current) return;
     const ctx = gsap.context(() => {
-      gsap.fromTo('.animate-up', 
-        { opacity: 0, y: 40 }, 
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '.animate-up' } }
+      gsap.fromTo('.animate-up',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '.animate-up' } }
       );
     }, containerRef);
     return () => ctx.revert();
   }, []);
 
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
   return (
     <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
-      
-      {/* 1. Advisory Hero */}
-      <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600880292089-90a7e086ee3c?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-luminosity"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark-blue via-primary-dark-blue/90 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
-              <Briefcase className="w-4 h-4 text-[#a5caff]" />
-              <span>Premium Advisory Service</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6 leading-tight">
-              Corporate Advisory: <br />
-              <span className="text-[#a5caff]">Architecting Strategic Growth</span>
-            </h1>
-            <p className="text-xl text-gray-300 font-light leading-relaxed mb-10">
-              Transform corporate ambition into measurable enterprise value. We provide C-suite executives and Boards with elite, data-driven counsel on complex restructuring, M&A transactions, and operational optimization within Nepal's evolving economic landscape.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-royal-blue text-white rounded-xl font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20 flex items-center justify-center">
-                Engage Our Advisors
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        badgeText="Strategic Growth Partner"
+        title1="Business Advisory &"
+        title2="Corporate Consulting"
+        description="Transforming ambition into enterprise value. We provide elite strategic counsel, corporate restructuring, and financial engineering to help Nepal’s most dynamic businesses overcome growth plateaus and dominate their markets."
+        bgImage="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
+        ctaText="Discuss Your Strategic Vision"
+        ctaLink="/contact"
+      />
 
-      {/* 2. Business Challenges */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
-              The Barriers to Enterprise Expansion
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              Scaling an enterprise in Nepal requires navigating a labyrinth of structural, financial, and regulatory constraints. Without decisive, expert intervention, growth initiatives often stall, destroying potential shareholder value.
-            </p>
-          </div>
+      <BusinessChallenges
+        title="The Architectures of Stagnation"
+        description="Scaling an enterprise in Nepal’s volatile economic environment is phenomenally difficult. Businesses frequently hit critical inflection points where their founding operational structures actively choke further growth."
+        challenges={[
+          {
+            icon: Network,
+            iconBgColor: "bg-red-50",
+            iconColor: "text-red-600",
+            title: "Governance Deficits",
+            description: "Informal, founder-led decision making works for startups but destroys value in mid-to-large enterprises. Lack of professional governance repels institutional investors and causes severe operational bottlenecks."
+          },
+          {
+            icon: TrendingUp,
+            iconBgColor: "bg-amber-50",
+            iconColor: "text-amber-600",
+            title: "Capital Inefficiency",
+            description: "Many highly profitable businesses suffer from toxic capital structures—over-leveraged with high-interest short-term debt, while massive amounts of capital are trapped in stagnant inventory or inefficient subsidiaries."
+          },
+          {
+            icon: Briefcase,
+            iconBgColor: "bg-blue-50",
+            iconColor: "text-royal-blue",
+            title: "Strategic Drift",
+            description: "Without rigorous, data-driven strategic planning, enterprises lose market share to agile competitors. They diversify into unrelated sectors without proper due diligence, burning cash reserves and diluting their core brand."
+          }
+        ]}
+      />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
-              <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-6">
-                <Network className="w-6 h-6 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Structural Inefficiencies</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                Many Nepalese conglomerates operate under legacy structures that obscure financial visibility, complicate succession planning, and trigger unnecessary tax liabilities under stringent cross-holding regulations.
-              </p>
-            </div>
-            
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
-              <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-6 h-6 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Capital Constraints</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                Securing institutional debt or private equity requires rigorous, bankable financial modeling. Unstructured funding requests frequently face rejection from BFIs due to perceived strategic misalignment or inadequate risk mitigation.
-              </p>
-            </div>
+      <ServiceBlocks
+        title="Elite Advisory Capabilities"
+        blocks={[
+          {
+            title: "Corporate Restructuring & Governance",
+            description: "We re-engineer the foundational architecture of your enterprise. We separate ownership from management by establishing highly professional Boards of Directors, drafting executive mandates, and implementing sophisticated corporate governance frameworks that rival listed multinational entities.",
+            strategicPurpose: "Institutionalize the business to ensure survivability beyond the founding generation.",
+            clientBenefits: "Unlocks the ability to attract private equity, execute IPOs, and dramatically accelerates executive decision-making.",
+            useCase: "Large family-owned conglomerates seeking to modernize or prepare for succession.",
+            image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
+          },
+          {
+            title: "Mergers, Acquisitions & Deal Advisory",
+            description: "We guide you through complex corporate transactions. From identifying strategic targets to conducting exhaustive financial, tax, and legal due diligence. We structure the deal to optimize tax outcomes and negotiate fiercely on your behalf to ensure the valuation heavily favors our client.",
+            strategicPurpose: "Execute high-stakes corporate transactions with absolute financial and legal certainty.",
+            clientBenefits: "Prevents the acquisition of hidden liabilities and guarantees maximum ROI on corporate buyouts.",
+            useCase: "Enterprises seeking aggressive horizontal integration or foreign investors acquiring Nepalese assets.",
+            image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop"
+          },
+          {
+            title: "Financial Turnaround & Restructuring",
+            description: "For distressed assets, we provide aggressive financial triage. We parachute into failing operations to halt cash burn, renegotiate suffocating debt facilities with BFIs, divest toxic assets, and architect a brutal but necessary path back to sustained profitability and solvency.",
+            strategicPurpose: "Rescue distressed enterprises from the brink of insolvency and liquidation.",
+            clientBenefits: "Protects shareholder equity, preserves jobs, and restores the confidence of institutional creditors.",
+            useCase: "Highly leveraged manufacturing or infrastructure projects facing severe cash flow crises.",
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+          }
+        ]}
+      />
 
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
-              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-                <Lightbulb className="w-6 h-6 text-royal-blue" />
-              </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Transaction Friction</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                Mergers and acquisitions often fail not because of poor strategic fit, but due to disastrous post-merger integration, miscalculated valuations, or failure to secure mandatory approvals from bodies like the OCR or NRB in a timely manner.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AdvisoryProcess
+        title="Our Strategic Methodology"
+        description="We combine the analytical rigor of an audit firm with the forward-looking, aggressive growth mindset of elite management consultants."
+        steps={[
+          { title: "Discovery", description: "Deep-dive interviews with the C-suite and exhaustive analysis of historical financial and operational data." },
+          { title: "Diagnosis", description: "Identifying the root causes of stagnation—be it capital structure, governance, or market positioning." },
+          { title: "Architecture", description: "Drafting the strategic blueprint: restructuring plans, M&A targets, or financial turnaround models." },
+          { title: "Execution", description: "Working alongside your team to implement governance protocols, negotiate with banks, or execute the merger." },
+          { title: "Optimization", description: "Post-implementation monitoring through executive dashboards to ensure the strategic objectives are met." }
+        ]}
+      />
 
-      {/* 3. How We Help */}
-      <section className="py-20 lg:py-28 bg-white dark:bg-[#020A1A]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
-              Catalysts for Corporate Transformation
-            </h2>
-            <div className="w-20 h-1 bg-royal-blue rounded-full"></div>
-          </div>
+      <TrustCredibility
+        title="Governed by Excellence"
+        description="Our advisory services are deeply rooted in the legal and financial frameworks governing Nepal’s corporate sector."
+        items={[
+          { title: "The Companies Act 2063", description: "Expertise in complex legal structuring, holding company formations, and minority shareholder protections." },
+          { title: "SEBON Regulations", description: "Guiding enterprises through the rigorous compliance required for IPOs and public market operations." },
+          { title: "NRB Directives", description: "Navigating complex debt restructuring guidelines and foreign exchange repatriation regulations." },
+          { title: "FITTA 2019", description: "Strategic structuring of joint ventures and technology transfer agreements under the Foreign Investment Act." },
+          { title: "Corporate Governance Guidelines", description: "Implementing best-in-class board structures and audit committees that exceed statutory minimums." },
+          { title: "Insolvency Act", description: "Navigating the legal intricacies of corporate rescue and debt recovery mechanisms." }
+        ]}
+      />
 
-          <div className="space-y-16">
-            {/* Service 1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
-              <div>
-                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Mergers, Acquisitions & JVs</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  We act as the strategic architect for your most critical corporate transactions. From identifying synergistic targets to negotiating term sheets and navigating the complex multi-agency approval processes in Nepal, we ensure transactions close efficiently and create immediate stakeholder value.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Facilitate inorganic growth, market consolidation, or strategic market entry via joint ventures.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Client Benefits:</span> Maximizes deal value, entirely mitigates regulatory deal-breakers, and ensures rapid post-merger integration.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> A manufacturing entity acquiring a competitor, or a local firm structuring a JV with a foreign technology partner.</li>
-                </ul>
-              </div>
-              <div className="bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="Mergers and Acquisitions" className="w-full h-full object-cover" />
-              </div>
-            </div>
+      <BusinessOutcomes
+        title="Transformational Outcomes"
+        description="Our advisory interventions are designed to fundamentally alter the trajectory and valuation of your enterprise."
+        outcomes={[
+          { title: "Multiplied Valuation", description: "By institutionalizing governance and optimizing capital structures, we drastically increase the enterprise value of your firm." },
+          { title: "Capital Access", description: "Transform your balance sheet to unlock massive institutional debt facilities and attract elite private equity." },
+          { title: "Crisis Resolution", description: "Navigate severe financial distress with a clear, aggressive roadmap back to operational solvency." },
+          { title: "Seamless Succession", description: "Transition leadership and equity smoothly across generations without fracturing the business." },
+          { title: "Market Dominance", description: "Execute strategic acquisitions that instantly capture market share and eliminate fierce competition." },
+          { title: "Operational Agility", description: "Strip away bureaucratic bloat to create a lean, highly responsive corporate machine." }
+        ]}
+      />
 
-            {/* Service 2 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
-              <div className="order-2 lg:order-1 bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="Corporate Restructuring" className="w-full h-full object-cover" />
-              </div>
-              <div className="order-1 lg:order-2">
-                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Corporate Restructuring & Succession</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  Legacy structures stifle agility. We design and execute comprehensive demergers, spin-offs, and holding company formations. For family-owned conglomerates, we facilitate seamless succession planning, establishing holding structures that preserve wealth while professionalizing management.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Optimize capital allocation, separate high-risk and low-risk assets, and professionalize governance.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Client Benefits:</span> Unlocks trapped enterprise value, significantly optimizes tax burdens, and ensures multi-generational business continuity.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> A family-owned group separating its real estate assets from its core trading operations.</li>
-                </ul>
-              </div>
-            </div>
+      <IndustryExpertise
+        title="Cross-Sector Strategic Insight"
+        description="We have engineered growth and orchestrated turnarounds across the most critical sectors of the Nepalese economy."
+        industries={[
+          { title: "Hospitality & Tourism", description: "Restructuring heavy debt loads for luxury hotel projects and advising on international management company (IMC) agreements." },
+          { title: "Hydropower & Energy", description: "Advising on complex project finance structuring, M&A of specific cascade projects, and IPO readiness." },
+          { title: "Manufacturing & Trading", description: "Engineering the spin-off of distinct operational divisions to unlock value and optimize tax incidence." },
+          { title: "Technology & E-Commerce", description: "Advising high-growth startups on series-funding valuation, cap-table management, and corporate governance." }
+        ]}
+      />
 
-            {/* Service 3 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
-              <div>
-                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Financial Modeling & Capital Advisory</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  Capital intensive projects require flawless financial architecture. We build robust, stress-tested financial models and Detailed Project Reports (DPRs) that withstand the rigorous scrutiny of domestic BFIs, multilateral agencies, and private equity investors.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Secure vital growth capital by proving project viability and demonstrating impeccable risk mitigation.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Client Benefits:</span> Accelerates funding approvals, secures highly favorable debt covenants, and provides management with a clear financial roadmap.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> A hydropower developer seeking syndicated loan financing from a consortium of Nepalese banks.</li>
-                </ul>
-              </div>
-              <div className="bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Capital Advisory" className="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FAQSection
+        title="Frequently Asked Questions"
+        description="Insights into our strategic advisory and corporate consulting engagements."
+        faqs={faqs}
+      />
 
-      {/* 4. Our Approach */}
-      <section className="py-20 bg-deep-navy text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="mb-16 text-center animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-4">
-              The Strategic Advisory Process
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              We do not offer pre-packaged templates. Every advisory engagement is a bespoke intervention, driven by rigorous data analysis and deep contextual understanding of your unique market position.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {[
-              { title: "Discovery", desc: "Intensive alignment with the Board to define absolute strategic objectives and evaluate the current operational baseline." },
-              { title: "Diagnostic", desc: "Rigorous financial, structural, and regulatory analysis to identify critical constraints and latent value opportunities." },
-              { title: "Structuring", desc: "Architecting the optimal transaction or restructuring pathway, heavily optimized for tax efficiency and legal compliance." },
-              { title: "Execution", desc: "Managing the complexities of implementation—from negotiating terms to securing OCR and sectoral approvals." },
-              { title: "Integration", desc: "Providing robust post-transaction support to ensure operational synergies are rapidly realized and sustained." }
-            ].map((step, idx) => (
-              <div key={idx} className="relative animate-up">
-                <div className="text-5xl font-bold text-white/10 mb-4">0{idx + 1}</div>
-                <h3 className="text-xl font-bold text-royal-blue mb-3">{step.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{step.desc}</p>
-                {idx < 4 && <div className="hidden md:block absolute top-6 -right-3 w-6 h-[1px] bg-white/20 dark:bg-[#020A1A]/20"></div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Regulatory Perspective */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
-        <div className="max-w-7xl mx-auto px-6 animate-up">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
-                Navigating the Legal Architecture of Growth
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                A brilliant corporate strategy is worthless if it cannot be legally executed in Nepal. We ensure your strategic ambitions are built upon an unshakeable regulatory foundation.
-              </p>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">The Companies Act 2063</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
-                    We expertly manage the procedural rigidities of the OCR. Whether executing a complex scheme of arrangement, altering share capital, or managing minority shareholder rights, we ensure your corporate maneuvers are legally impenetrable.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">Income Tax Act 2058 (Section 57)</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
-                    Changes in ownership structure (exceeding 50%) trigger severe tax implications under Section 57. We architect M&A and restructuring timelines to strategically mitigate these deemed disposal liabilities, preserving massive amounts of transaction value.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">Sectoral Regulatory Directives</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
-                    For highly regulated sectors, we manage the critical pre-approvals required from the Nepal Rastra Bank (for BFIs) or the Nepal Insurance Authority, ensuring that statutory capital requirements and cross-holding limits are strictly observed during consolidation.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="absolute inset-0 bg-royal-blue rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
-              <div className="bg-white dark:bg-[#020A1A] p-8 md:p-12 rounded-3xl shadow-xl relative z-10 border border-gray-100 dark:border-white/10">
-                <Briefcase className="w-12 h-12 text-royal-blue mb-6" />
-                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Strategic Implication</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed italic">
-                  "In corporate advisory, legal compliance and financial strategy cannot exist in silos. By synthesizing deep regulatory knowledge with aggressive commercial acumen, we allow management to pursue ambitious growth targets without fear of administrative roadblocks or hidden liabilities."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Why It Matters (Outcomes) */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
-              Engineering Lasting Enterprise Value
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              Our advisory interventions are specifically designed to yield high-impact, measurable results that fundamentally alter the trajectory of your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Optimized Capital", desc: "Unlock trapped liquidity and restructure debt/equity ratios to dramatically improve overarching capital efficiency and ROI." },
-              { title: "Seamless Transitions", desc: "Facilitate smooth, conflict-free ownership transitions and generational succession, preserving legacy wealth and business continuity." },
-              { title: "Accelerated Funding", desc: "Dramatically shorten the time required to secure institutional debt or private equity through the presentation of bankable, rigorous financial models." },
-              { title: "Frictionless Integration", desc: "Ensure that M&A transactions quickly move past the legal closing to realize actual operational and financial synergies." },
-              { title: "Robust Governance", desc: "Implement institutional-grade governance frameworks that attract premium valuations and sophisticated international investors." },
-              { title: "Sustainable Scale", desc: "Re-architect operational and corporate structures to safely support aggressive geographical or vertical market expansion." }
-            ].map((outcome, idx) => (
-              <div key={idx} className="flex items-start p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10 animate-up">
-                <CheckCircle2 className="w-6 h-6 text-royal-blue shrink-0 mr-4" />
-                <div>
-                  <h4 className="font-bold text-primary-dark-blue dark:text-white mb-2">{outcome.title}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{outcome.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Industry Applications */}
-      <section className="py-20 bg-primary-dark-blue text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-6">
-              Contextual Industry Expertise
-            </h2>
-            <div className="w-20 h-1 bg-royal-blue rounded-full mb-8"></div>
-            <p className="text-lg text-gray-300 max-w-3xl leading-relaxed">
-              Strategic advice must be deeply rooted in industry realities. We leverage our extensive sectoral exposure to deliver highly contextualized advisory services across Nepal’s economy.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="border-l-2 border-royal-blue pl-6 animate-up">
-              <h3 className="text-xl font-bold mb-2">Banking & Insurance</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Navigating NRB and NIA mandated 'forced' mergers, advising on capital restructuring to meet paid-up capital requirements, and managing post-merger cultural integration.</p>
-            </div>
-            <div className="border-l-2 border-royal-blue pl-6 animate-up">
-              <h3 className="text-xl font-bold mb-2">Hydropower & Infrastructure</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Structuring complex consortium financing models, advising on optimal debt-to-equity ratios, and preparing entities for highly regulated Initial Public Offerings (IPOs).</p>
-            </div>
-            <div className="border-l-2 border-royal-blue pl-6 animate-up">
-              <h3 className="text-xl font-bold mb-2">Manufacturing & Trading Conglomerates</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Executing complex demergers to separate trading arms from manufacturing units, optimizing holding structures, and formalizing family governance charters.</p>
-            </div>
-            <div className="border-l-2 border-royal-blue pl-6 animate-up">
-              <h3 className="text-xl font-bold mb-2">Technology & Startups</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Advising on venture capital term sheets, structuring employee stock ownership plans (ESOPs), and preparing financial data rooms for Series A funding rounds.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. FAQs */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400">Insights into complex corporate advisory engagements.</p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white dark:bg-[#020A1A] border border-gray-200 dark:border-white/20 rounded-xl overflow-hidden animate-up">
-                <button 
-                  onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-50 dark:bg-[#0A1128] transition-colors focus:outline-none"
-                >
-                  <span className="font-semibold text-primary-dark-blue dark:text-white pr-8">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-royal-blue transform transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
-                </button>
-                <div 
-                  className={`px-6 transition-all duration-300 ease-in-out ${openFaq === index ? 'pb-5 max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
-                >
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-t border-gray-100 dark:border-white/10 pt-4">
-                    {faq.a}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Related Insights & Services */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12 animate-up">
-            <h2 className="text-2xl md:text-3xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-2">Continue Exploring</h2>
-            <div className="w-16 h-1 bg-royal-blue rounded-full"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 flex flex-col justify-between group cursor-pointer animate-up">
-              <div>
-                <span className="text-xs font-bold text-royal-blue uppercase tracking-wider mb-2 block">Related Service</span>
-                <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4 group-hover:text-royal-blue transition-colors">Due Diligence & Valuation</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">Before executing any corporate transaction, empower your decision-making with our exhaustive financial due diligence and objective enterprise valuation services.</p>
-              </div>
-              <Link to="/services/due-diligence-and-valuation" className="inline-flex items-center text-sm font-bold text-primary-dark-blue dark:text-white group-hover:text-royal-blue transition-colors">
-                Explore Service <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-            
-            <div className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 flex flex-col justify-between group cursor-pointer animate-up">
-              <div>
-                <span className="text-xs font-bold text-royal-blue uppercase tracking-wider mb-2 block">Strategic Insight</span>
-                <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4 group-hover:text-royal-blue transition-colors">Optimizing Capital Structures in High-Interest Environments</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">Explore strategic methodologies for refinancing corporate debt and optimizing equity structures amidst Nepal's fluctuating liquidity landscape.</p>
-              </div>
-              <Link to="/insights" className="inline-flex items-center text-sm font-bold text-primary-dark-blue dark:text-white group-hover:text-royal-blue transition-colors">
-                Read Article <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 10. Contact CTA */}
-      <section className="py-24 bg-primary-dark-blue text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600880292089-90a7e086ee3c?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-luminosity"></div>
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10 animate-up">
-          <h2 className="text-3xl md:text-5xl font-heading font-semibold mb-6">
-            Execute Your Strategic Vision
-          </h2>
-          <p className="text-lg text-gray-300 mb-10 leading-relaxed font-light">
-            Do not let structural inefficiencies or regulatory red tape stall your enterprise growth. Partner with our senior advisory team to architect and flawlessly execute your most ambitious corporate transactions.
-          </p>
-          <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white rounded-xl font-bold text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20 active:scale-[0.98]">
-            Schedule an Advisory Session
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-        </div>
-      </section>
-
+      <ContactCTA
+        title="Unlock Your Enterprise Value"
+        description="Growth plateaus and financial distress require decisive, expert intervention. Partner with our elite advisory team to architect the future of your business."
+        ctaText="Schedule a Strategy Session"
+        ctaLink="/contact"
+        bgImage="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
+      />
     </div>
   );
 }

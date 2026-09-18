@@ -22,15 +22,15 @@ export default function Services() {
       const ctx = gsap.context(() => {
         // Animate hero text
         gsap.fromTo('.services-hero-text', 
-          { opacity: 0, y: 30 }, 
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: 'power3.out' }
+          { opacity: 0, y: 40, filter: 'blur(8px)' }, 
+          { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, stagger: 0.2, ease: 'power3.out' }
         );
 
         // Animate the cards
         gsap.fromTo('.service-card',
-          { opacity: 0, y: 30 },
+          { opacity: 0, y: 40, filter: 'blur(8px)' },
           { 
-            opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+            opacity: 1, y: 0, filter: 'blur(0px)', duration: 1, stagger: 0.1, ease: 'power3.out',
             scrollTrigger: {
               trigger: '.services-grid',
               start: 'top 85%'
@@ -49,7 +49,7 @@ export default function Services() {
     <div ref={containerRef} className="bg-gray-50 dark:bg-[#0A1128] min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-primary-dark-blue overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-luminosity"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary-dark-blue via-transparent to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">

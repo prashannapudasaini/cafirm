@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
         {
           opacity: 1,
           x: 0,
-          duration: 0.6,
+          duration: 1,
           stagger: 0.1,
           ease: 'power2.out',
           scrollTrigger: {

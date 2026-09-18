@@ -28,9 +28,8 @@ const FirmStory = () => {
         '.story-content > *',
         { opacity: 0, y: 20 },
         {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
+          opacity: 1, y: 0, filter: 'blur(0px)',
+          duration: 1.2,
           stagger: 0.1,
           ease: 'power3.out',
           scrollTrigger: {

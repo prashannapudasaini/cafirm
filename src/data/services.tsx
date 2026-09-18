@@ -1,4 +1,4 @@
-import { ShieldCheck, Landmark, Briefcase, Scale, FileText, Globe, PieChart, TrendingUp, Network, Search, MonitorCheck, Users2, Calculator, Building2 } from 'lucide-react';
+import { ShieldCheck, Landmark, Briefcase, Scale, FileText, Globe, PieChart, TrendingUp, Network, Search, MonitorCheck, Users2, Calculator, Building2, Receipt } from 'lucide-react';
 
 export const servicesData = [
   {
@@ -112,5 +112,13 @@ export const servicesData = [
     shortDesc: "Advisory on corporate restructuring and graceful winding-down processes.",
     image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=2070&auto=format&fit=crop",
     link: "/services/insolvency-liquidation"
+  },
+  {
+    id: "vat-advisory",
+    title: "VAT Advisory & Compliance",
+    icon: <Receipt className="w-8 h-8 text-royal-blue" />,
+    shortDesc: "Proactive VAT management, monthly filings, and complex refund strategies.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
+    link: "/services/vat-advisory"
   }
 ];

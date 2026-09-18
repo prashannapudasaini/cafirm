@@ -77,12 +77,13 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-[24px] bg-white/5 border border-white/10 shadow-[0_8px_40px_rgba(15,82,186,0.08)] transition-all duration-300;
+    @apply backdrop-blur-[24px] bg-white/5 border border-white/10 shadow-[0_8px_40px_rgba(15,82,186,0.08)];
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .glass-card:hover {
     @apply bg-white/10 border-white/20 shadow-[0_16px_60px_rgba(15,82,186,0.2)];
-    transform: translateY(-5px);
+    transform: translateY(-4px) scale(1.01);
   }
 
   .glass-card:active {

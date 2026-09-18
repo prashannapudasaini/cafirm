@@ -23,7 +23,7 @@ const Certifications = () => {
         {
           opacity: 1,
           x: 0,
-          duration: 0.8,
+          duration: 1.2,
           stagger: 0.1,
           ease: 'power3.out',
           scrollTrigger: {

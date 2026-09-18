@@ -13,11 +13,10 @@ const AboutSection = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         '.about-content > *',
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: 40, filter: 'blur(8px)' },
         {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
+          opacity: 1, y: 0, filter: 'blur(0px)',
+          duration: 1.2,
           stagger: 0.1,
           ease: 'power3.out',
           scrollTrigger: {

@@ -6,25 +6,28 @@ import { Link } from 'react-router-dom';
 
 const articles = [
   {
-    category: 'Thought Leadership',
-    title: 'Annual Budget 2081/82: Strategic Business Impact and Tax Implications',
-    date: 'June 01, 2024',
+    category: 'Tax & Regulatory',
+    title: 'Income Tax Compliance in Nepal: Navigating the Complexities',
+    date: 'June 01, 2026',
     readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop',
+    link: '/insights/tax-regulatory-updates/income-tax-compliance-nepal'
   },
   {
-    category: 'Advisory',
-    title: 'Navigating NFRS Compliance: A Guide for Growing Nepali Enterprises',
-    date: 'May 15, 2024',
+    category: 'Audit & Assurance',
+    title: 'Statutory Audit in Nepal: Ensuring Transparency and Compliance',
+    date: 'May 15, 2026',
     readTime: '6 min read',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop',
+    link: '/insights/audit-assurance-insights/statutory-audit-nepal'
   },
   {
-    category: 'Foreign Investment',
-    title: 'Optimizing FDI Frameworks: Strategic Entry and Repatriation in Nepal',
-    date: 'April 20, 2024',
+    category: 'Governance & Risk',
+    title: 'Corporate Governance Framework in Nepal: A Blueprint for Success',
+    date: 'April 20, 2026',
     readTime: '7 min read',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+    link: '/insights/governance-risk/corporate-governance-framework'
   }
 ];
 
@@ -37,11 +40,10 @@ const Insights = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         '.insight-card',
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: 40, filter: 'blur(8px)' },
         {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
+          opacity: 1, y: 0, filter: 'blur(0px)',
+          duration: 1.2,
           stagger: 0.15,
           ease: 'power3.out',
           scrollTrigger: {
@@ -75,7 +77,7 @@ const Insights = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article, idx) => (
-            <div key={idx} className="insight-card group cursor-pointer flex flex-col h-full bg-white dark:bg-[#020A1A] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+            <Link to={article.link} key={idx} className="insight-card group cursor-pointer flex flex-col h-full bg-white dark:bg-[#020A1A] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 block">
               <div className="relative aspect-[16/10] overflow-hidden shrink-0">
                 <img 
                   src={article.image} 
@@ -105,7 +107,7 @@ const Insights = () => {
                   <ArrowUpRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

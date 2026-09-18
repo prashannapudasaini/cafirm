@@ -11,29 +11,20 @@ const navLinks = [
   {
     name: 'About Us',
     path: '/about',
-    desc: 'Learn about our firm, leadership, and our unwavering commitment to excellence in Nepal.',
-    dropdown: [
-      { name: 'Firm Overview', path: '/about#overview' },
-      { name: 'Leadership Team', path: '/about#leadership' },
-      { name: 'Vision & Mission', path: '/about#vision' },
-      { name: 'Why Choose Us', path: '/about#why-us' },
-    ],
   },
   {
     name: 'Services',
     path: '/services',
     desc: 'Comprehensive financial, advisory, and compliance services tailored for modern businesses.',
     dropdown: [
-      { name: 'Audit & Assurance', path: '/services/audit' },
-      { name: 'Tax Advisory', path: '/services/tax' },
-      { name: 'Accounting & Bookkeeping', path: '/services/accounting' },
-      { name: 'Company Registration', path: '/services/registration' },
-      { name: 'VAT Services', path: '/services/vat' },
-      { name: 'Business Advisory', path: '/services/advisory' },
-      { name: 'Risk Consulting', path: '/services/risk' },
-      { name: 'Financial Planning', path: '/services/planning' },
-      { name: 'Payroll Services', path: '/services/payroll' },
-      { name: 'Compliance Services', path: '/services/compliance' },
+      { name: 'Audit & Assurance', path: '/services/audit-and-assurance' },
+      { name: 'Tax & Regulatory Advisory', path: '/services/tax-and-regulatory' },
+      { name: 'Business Advisory & Corporate Consulting', path: '/services/corporate-advisory' },
+      { name: 'Risk, Governance & Compliance', path: '/services/risk-and-compliance' },
+      { name: 'Accounting Outsourcing & CFO Services', path: '/services/accounting-and-cfo' },
+      { name: 'Business Registration & Foreign Investment Advisory', path: '/services/business-registration' },
+      { name: 'Payroll & HR Compliance Services', path: '/services/bpo-payroll' },
+      { name: 'Financial Planning & Transaction Advisory', path: '/services/due-diligence-and-valuation' },
     ],
   },
   {
@@ -55,12 +46,12 @@ const navLinks = [
   {
     name: 'Insights',
     path: '/insights',
-    desc: 'Stay informed with the latest regulatory updates, tax changes, and firm news.',
+    desc: 'Expert analysis on tax legislation, regulatory shifts, and business strategy in Nepal.',
     dropdown: [
-      { name: 'Articles', path: '/insights/articles' },
-      { name: 'Tax Updates', path: '/insights/tax-updates' },
-      { name: 'News & Circulars', path: '/insights/news' },
-      { name: 'Publications', path: '/insights/publications' },
+      { name: 'Tax & Regulatory Updates', path: '/insights/tax-regulatory-updates' },
+      { name: 'Audit & Assurance Insights', path: '/insights/audit-assurance-insights' },
+      { name: 'Corporate Governance & Risk', path: '/insights/governance-risk' },
+      { name: 'Business Growth & Strategy', path: '/insights/business-strategy' },
     ],
   },
   {
@@ -72,6 +63,7 @@ const navLinks = [
       { name: 'Calculators', path: '/resources/calculators' },
       { name: 'Guides', path: '/resources/guides' },
       { name: 'FAQs', path: '/resources/faqs' },
+      { name: 'Regulatory Updates', path: '/resources/regulatory-updates' },
     ],
   },
   { name: 'Careers', path: '/careers' },
@@ -100,15 +92,16 @@ const MegaMenu = ({
 
     if (isOpen) {
       gsap.fromTo(menuRef.current,
-        { opacity: 0, y: -10 },
-        { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }
+        { opacity: 0, y: -20, filter: 'blur(8px)' },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.5, ease: 'power3.out' }
       );
     } else {
       gsap.to(menuRef.current, { 
         opacity: 0, 
-        y: -10, 
-        duration: 0.2, 
-        ease: 'power2.in',
+        y: -15, 
+        filter: 'blur(4px)',
+        duration: 0.3, 
+        ease: 'power3.in',
         onComplete: onExited 
       });
     }

@@ -19,8 +19,8 @@ const Hero = () => {
       )
         .fromTo(
           leftContentRef.current?.children || [],
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.1 },
+          { opacity: 0, y: 40, filter: 'blur(8px)' },
+          { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, stagger: 0.1 },
           '-=1'
         )
         .fromTo(
@@ -32,7 +32,7 @@ const Hero = () => {
         .fromTo(
           '.floating-card',
           { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.2 },
+          { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, stagger: 0.2 },
           '-=0.6'
         );
 

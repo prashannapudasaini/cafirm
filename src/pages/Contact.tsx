@@ -10,7 +10,7 @@ export default function Contact() {
     const ctx = gsap.context(() => {
       gsap.fromTo('.animate-up', 
         { opacity: 0, y: 40 }, 
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, stagger: 0.15, ease: 'power3.out' }
       );
     }, containerRef);
     return () => ctx.revert();

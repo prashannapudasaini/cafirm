@@ -1,444 +1,206 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ArrowRight, CheckCircle2, PieChart, TrendingUp, LineChart, Target, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { PieChart, Calculator, TrendingUp } from 'lucide-react';
+
+import { ServiceHero } from '../../components/services/shared/ServiceHero';
+import { BusinessChallenges } from '../../components/services/shared/BusinessChallenges';
+import { ServiceBlocks } from '../../components/services/shared/ServiceBlocks';
+import { AdvisoryProcess } from '../../components/services/shared/AdvisoryProcess';
+import { BusinessOutcomes } from '../../components/services/shared/BusinessOutcomes';
+import { IndustryExpertise } from '../../components/services/shared/IndustryExpertise';
+import { FAQSection } from '../../components/services/shared/FAQSection';
+import { ContactCTA } from '../../components/services/shared/ContactCTA';
+import { TrustCredibility } from '../../components/services/shared/TrustCredibility';
 
 /* 
   SEO RECOMMENDATIONS
-  Title: Outsourced CFO & Strategic Accounting Services | Premium CA Firm Nepal
-  Meta Description: Elevate your financial leadership with our Outsourced CFO services in Nepal. Expert NFRS accounting, FP&A, and cash flow management for growing enterprises.
-  H1: Accounting & Outsourced CFO: Elevating Financial Leadership
+  Title: Accounting Outsourcing & Virtual CFO Services | Premium CA Firm
+  Meta Description: Elite accounting outsourcing, bookkeeping, and virtual CFO services in Nepal. Scale your finance function with our expert team and robust reporting systems.
+  H1: Accounting Outsourcing & CFO Services
 */
 
 const faqs = [
   {
-    q: "How does an Outsourced CFO differ from a traditional accountant or controller?",
-    a: "A traditional accountant focuses on historical data—recording what has already happened to ensure compliance. An Outsourced CFO is entirely forward-looking. We focus on strategic financial planning (FP&A), cash flow forecasting, optimizing capital structures, and providing the executive board with data-driven insights to drive future growth and profitability."
+    q: "Why should we outsource our accounting function instead of hiring an internal team?",
+    a: "Outsourcing immediately upgrades your finance function from basic bookkeeping to institutional-grade accounting without the overhead of hiring, training, and retaining senior talent. We provide continuity, eliminate single-person dependency, and ensure your accounts are always managed by professionals adhering to the latest NFRS updates and tax laws."
   },
   {
-    q: "At what stage of growth should a company consider an Outsourced CFO?",
-    a: "Enterprises typically require CFO-level intervention when they hit inflection points: preparing for a major capital raise, navigating a complex merger, experiencing rapid revenue growth that outpaces internal controls, or when founders realize that reactive, historical accounting is no longer sufficient to guide strategic decision-making."
+    q: "What does a Virtual CFO actually do for my business?",
+    a: "A Virtual CFO acts as a strategic financial partner. While standard accountants record history, a CFO shapes the future. They provide high-level financial modeling, cash flow forecasting, budgeting variance analysis, and strategic advice on capital raising, pricing models, and aggressive cost optimization."
   },
   {
-    q: "Do you handle day-to-day bookkeeping as part of this service?",
-    a: "Yes. Our service is highly scalable. We can provide end-to-end finance department outsourcing—from deploying cloud-based bookkeeping and payroll processing to high-level CFO advisory. Alternatively, if you have an internal accounting team, our CFOs can sit above them to provide strategic oversight, review month-end closes, and generate executive board reports."
+    q: "Is our financial data secure if we outsource to your firm?",
+    a: "Absolute data security is our foundational promise. We utilize enterprise-grade, cloud-based accounting systems with strict access controls, multi-factor authentication, and automated backups. Our internal network is fortified with robust Information Security (IS) controls designed to prevent any unauthorized data extraction."
   },
   {
-    q: "How do you ensure our financial statements comply with NFRS?",
-    a: "The transition to Nepal Financial Reporting Standards (NFRS) is complex. Our teams are deeply trained in NFRS mandates. We design your Chart of Accounts, configure your ERP/accounting software, and establish monthly closing checklists explicitly aligned with NFRS, ensuring your year-end statutory audit is a frictionless event."
+    q: "Can you manage our accounting using our existing ERP software (e.g., Tally, SAP, Oracle)?",
+    a: "Yes. Our teams are highly proficient in all major ERP ecosystems operating in Nepal, including SAP, Oracle, Tally ERP 9 / Prime, and modern cloud platforms like Xero and QuickBooks. We can seamlessly integrate into your existing infrastructure or migrate you to a more efficient platform."
   },
   {
-    q: "Can you manage complex payroll and TDS compliance?",
-    a: "Absolutely. Payroll in Nepal involves complex calculations of Tax Deducted at Source (TDS), Social Security Fund (SSF) contributions, and provident funds. We manage the entire payroll lifecycle, ensuring absolute confidentiality, flawless statutory compliance, and timely disbursements, completely offloading this burden from your HR and management teams."
+    q: "How frequently will we receive financial reports?",
+    a: "We establish a customized reporting cadence—typically a comprehensive 'Month-End Close' package delivered by the 10th of the following month. This includes a Profit & Loss statement, Balance Sheet, Cash Flow analysis, and a customized executive dashboard tracking your specific KPIs."
   },
   {
-    q: "What kind of management reports will we receive?",
-    a: "We replace generic, static profit and loss statements with dynamic, highly visual Management Information Systems (MIS) dashboards. You will receive customized monthly reporting packages that track specific KPIs, analyze budget-to-actual variances, forecast rolling cash flows, and provide actionable commentary on overarching financial health."
+    q: "Do you handle the actual payment processing to vendors and employees?",
+    a: "We engineer strict procurement-to-pay workflows. We prepare the payment vouchers, verify them against budgets, deduct appropriate TDS, and stage the payments in your banking portal. Management retains the final authorization 'click' to release funds, ensuring complete control and segregation of duties."
   },
   {
-    q: "How do you assist with budgeting and forecasting?",
-    a: "We move your enterprise away from static, incremental budgeting. We implement zero-based budgeting or rolling forecasts that align strictly with your strategic objectives. We continuously monitor actual performance against these forecasts, allowing management to pivot rapidly in response to market volatility or unexpected capital requirements."
+    q: "How does your service integrate with the annual statutory audit?",
+    a: "Because we maintain your accounts to the highest NFRS standards and ensure all tax compliance is handled concurrently, your books are essentially 'audit-ready' 365 days a year. This eliminates the frantic year-end rush and significantly reduces the time and cost of the statutory audit."
   },
   {
-    q: "Is it secure to outsource our entire financial function?",
-    a: "We treat data security and confidentiality as our highest priority. We implement institutional-grade, cloud-based accounting ecosystems with strict role-based access controls, robust audit trails, and bank-level encryption, ensuring your financial data is significantly more secure than typical on-premise legacy systems."
+    q: "Can you assist foreign subsidiaries in reporting back to their parent company?",
+    a: "Yes. We specialize in group reporting. We maintain the local books in compliance with Nepal laws while simultaneously preparing group reporting packages (under IFRS or US GAAP) and translating local currency financials into the parent company's functional currency for rapid consolidation."
   }
 ];
 
 export default function AccountingOutsourcedCFO() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   useEffect(() => {
     if (!containerRef.current) return;
     const ctx = gsap.context(() => {
-      gsap.fromTo('.animate-up', 
-        { opacity: 0, y: 40 }, 
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '.animate-up' } }
+      gsap.fromTo('.animate-up',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '.animate-up' } }
       );
     }, containerRef);
     return () => ctx.revert();
   }, []);
 
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
   return (
     <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
-      
-      {/* 1. Advisory Hero */}
-      <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=2026&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-luminosity"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark-blue via-primary-dark-blue/90 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
-              <PieChart className="w-4 h-4 text-[#a5caff]" />
-              <span>Premium Advisory Service</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6 leading-tight">
-              Accounting & CFO: <br />
-              <span className="text-[#a5caff]">Elevating Financial Leadership</span>
-            </h1>
-            <p className="text-xl text-gray-300 font-light leading-relaxed mb-10">
-              Transform your finance function from a reactive compliance center into a proactive strategic engine. We provide elite, scalable financial leadership, delivering the rigorous NFRS accounting, dynamic forecasting, and capital optimization required to scale aggressively in Nepal.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-royal-blue text-white rounded-xl font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20 flex items-center justify-center">
-                Consult on CFO Services
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        badgeText="Operational Excellence"
+        title1="Accounting Outsourcing &"
+        title2="Virtual CFO Services"
+        description="Elevate your finance function from a chaotic administrative burden into a strategic asset. We deploy elite accounting teams and senior CFOs to deliver immaculate ledgers, deep financial intelligence, and absolute compliance."
+        bgImage="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=2026&auto=format&fit=crop"
+        ctaText="Upgrade Your Finance Function"
+        ctaLink="/contact"
+      />
 
-      {/* 2. Business Challenges */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
-              The Leadership Gap in Corporate Finance
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              As Nepalese enterprises rapidly scale, their financial complexity frequently outpaces the capabilities of their legacy accounting teams. Operating a high-growth company with retroactive, purely compliance-focused financial data is akin to driving blindfolded.
-            </p>
-          </div>
+      <BusinessChallenges
+        title="The Cost of Poor Financial Visibility"
+        description="Many high-growth enterprises in Nepal are flying blind. Their accounting departments are bogged down in manual data entry, constantly battling tax compliance fires, and failing to provide management with timely, actionable data."
+        challenges={[
+          {
+            icon: Calculator,
+            iconBgColor: "bg-red-50",
+            iconColor: "text-red-600",
+            title: "Talent Bottlenecks",
+            description: "Recruiting, training, and retaining competent accountants in Nepal is incredibly difficult. High turnover in the finance department leads to catastrophic knowledge loss, delayed reporting, and ultimately, massive statutory fines."
+          },
+          {
+            icon: TrendingUp,
+            iconBgColor: "bg-amber-50",
+            iconColor: "text-amber-600",
+            title: "Stagnant Reporting",
+            description: "When accounts are treated merely as a year-end compliance task, management receives financial data that is 6 to 12 months old. You cannot steer a fast-growing company by looking in the rearview mirror."
+          },
+          {
+            icon: PieChart,
+            iconBgColor: "bg-blue-50",
+            iconColor: "text-royal-blue",
+            title: "Compliance Chaos",
+            description: "Failing to deduct TDS accurately, missing monthly VAT filing deadlines, or incorrectly calculating advance tax disrupts cash flow and triggers aggressive, punitive scrutiny from the Inland Revenue Department (IRD)."
+          }
+        ]}
+      />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
-              <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-6">
-                <LineChart className="w-6 h-6 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Strategic Blindspots</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                Relying solely on year-end statutory audits provides zero actionable intelligence. Without dynamic, real-time Management Information Systems (MIS), founders and boards cannot identify underperforming business units or optimize resource allocation until it is too late.
-              </p>
-            </div>
-            
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
-              <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Cash Flow Volatility</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                Profitable companies frequently collapse due to poor liquidity management. Inability to forecast rolling cash flows accurately leaves enterprises highly vulnerable to severe working capital shortages, jeopardizing vendor relationships and stalling growth.
-              </p>
-            </div>
+      <ServiceBlocks
+        title="Elite Financial Operations"
+        blocks={[
+          {
+            title: "Comprehensive Accounting & Bookkeeping",
+            description: "We take absolute ownership of your daily financial operations. From recording complex transactions and managing accounts payable/receivable to executing rigorous bank reconciliations. We ensure your ledgers are impeccably maintained, fully compliant with NFRS, and always audit-ready.",
+            strategicPurpose: "Eradicate accounting backlogs and establish a flawless foundation of financial data.",
+            clientBenefits: "Eliminates the stress of managing an internal team and dramatically reduces statutory audit timelines.",
+            useCase: "Fast-growing SMEs, INGOs, and foreign subsidiaries that require institutional-grade accounting without the overhead.",
+            image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2111&auto=format&fit=crop"
+          },
+          {
+            title: "Virtual CFO & Strategic Leadership",
+            description: "Access the strategic horsepower of a seasoned Chief Financial Officer without the prohibitive full-time salary. Our Virtual CFOs provide aggressive cash flow management, sophisticated financial modeling for new projects, budget variance analysis, and represent you in critical negotiations with banks and investors.",
+            strategicPurpose: "Provide executive-level financial intelligence to drive aggressive scaling and profitability.",
+            clientBenefits: "Unlocks the ability to make data-driven strategic decisions, optimize capital structures, and raise institutional funding.",
+            useCase: "Mid-market enterprises preparing for major expansions, IPOs, or seeking private equity injections.",
+            image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
+          },
+          {
+            title: "Tax Compliance & Payroll Processing",
+            description: "We seamlessly integrate tax and payroll into the accounting lifecycle. We calculate and file your monthly VAT returns, execute precise TDS deductions, manage Social Security Fund (SSF) contributions, and handle the complex monthly payroll processing for your entire workforce.",
+            strategicPurpose: "Centralize and automate all statutory financial obligations to guarantee zero defaults.",
+            clientBenefits: "Completely insulates the firm from IRD and Labor Office penalties while ensuring employees are paid accurately and on time.",
+            useCase: "Enterprises with large headcounts or complex, multi-state tax obligations.",
+            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop"
+          }
+        ]}
+      />
 
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
-              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-6 h-6 text-royal-blue" />
-              </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Talent & Overhead Costs</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                Recruiting and retaining a full-time, highly experienced Chief Financial Officer in Nepal is immensely expensive and often unnecessary for mid-market firms. Consequently, critical strategic financial decisions are left to junior accountants or overburdened founders.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AdvisoryProcess
+        title="The Onboarding & Execution Process"
+        description="Transitioning your finance function requires precision. We execute a seamless, highly structured onboarding process that causes zero disruption to your daily operations."
+        steps={[
+          { title: "Discovery & Blueprint", description: "Deep analysis of your current accounting ecosystem, software, and reporting requirements." },
+          { title: "System Migration", description: "Cleaning historical data, setting up the Chart of Accounts, and configuring cloud ERPs." },
+          { title: "Workflow Engineering", description: "Establishing stringent SOPs for document flow, invoice approvals, and payment processing." },
+          { title: "Daily Execution", description: "Our teams take over the daily bookkeeping, reconciliations, and tax compliance." },
+          { title: "Executive Reporting", description: "Delivery of the monthly 'Close Package' and strategic review sessions with the Virtual CFO." }
+        ]}
+      />
 
-      {/* 3. How We Help */}
-      <section className="py-20 lg:py-28 bg-white dark:bg-[#020A1A]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
-              Comprehensive Financial Leadership
-            </h2>
-            <div className="w-20 h-1 bg-royal-blue rounded-full"></div>
-          </div>
+      <TrustCredibility
+        title="Uncompromising Standards"
+        description="When you outsource to us, you are relying on a highly regulated, professional CA firm bound by rigorous statutory standards."
+        items={[
+          { title: "NFRS & IFRS Compliance", description: "Guaranteeing your accounts meet the stringent reporting standards mandated by ICAN." },
+          { title: "Income Tax Act 2058", description: "Ensuring flawless application of depreciation, allowable deductions, and TDS provisions." },
+          { title: "Labor Act & SSF", description: "Strict adherence to the Labor Act for payroll processing and mandatory Social Security Fund contributions." },
+          { title: "Data Privacy & Confidentiality", description: "Bound by professional codes of ethics to maintain absolute secrecy of your financial data." },
+          { title: "Information Security (IS)", description: "Utilizing enterprise-grade encryption and secure document management protocols." },
+          { title: "Companies Act 2063", description: "Ensuring all accounting records satisfy the legal requirements for maintenance and preservation." }
+        ]}
+      />
 
-          <div className="space-y-16">
-            {/* Service 1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
-              <div>
-                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Strategic Outsourced CFO</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  We deploy senior financial executives on a fractional basis to guide your corporate strategy. From orchestrating complex debt refinancing and optimizing capital structures to representing the enterprise before institutional investors and the Board of Directors, we provide the elite financial acumen necessary to scale aggressively.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Inject top-tier financial leadership directly into the executive team without the overhead of a full-time hire.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Client Benefits:</span> Optimizes enterprise valuation, secures favorable financing, and aligns financial strategy intimately with corporate objectives.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> High-growth tech startups preparing for Series A funding, or mature family businesses undergoing professionalization.</li>
-                </ul>
-              </div>
-              <div className="bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="Outsourced CFO" className="w-full h-full object-cover" />
-              </div>
-            </div>
+      <BusinessOutcomes
+        title="Transformative Outcomes"
+        description="Outsourcing your finance function is not a cost—it is an investment in unparalleled operational efficiency."
+        outcomes={[
+          { title: "Strategic Focus", description: "Free the CEO and founders from the minutiae of bookkeeping to focus entirely on revenue generation and market expansion." },
+          { title: "Actionable Intelligence", description: "Receive real-time, highly accurate financial dashboards that allow you to pivot strategies immediately based on data, not gut feelings." },
+          { title: "Zero Compliance Risk", description: "Completely eliminate the anxiety of missed VAT deadlines, incorrect TDS filings, and the resulting punitive IRD fines." },
+          { title: "Cost Optimization", description: "Access a multi-tiered team of accountants, tax experts, and a CFO for less than the cost of a single, full-time senior hire." },
+          { title: "Audit Readiness", description: "Transform the stressful, month-long annual statutory audit into a smooth, frictionless event." },
+          { title: "Scalable Infrastructure", description: "As your revenue doubles, your accounting team instantly scales with you—no hiring, no training, no delays." }
+        ]}
+      />
 
-            {/* Service 2 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
-              <div className="order-2 lg:order-1 bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="FP&A" className="w-full h-full object-cover" />
-              </div>
-              <div className="order-1 lg:order-2">
-                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Financial Planning & Analysis (FP&A)</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  We transform raw accounting data into actionable executive intelligence. We build dynamic financial models, implement rolling cash flow forecasts, and design bespoke MIS dashboards that track granular KPIs across all your business units, enabling highly agile, data-driven decision-making.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Provide management with absolute clarity on future financial trajectories and operational bottlenecks.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Client Benefits:</span> Completely eliminates cash flow crises, maximizes ROI on capital expenditures, and enforces strict budgetary discipline.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> A manufacturing conglomerate needing to assess the profitability of distinct product lines in real-time.</li>
-                </ul>
-              </div>
-            </div>
+      <IndustryExpertise
+        title="Tailored Financial Operations"
+        description="We customize our Chart of Accounts and reporting metrics to track the KPIs that actually matter in your specific industry."
+        industries={[
+          { title: "Technology & IT Services", description: "Tracking Software-as-a-Service (SaaS) metrics like ARR, Churn, and CAC, while managing complex foreign currency inward remittances." },
+          { title: "NGOs & INGOs", description: "Executing strict fund-accounting, tracking grant utilizations against specific donor budgets, and preparing SWC-compliant reports." },
+          { title: "E-Commerce & Retail", description: "Managing massive daily transaction volumes, complex payment gateway reconciliations, and highly dynamic inventory accounting." },
+          { title: "Foreign Subsidiaries (FDI)", description: "Maintaining dual ledgers—local NFRS books for Nepalese authorities and IFRS-compliant reporting packages for the foreign parent entity." }
+        ]}
+      />
 
-            {/* Service 3 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
-              <div>
-                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">End-to-End Accounting & Compliance (NFRS)</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                  We provide a completely managed finance function. From daily bookkeeping and automated payroll processing (including SSF/TDS compliance) to executing rigorous month-end closes. We ensure your entire financial architecture is strictly aligned with Nepal Financial Reporting Standards (NFRS), rendering the annual statutory audit frictionless.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Guarantee immaculate financial records and seamless regulatory compliance, offloading the entire administrative burden.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Client Benefits:</span> Drastically reduces the cost of internal finance operations, prevents IRD penalties, and ensures perpetual audit-readiness.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> Multinational branches (FDI) operating in Nepal requiring flawless local compliance and seamless IFRS group reporting.</li>
-                </ul>
-              </div>
-              <div className="bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop" alt="Accounting & Compliance" className="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FAQSection
+        title="Frequently Asked Questions"
+        description="Insights into our outsourcing models and virtual CFO engagements."
+        faqs={faqs}
+      />
 
-      {/* 4. Our Approach */}
-      <section className="py-20 bg-deep-navy text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="mb-16 text-center animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-4">
-              Our Professional Advisory Process
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              We do not simply replace your bookkeeper; we engineer a high-performance financial ecosystem tailored to your strategic ambitions.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {[
-              { title: "Diagnostic", desc: "A rigorous audit of your legacy accounting systems, chart of accounts, and historical financial integrity." },
-              { title: "System Design", desc: "Architecting a modernized, cloud-based financial infrastructure explicitly aligned with NFRS and your specific KPIs." },
-              { title: "Transition", desc: "Seamlessly migrating historical data, establishing rigorous Month-End Close (MEC) checklists, and training key personnel." },
-              { title: "Execution", desc: "Managing daily financial operations, executing precise payroll, and handling all continuous tax compliance." },
-              { title: "Strategic Advisory", desc: "Delivering executive-level MIS reports and presenting strategic financial insights directly to the Board of Directors." }
-            ].map((step, idx) => (
-              <div key={idx} className="relative animate-up">
-                <div className="text-5xl font-bold text-white/10 mb-4">0{idx + 1}</div>
-                <h3 className="text-xl font-bold text-royal-blue mb-3">{step.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{step.desc}</p>
-                {idx < 4 && <div className="hidden md:block absolute top-6 -right-3 w-6 h-[1px] bg-white/20 dark:bg-[#020A1A]/20"></div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Regulatory Perspective */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
-        <div className="max-w-7xl mx-auto px-6 animate-up">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
-                Mastering the Compliance Ecosystem
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                Strategic financial leadership requires an immaculate foundation of compliance. We ensure that every operational decision is supported by a perfectly compliant financial architecture.
-              </p>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">NFRS Implementation</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
-                    The Institute of Chartered Accountants of Nepal (ICAN) mandates NFRS for a growing tier of businesses. We manage this highly technical transition, ensuring fair value measurements and complex disclosures are accurately embedded into your daily accounting routines.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">Payroll & Labor Compliance</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
-                    We navigate the intricate intersections of the Labor Act and the Income Tax Act, flawlessly executing complex Tax Deducted at Source (TDS) calculations and ensuring strict, timely adherence to Social Security Fund (SSF) mandates.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">Continuous IRD Readiness</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
-                    By maintaining immaculate, real-time ledgers and rigorously reconciling VAT inputs/outputs monthly, we completely neutralize the threat of aggressive, surprise assessments from the Inland Revenue Department (IRD).
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="absolute inset-0 bg-royal-blue rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
-              <div className="bg-white dark:bg-[#020A1A] p-8 md:p-12 rounded-3xl shadow-xl relative z-10 border border-gray-100 dark:border-white/10">
-                <PieChart className="w-12 h-12 text-royal-blue mb-6" />
-                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Strategic Implication</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed italic">
-                  "Founders should not spend their time scrutinizing spreadsheets or worrying about unfiled TDS returns. By outsourcing the entire financial apparatus to elite professionals, executive bandwidth is entirely liberated to focus on commercial expansion and market domination."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Why It Matters (Outcomes) */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
-              Empowering Strategic Execution
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-              Our CFO and accounting services are explicitly designed to yield high-impact, measurable results that fundamentally alter the trajectory of your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Enhanced Visibility", desc: "Gain absolute, real-time clarity into the financial health of your enterprise through bespoke, highly visual executive MIS dashboards." },
-              { title: "Optimized Liquidity", desc: "Eradicate cash flow crises through rigorous rolling forecasts, optimized working capital cycles, and strategic debt management." },
-              { title: "Frictionless Audits", desc: "Maintain a perpetual state of 'audit-readiness', drastically reducing the time, cost, and stress associated with year-end statutory compliance." },
-              { title: "Scalable Infrastructure", desc: "Build a highly scalable, cloud-based financial ecosystem capable of supporting rapid geographical expansion or complex M&A activities." },
-              { title: "Cost Efficiency", desc: "Secure elite, C-suite financial intelligence at a fraction of the cost required to recruit, train, and retain a full-time, highly experienced internal CFO." },
-              { title: "Investor Readiness", desc: "Present immaculate, NFRS-compliant financial models and historical data that immediately instills confidence in institutional lenders and private equity." }
-            ].map((outcome, idx) => (
-              <div key={idx} className="flex items-start p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10 animate-up">
-                <CheckCircle2 className="w-6 h-6 text-royal-blue shrink-0 mr-4" />
-                <div>
-                  <h4 className="font-bold text-primary-dark-blue dark:text-white mb-2">{outcome.title}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{outcome.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Industry Applications */}
-      <section className="py-20 bg-primary-dark-blue text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-6">
-              Sector-Specific Financial Leadership
-            </h2>
-            <div className="w-20 h-1 bg-royal-blue rounded-full mb-8"></div>
-            <p className="text-lg text-gray-300 max-w-3xl leading-relaxed">
-              Strategic finance is not a one-size-fits-all discipline. We deploy CFOs with deep, native experience within the specific operational nuances of your industry.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="border-l-2 border-royal-blue pl-6 animate-up">
-              <h3 className="text-xl font-bold mb-2">Technology & Startups</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Managing cash burn rates, architecting complex SaaS revenue recognition models, and preparing immaculate financial data rooms for Series A and B funding rounds.</p>
-            </div>
-            <div className="border-l-2 border-royal-blue pl-6 animate-up">
-              <h3 className="text-xl font-bold mb-2">Multinational Branches (FDI)</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Ensuring flawless compliance with complex local tax regimes while simultaneously delivering highly standardized IFRS reporting packages to foreign parent companies.</p>
-            </div>
-            <div className="border-l-2 border-royal-blue pl-6 animate-up">
-              <h3 className="text-xl font-bold mb-2">Hospitality & Retail</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Deploying rigorous daily revenue reconciliations, optimizing complex multi-location inventory models, and managing aggressive seasonal cash flow volatility.</p>
-            </div>
-            <div className="border-l-2 border-royal-blue pl-6 animate-up">
-              <h3 className="text-xl font-bold mb-2">Manufacturing & Agribusiness</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">Implementing granular standard costing systems, analyzing product-line profitability, and aggressively optimizing supply chain working capital cycles.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. FAQs */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400">Executive insights into managed finance and strategic accounting.</p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white dark:bg-[#020A1A] border border-gray-200 dark:border-white/20 rounded-xl overflow-hidden animate-up">
-                <button 
-                  onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-50 dark:bg-[#0A1128] transition-colors focus:outline-none"
-                >
-                  <span className="font-semibold text-primary-dark-blue dark:text-white pr-8">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-royal-blue transform transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
-                </button>
-                <div 
-                  className={`px-6 transition-all duration-300 ease-in-out ${openFaq === index ? 'pb-5 max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
-                >
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-t border-gray-100 dark:border-white/10 pt-4">
-                    {faq.a}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Related Insights & Services */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12 animate-up">
-            <h2 className="text-2xl md:text-3xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-2">Continue Exploring</h2>
-            <div className="w-16 h-1 bg-royal-blue rounded-full"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 flex flex-col justify-between group cursor-pointer animate-up">
-              <div>
-                <span className="text-xs font-bold text-royal-blue uppercase tracking-wider mb-2 block">Related Service</span>
-                <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4 group-hover:text-royal-blue transition-colors">Tax & Regulatory Services</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">Our outsourced accounting frameworks are inextricably linked to robust tax planning, ensuring that daily financial operations inherently minimize corporate tax liabilities.</p>
-              </div>
-              <Link to="/services/tax-and-regulatory" className="inline-flex items-center text-sm font-bold text-primary-dark-blue dark:text-white group-hover:text-royal-blue transition-colors">
-                Explore Service <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-            
-            <div className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 flex flex-col justify-between group cursor-pointer animate-up">
-              <div>
-                <span className="text-xs font-bold text-royal-blue uppercase tracking-wider mb-2 block">Strategic Insight</span>
-                <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4 group-hover:text-royal-blue transition-colors">Navigating NFRS Compliance: A Guide for Growing Enterprises</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">Explore our executive briefing on how medium-to-large enterprises in Nepal can smoothly transition to Nepal Financial Reporting Standards.</p>
-              </div>
-              <Link to="/insights" className="inline-flex items-center text-sm font-bold text-primary-dark-blue dark:text-white group-hover:text-royal-blue transition-colors">
-                Read Article <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 10. Contact CTA */}
-      <section className="py-24 bg-primary-dark-blue text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=2026&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-luminosity"></div>
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10 animate-up">
-          <h2 className="text-3xl md:text-5xl font-heading font-semibold mb-6">
-            Empower Your Financial Strategy
-          </h2>
-          <p className="text-lg text-gray-300 mb-10 leading-relaxed font-light">
-            Do not let a reactive finance department stall your enterprise growth. Partner with our senior advisory team to establish elite, proactive financial leadership and highly scalable accounting frameworks.
-          </p>
-          <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white rounded-xl font-bold text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20 active:scale-[0.98]">
-            Schedule an Advisory Session
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-        </div>
-      </section>
-
+      <ContactCTA
+        title="Scale Your Finance Function"
+        description="Stop fighting administrative fires and start driving strategic growth. Partner with our elite accounting team to build a world-class financial operation."
+        ctaText="Schedule a Capability Briefing"
+        ctaLink="/contact"
+        bgImage="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=2026&auto=format&fit=crop"
+      />
     </div>
   );
 }

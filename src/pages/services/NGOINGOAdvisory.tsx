@@ -31,7 +31,7 @@ export default function NGOINGOAdvisory() {
     const ctx = gsap.context(() => {
       gsap.fromTo('.animate-up', 
         { opacity: 0, y: 40 }, 
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '.animate-up' } }
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '.animate-up' } }
       );
     }, containerRef);
     return () => ctx.revert();

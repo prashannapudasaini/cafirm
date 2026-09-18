@@ -26,7 +26,7 @@ const AboutIndustries = () => {
         {
           opacity: 1,
           scale: 1,
-          duration: 0.6,
+          duration: 1,
           stagger: 0.05,
           ease: 'power2.out',
           scrollTrigger: {

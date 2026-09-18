@@ -1,10 +1,11 @@
 import Hero from '../components/home/Hero';
+import TrustAndCredibility from '../components/home/TrustAndCredibility';
+import Statistics from '../components/home/Statistics';
 import TrustedBy from '../components/home/TrustedBy';
 import AboutSection from '../components/home/AboutSection';
 import ServicesShowcase from '../components/home/ServicesShowcase';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import Industries from '../components/home/Industries';
-import Leadership from '../components/home/Leadership';
 import ClientSuccess from '../components/home/ClientSuccess';
 import Insights from '../components/home/Insights';
 import FinalCTA from '../components/home/FinalCTA';
@@ -18,8 +19,9 @@ export default function Home() {
       <ServicesShowcase />
       <WhyChooseUs />
       <Industries />
-      <Leadership />
       <ClientSuccess />
+      <Statistics />
+      <TrustAndCredibility />
       <Insights />
       <FinalCTA />
     </div>
