@@ -61,7 +61,7 @@ export default function Resources() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
@@ -79,7 +79,7 @@ export default function Resources() {
           {resourceCategories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <div key={index} className="animate-up group bg-white dark:bg-[#020A1A] border border-gray-100 dark:border-white/10 rounded-[2rem] p-10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-royal-blue/20 transition-all">
+              <div key={index} className="animate-up group bg-white dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 rounded-[2rem] p-10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-royal-blue/20 transition-all">
                 <div className="flex items-start justify-between mb-8">
                   <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${category.color} mb-4`}>
                     <Icon className="w-7 h-7" />
@@ -119,7 +119,7 @@ export default function Resources() {
           </div>
           
           <div className="relative z-10 shrink-0">
-            <button className="px-8 py-4 bg-white dark:bg-[#020A1A] text-primary-dark-blue dark:text-white rounded-xl font-bold hover:bg-gray-50 dark:bg-[#0A1128] transition-colors shadow-lg flex items-center">
+            <button className="px-8 py-4 bg-white dark:bg-[#031B4E] text-primary-dark-blue dark:text-white rounded-xl font-bold hover:bg-gray-50 dark:bg-[#031B4E] transition-colors shadow-lg flex items-center">
               Login to Portal <ArrowRight className="ml-2 w-5 h-5" />
             </button>
           </div>

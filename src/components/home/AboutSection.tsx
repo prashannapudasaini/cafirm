@@ -46,7 +46,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-10 md:py-12 bg-white dark:bg-[#020A1A] relative">
+    <section ref={containerRef} className="py-10 md:py-12 bg-white dark:bg-[#031B4E] relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -61,7 +61,7 @@ const AboutSection = () => {
             <div className="absolute inset-0 bg-primary-dark-blue/10 mix-blend-multiply" />
 
             {/* Experience Badge */}
-            <div className="absolute bottom-8 left-8 bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur-md p-6 rounded-2xl shadow-xl flex items-center space-x-4">
+            <div className="absolute bottom-8 left-8 bg-white/90 dark:bg-[#031B4E]/90 backdrop-blur-md p-6 rounded-2xl shadow-xl flex items-center space-x-4">
               <Award className="w-10 h-10 text-royal-blue" />
               <div>
                 <p className="text-3xl font-heading font-bold text-primary-dark-blue dark:text-white">15+</p>

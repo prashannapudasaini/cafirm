@@ -18,7 +18,7 @@ export default function NGOINGO() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen">
       
       {/* 1. Industry Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function NGOINGO() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Globe2 className="w-4 h-4 text-royal-blue" />
               <span>Industry Expertise</span>
             </div>
@@ -42,7 +42,7 @@ export default function NGOINGO() {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
+      <section className="py-20 bg-white dark:bg-[#031B4E]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
           <div className="space-y-16 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             
@@ -104,15 +104,15 @@ export default function NGOINGO() {
                 We provide the financial architecture that guarantees donor trust and regulatory immunity, allowing INGOs to focus entirely on their programmatic impact.
               </p>
               <div className="space-y-4">
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Fund Accountability Statements (FAS) Audits</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We conduct specialized audits specifically designed to meet the rigorous demands of USAID, the European Union, and the UN. We verify that every rupee spent directly correlates to the approved project budget and donor procurement guidelines.</p>
                 </div>
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Local Partner Capacity Building</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We mitigate consortium risk by auditing local NGO implementing partners. We design and install robust financial manuals, procurement policies, and internal control frameworks at the grassroots level to prevent fund leakage.</p>
                 </div>
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Outsourced CFO & Payroll Services</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">For INGOs establishing a new presence in Nepal, we offer fully outsourced financial management. We handle multi-currency donor reporting, complex expat payroll taxation, and Social Security Fund (SSF) compliance, acting as your localized finance department.</p>
                 </div>
@@ -159,19 +159,19 @@ export default function NGOINGO() {
             <section>
               <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Business Outcomes</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Zero Disallowed Costs:</strong> Eliminate the financial risk of grant clawbacks by ensuring absolute compliance with complex, donor-specific procurement and expenditure guidelines.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Uninterrupted Operations:</strong> Prevent the freezing of organizational bank accounts by flawlessly navigating the SWC’s bureaucratic approval processes.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Consortium Security:</strong> Protect the lead applicant's reputation by aggressively auditing and building the financial capacity of local implementing partners.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Tax Compliance:</strong> Avoid massive IRD penalties by implementing automated Withholding Tax (WHT) and payroll tax (TDS) deduction protocols across the organization.</span>
                 </li>
@@ -194,7 +194,7 @@ export default function NGOINGO() {
       </section>
 
       {/* 10. Industry Consultation CTA */}
-      <section className="py-24 bg-gray-50 dark:bg-[#0A1128] border-t border-gray-200 dark:border-white/20">
+      <section className="py-24 bg-gray-50 dark:bg-[#031B4E] border-t border-gray-200 dark:border-white/20">
         <div className="max-w-4xl mx-auto px-6 text-center animate-up">
           <Building2 className="w-12 h-12 text-royal-blue mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">

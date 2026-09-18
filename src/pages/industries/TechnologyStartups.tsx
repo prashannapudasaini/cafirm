@@ -18,7 +18,7 @@ export default function TechnologyStartups() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen">
       
       {/* 1. Industry Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function TechnologyStartups() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Cpu className="w-4 h-4 text-royal-blue" />
               <span>Industry Expertise</span>
             </div>
@@ -42,7 +42,7 @@ export default function TechnologyStartups() {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
+      <section className="py-20 bg-white dark:bg-[#031B4E]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
           <div className="space-y-16 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             
@@ -104,15 +104,15 @@ export default function TechnologyStartups() {
                 We act as the strategic financial partner for high-growth tech companies, bridging the gap between visionary founders and institutional capital.
               </p>
               <div className="space-y-4">
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Fundraising & Valuation Modeling</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We build institutional-grade financial models to defend your valuation during Series A/B rounds. We prepare comprehensive pitch-deck financials, cap-table scenarios, and unit economic analyses (CAC/LTV) that speak the exact language of global VCs.</p>
                 </div>
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">FDI & Term Sheet Structuring</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We manage the entire bureaucratic lifecycle of foreign investment. We advise on term sheet mechanics (liquidation preferences, anti-dilution clauses) and navigate FITTA and NRB regulations to ensure the seamless, legal injection of foreign capital.</p>
                 </div>
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Virtual CFO Services</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Early-stage startups cannot afford a full-time, Big-4 trained CFO. We provide fractional CFO services, managing your burn rate, optimizing working capital, and ensuring rigorous bookkeeping to prepare you for future financial due diligence.</p>
                 </div>
@@ -159,19 +159,19 @@ export default function TechnologyStartups() {
             <section>
               <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Business Outcomes</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Maximized Valuations:</strong> Enter funding rounds armed with defensible, institutional-grade financial models that prevent VCs from arbitrarily discounting your enterprise value.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Frictionless FDI:</strong> Eliminate the bureaucratic delays of foreign fundraising by perfectly executing FITTA and NRB compliance protocols for cross-border capital injections.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Founder Protection:</strong> Protect your control over the company through strategically drafted term sheets, robust cap-table management, and legally sound ESOP structures.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Due Diligence Readiness:</strong> Maintain a state of perpetual readiness for M&A acquisitions or Series B funding through rigorous, outsourced CFO and bookkeeping services.</span>
                 </li>
@@ -194,7 +194,7 @@ export default function TechnologyStartups() {
       </section>
 
       {/* 10. Industry Consultation CTA */}
-      <section className="py-24 bg-gray-50 dark:bg-[#0A1128] border-t border-gray-200 dark:border-white/20">
+      <section className="py-24 bg-gray-50 dark:bg-[#031B4E] border-t border-gray-200 dark:border-white/20">
         <div className="max-w-4xl mx-auto px-6 text-center animate-up">
           <Building2 className="w-12 h-12 text-royal-blue mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">

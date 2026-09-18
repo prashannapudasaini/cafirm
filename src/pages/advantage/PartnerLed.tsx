@@ -18,7 +18,7 @@ export default function PartnerLed() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen">
       
       {/* Hero Section */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function PartnerLed() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <HeartHandshake className="w-4 h-4 text-royal-blue" />
               <span>Premium Advantage</span>
             </div>
@@ -42,7 +42,7 @@ export default function PartnerLed() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
+      <section className="py-20 bg-white dark:bg-[#031B4E]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
           <div className="space-y-12 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             {/* Executive Introduction */}
@@ -117,7 +117,7 @@ export default function PartnerLed() {
             {/* Closing Insight */}
             <section>
               <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Final Assessment</h3>
-              <p className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 italic font-medium text-primary-dark-blue dark:text-white text-xl leading-relaxed text-center">
+              <p className="bg-gray-50 dark:bg-[#031B4E] p-8 rounded-2xl border border-gray-100 dark:border-white/10 italic font-medium text-primary-dark-blue dark:text-white text-xl leading-relaxed text-center">
                 "Methodologies can be standardized, but judgment cannot be delegated. We commit our highest level of expertise to every engagement because your enterprise deserves nothing less than executive-level precision."
               </p>
             </section>

@@ -44,7 +44,7 @@ const TrustAndCredibility = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 bg-white dark:bg-[#020A1A] relative z-10 border-b border-gray-100 dark:border-white/5">
+    <section ref={sectionRef} className="py-12 bg-white dark:bg-[#031B4E] relative z-10 border-b border-gray-100 dark:border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-10">
           <p className="text-sm font-semibold text-royal-blue uppercase tracking-widest">Trusted Expertise & Compliance</p>
@@ -54,9 +54,9 @@ const TrustAndCredibility = () => {
           {trustIndicators.map((item, index) => (
             <div 
               key={index} 
-              className="trust-badge glass-card bg-gray-50 dark:bg-[#0A1128] rounded-2xl p-6 flex flex-col items-center justify-center text-center group cursor-default"
+              className="trust-badge glass-card bg-gray-50 dark:bg-[#031B4E] rounded-2xl p-6 flex flex-col items-center justify-center text-center group cursor-default"
             >
-              <div className="w-12 h-12 rounded-full bg-white dark:bg-[#020A1A] shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-md transition-all duration-400">
+              <div className="w-12 h-12 rounded-full bg-white dark:bg-[#031B4E] shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-md transition-all duration-400">
                 <item.icon className="w-5 h-5 text-primary-dark-blue dark:text-white" />
               </div>
               <h3 className="text-sm font-semibold text-primary-dark-blue dark:text-white leading-tight">

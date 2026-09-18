@@ -17,7 +17,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-20">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
@@ -34,7 +34,7 @@ export default function Contact() {
           
           {/* Contact Information */}
           <div className="lg:col-span-1 space-y-8 animate-up">
-            <div className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10">
+            <div className="bg-gray-50 dark:bg-[#031B4E] p-8 rounded-2xl border border-gray-100 dark:border-white/10">
               <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-6">Kathmandu Office</h3>
               
               <div className="space-y-6">
@@ -83,34 +83,34 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="lg:col-span-2 animate-up">
-            <div className="bg-white dark:bg-[#020A1A] p-8 md:p-12 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-white/10">
+            <div className="bg-white dark:bg-[#031B4E] p-8 md:p-12 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 dark:border-white/10">
               <h2 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-8">Send us a Message</h2>
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">First Name</label>
-                    <input type="text" className="w-full px-4 py-3 bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all" placeholder="John" />
+                    <input type="text" className="w-full px-4 py-3 bg-gray-50 dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all" placeholder="John" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Last Name</label>
-                    <input type="text" className="w-full px-4 py-3 bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all" placeholder="Doe" />
+                    <input type="text" className="w-full px-4 py-3 bg-gray-50 dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all" placeholder="Doe" />
                   </div>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
-                    <input type="email" className="w-full px-4 py-3 bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all" placeholder="john@company.com" />
+                    <input type="email" className="w-full px-4 py-3 bg-gray-50 dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all" placeholder="john@company.com" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Company Name (Optional)</label>
-                    <input type="text" className="w-full px-4 py-3 bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all" placeholder="Your Company Ltd." />
+                    <input type="text" className="w-full px-4 py-3 bg-gray-50 dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all" placeholder="Your Company Ltd." />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Service of Interest</label>
-                  <select className="w-full px-4 py-3 bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all text-gray-600 dark:text-gray-400">
+                  <select className="w-full px-4 py-3 bg-gray-50 dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all text-gray-600 dark:text-gray-400">
                     <option>Audit & Assurance</option>
                     <option>Tax Advisory</option>
                     <option>Business Advisory</option>
@@ -121,7 +121,7 @@ export default function Contact() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">How can we help?</label>
-                  <textarea rows={5} className="w-full px-4 py-3 bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all resize-none" placeholder="Briefly describe your requirements..."></textarea>
+                  <textarea rows={5} className="w-full px-4 py-3 bg-gray-50 dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-royal-blue/20 focus:border-royal-blue transition-all resize-none" placeholder="Briefly describe your requirements..."></textarea>
                 </div>
 
                 <button type="submit" className="inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white rounded-xl font-bold text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20 w-full sm:w-auto">

@@ -30,7 +30,7 @@ export const ServiceHero = ({
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="max-w-3xl animate-up">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
             <ShieldCheck className="w-4 h-4 text-[#a5caff]" />
             <span>{badgeText}</span>
           </div>

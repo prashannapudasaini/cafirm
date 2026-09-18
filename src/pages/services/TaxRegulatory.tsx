@@ -69,7 +69,7 @@ export default function TaxRegulatory() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen">
       <ServiceHero
         badgeText="Premium Tax Advisory"
         title1="Tax & Regulatory Advisory:"

@@ -42,7 +42,7 @@ export default function InsolvencyLiquidation() {
   };
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen">
       
       {/* 1. Advisory Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -51,7 +51,7 @@ export default function InsolvencyLiquidation() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Building2 className="w-4 h-4 text-[#a5caff]" />
               <span>Restructuring Advisory</span>
             </div>
@@ -73,7 +73,7 @@ export default function InsolvencyLiquidation() {
       </section>
 
       {/* 2. Business Challenges */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
+      <section className="py-20 bg-gray-50 dark:bg-[#031B4E]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
@@ -85,7 +85,7 @@ export default function InsolvencyLiquidation() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
+            <div className="bg-white dark:bg-[#031B4E] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-6">
                 <ShieldAlert className="w-6 h-6 text-red-600" />
               </div>
@@ -95,7 +95,7 @@ export default function InsolvencyLiquidation() {
               </p>
             </div>
             
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
+            <div className="bg-white dark:bg-[#031B4E] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
                 <FileWarning className="w-6 h-6 text-amber-600" />
               </div>
@@ -105,7 +105,7 @@ export default function InsolvencyLiquidation() {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
+            <div className="bg-white dark:bg-[#031B4E] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                 <Scale className="w-6 h-6 text-royal-blue" />
               </div>
@@ -119,7 +119,7 @@ export default function InsolvencyLiquidation() {
       </section>
 
       {/* 3. How We Help */}
-      <section className="py-20 lg:py-28 bg-white dark:bg-[#020A1A]">
+      <section className="py-20 lg:py-28 bg-white dark:bg-[#031B4E]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 animate-up">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
@@ -165,7 +165,7 @@ export default function InsolvencyLiquidation() {
       </section>
 
       {/* 8. FAQs */}
-      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
+      <section className="py-20 bg-gray-50 dark:bg-[#031B4E]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16 animate-up">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
@@ -175,10 +175,10 @@ export default function InsolvencyLiquidation() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white dark:bg-[#020A1A] border border-gray-200 dark:border-white/20 rounded-xl overflow-hidden animate-up">
+              <div key={index} className="bg-white dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 rounded-xl overflow-hidden animate-up">
                 <button 
                   onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-50 dark:bg-[#0A1128] transition-colors focus:outline-none"
+                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-50 dark:bg-[#031B4E] transition-colors focus:outline-none"
                 >
                   <span className="font-semibold text-primary-dark-blue dark:text-white pr-8">{faq.q}</span>
                   <ChevronDown className={`w-5 h-5 text-royal-blue transform transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />

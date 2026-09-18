@@ -46,7 +46,7 @@ export default function Services() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-gray-50 dark:bg-[#0A1128] min-h-screen">
+    <div ref={containerRef} className="bg-gray-50 dark:bg-[#031B4E] min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-primary-dark-blue overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
@@ -63,14 +63,14 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 md:py-24 bg-gray-50 dark:bg-[#0A1128]">
+      <section className="py-16 md:py-24 bg-gray-50 dark:bg-[#031B4E]">
         <div className="max-w-7xl mx-auto px-6 services-grid">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesData.map((service, index) => (
               <div
                 key={index}
                 onClick={() => navigate(service.link)}
-                className="service-card bg-white dark:bg-[#020A1A] rounded-2xl overflow-hidden group cursor-pointer flex flex-col shadow-sm hover:shadow-xl border border-gray-100 dark:border-white/10 transition-all duration-300 active:scale-[0.98]"
+                className="service-card bg-white dark:bg-[#031B4E] rounded-2xl overflow-hidden group cursor-pointer flex flex-col shadow-sm hover:shadow-xl border border-gray-100 dark:border-white/10 transition-all duration-300 active:scale-[0.98]"
               >
                 <div className="relative h-56 overflow-hidden shrink-0">
                   <img 
@@ -81,7 +81,7 @@ export default function Services() {
                   <div className="absolute inset-0 bg-primary-dark-blue/20 group-hover:opacity-0 transition-opacity duration-500" />
                   
                   {/* Floating Icon */}
-                  <div className="absolute bottom-4 left-4 w-14 h-14 bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur-md rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="absolute bottom-4 left-4 w-14 h-14 bg-white/90 dark:bg-[#031B4E]/90 backdrop-blur-md rounded-xl flex items-center justify-center shadow-lg">
                     {service.icon}
                   </div>
                 </div>

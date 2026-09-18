@@ -96,7 +96,7 @@ export default function Calculators() {
   };
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-24">
       <Helmet>
         <title>Financial Calculators | Resources | Jay & Ajay Associates</title>
         <meta name="description" content="Interactive Nepalese salary tax calculator and financial tools." />
@@ -104,7 +104,7 @@ export default function Calculators() {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-indigo-50 dark:bg-[#020A1A]/50 border border-indigo-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-indigo-600">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-indigo-50 dark:bg-[#031B4E]/50 border border-indigo-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-indigo-600">
             <Calculator className="w-4 h-4" />
             <span>Interactive Tools</span>
           </div>
@@ -122,7 +122,7 @@ export default function Calculators() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-up mb-16">
           
           {/* Input Form */}
-          <div className="bg-white dark:bg-[#0A1128] border border-gray-100 dark:border-white/10 rounded-[2rem] p-8 shadow-sm">
+          <div className="bg-white dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 rounded-[2rem] p-8 shadow-sm">
             <h2 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-6 flex items-center">
               Salary Tax Calculator
             </h2>
@@ -206,7 +206,7 @@ export default function Calculators() {
                   <h4 className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">Tax Slabs Applied</h4>
                   <div className="space-y-3">
                     {taxResult.slabs.map((slab, i) => (
-                      <div key={i} className="flex justify-between items-center bg-white dark:bg-[#0A1128] p-3 rounded-lg border border-gray-100 dark:border-white/5">
+                      <div key={i} className="flex justify-between items-center bg-white dark:bg-[#031B4E] p-3 rounded-lg border border-gray-100 dark:border-white/5">
                         <span className="text-sm text-gray-600 dark:text-gray-400">{slab.name}</span>
                         <span className="text-sm font-bold text-primary-dark-blue dark:text-white">NPR {slab.tax.toLocaleString()}</span>
                       </div>
@@ -242,7 +242,7 @@ export default function Calculators() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {['VAT Calculator', 'TDS Calculator', 'Loan EMI Calculator', 'SSF Contribution Calculator', 'Corporate Tax Estimator', 'Depreciation Calculator'].map((tool, idx) => (
-              <div key={idx} className="bg-gray-50 dark:bg-[#0A1128] border border-gray-100 dark:border-white/10 rounded-xl p-6 flex flex-col items-center text-center opacity-70">
+              <div key={idx} className="bg-gray-50 dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 rounded-xl p-6 flex flex-col items-center text-center opacity-70">
                 <Calculator className="w-8 h-8 text-gray-400 mb-4" />
                 <h3 className="font-semibold text-gray-700 dark:text-gray-300">{tool}</h3>
                 <span className="text-xs text-royal-blue font-bold uppercase tracking-wider mt-2">In Development</span>

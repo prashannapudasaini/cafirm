@@ -18,7 +18,7 @@ export default function HydropowerRenewable() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen">
       
       {/* 1. Industry Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function HydropowerRenewable() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Zap className="w-4 h-4 text-royal-blue" />
               <span>Industry Expertise</span>
             </div>
@@ -42,7 +42,7 @@ export default function HydropowerRenewable() {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
+      <section className="py-20 bg-white dark:bg-[#031B4E]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
           <div className="space-y-16 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             
@@ -104,15 +104,15 @@ export default function HydropowerRenewable() {
                 We provide end-to-end financial advisory for IPPs—from the initial feasibility studies through construction, IPO, and commercial operation.
               </p>
               <div className="space-y-4">
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Project Financing & Capital Structuring</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We develop robust financial models to secure syndicate loans from domestic BFIs. We structure the capital to optimize the Weighted Average Cost of Capital (WACC) and ensure the project remains financially viable despite interest rate fluctuations.</p>
                 </div>
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Cost Audit & CAPEX Verification</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">During the construction phase, we deploy targeted cost audits. We verify contractor billings, ensure the correct capitalization of borrowing costs (as per NAS 23), and tightly monitor budget variances to prevent capital leakage.</p>
                 </div>
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">FDI Advisory & NRB Compliance</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We act as the localized bridge for international investors. We handle the entire bureaucratic lifecycle of foreign investment—securing Department of Industry (DOI) approvals, managing NRB foreign exchange accounting, and facilitating frictionless capital repatriation.</p>
                 </div>
@@ -159,19 +159,19 @@ export default function HydropowerRenewable() {
             <section>
               <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Business Outcomes</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Preserved Capital:</strong> Avoid massive financial penalties and unrecoverable VAT by establishing strict cost controls and compliance protocols during the construction phase.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Successful IPOs:</strong> Ensure a heavily oversubscribed public offering by presenting SEBON-approved, meticulously audited financial statements and robust corporate governance.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Optimized Tax Strategy:</strong> Legally maximize all available statutory tax holidays and concessions to accelerate the payback period for promoters and investors.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>FDI Attraction:</strong> Provide international investors with the absolute transparency, IFRS alignment, and localized bureaucratic support required to deploy capital into Nepal safely.</span>
                 </li>
@@ -194,7 +194,7 @@ export default function HydropowerRenewable() {
       </section>
 
       {/* 10. Industry Consultation CTA */}
-      <section className="py-24 bg-gray-50 dark:bg-[#0A1128] border-t border-gray-200 dark:border-white/20">
+      <section className="py-24 bg-gray-50 dark:bg-[#031B4E] border-t border-gray-200 dark:border-white/20">
         <div className="max-w-4xl mx-auto px-6 text-center animate-up">
           <Building2 className="w-12 h-12 text-royal-blue mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">

@@ -19,7 +19,7 @@ export const RelatedServices = ({
   services
 }: RelatedServicesProps) => {
   return (
-    <section className="py-20 bg-white dark:bg-[#020A1A]">
+    <section className="py-20 bg-white dark:bg-[#031B4E]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12 animate-up">
           <h2 className="text-2xl md:text-3xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-2">{title}</h2>
@@ -28,7 +28,7 @@ export const RelatedServices = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, idx) => (
-            <div key={idx} className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 flex flex-col justify-between group cursor-pointer animate-up">
+            <div key={idx} className="bg-gray-50 dark:bg-[#031B4E] p-8 rounded-2xl border border-gray-100 dark:border-white/10 flex flex-col justify-between group cursor-pointer animate-up">
               <div>
                 <span className="text-xs font-bold text-royal-blue uppercase tracking-wider mb-2 block">{service.tag || "Related Service"}</span>
                 <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4 group-hover:text-royal-blue transition-colors">{service.title}</h3>

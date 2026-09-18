@@ -16,7 +16,7 @@ interface ServiceBlocksProps {
 
 export const ServiceBlocks = ({ title = "Strategic Capabilities", blocks }: ServiceBlocksProps) => {
   return (
-    <section className="py-20 lg:py-28 bg-white dark:bg-[#020A1A]">
+    <section className="py-20 lg:py-28 bg-white dark:bg-[#031B4E]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 animate-up">
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">

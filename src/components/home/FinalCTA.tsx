@@ -31,11 +31,11 @@ const FinalCTA = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-10 md:py-12 px-6 bg-white dark:bg-[#020A1A] relative z-10">
+    <section ref={containerRef} className="py-10 md:py-12 px-6 bg-white dark:bg-[#031B4E] relative z-10">
       <div className="max-w-7xl mx-auto">
-        <div className="cta-content rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden bg-gradient-to-br from-primary-dark-blue via-royal-blue to-white dark:to-[#020A1A] shadow-[0_20px_80px_-20px_rgba(15,82,186,0.5)] border border-black/5">
+        <div className="cta-content rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden bg-gradient-to-br from-primary-dark-blue via-royal-blue to-white dark:to-[#031B4E] shadow-[0_20px_80px_-20px_rgba(15,82,186,0.5)] border border-black/5">
           {/* Background Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl max-h-3xl bg-white/20 dark:bg-[#020A1A]/20 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl max-h-3xl bg-white/20 dark:bg-[#031B4E]/20 rounded-full blur-[120px] pointer-events-none" />
           
           <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-white mb-6 leading-tight">
@@ -52,7 +52,7 @@ const FinalCTA = () => {
                 Book Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link to="/contact" className="px-8 py-4 bg-white dark:bg-[#020A1A] border border-gray-200 dark:border-white/20 text-primary-dark-blue dark:text-white rounded-xl font-medium hover:bg-gray-50 dark:bg-[#0A1128] transition-all active:scale-[0.98] w-full sm:w-auto text-center shadow-sm hover:shadow-md">
+              <Link to="/contact" className="px-8 py-4 bg-white dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 text-primary-dark-blue dark:text-white rounded-xl font-medium hover:bg-gray-50 dark:bg-[#031B4E] transition-all active:scale-[0.98] w-full sm:w-auto text-center shadow-sm hover:shadow-md">
                 Contact Us
               </Link>
             </div>

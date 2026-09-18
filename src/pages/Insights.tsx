@@ -56,7 +56,7 @@ export default function Insights() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-24">
       <Helmet>
         <title>Insights Knowledge Hub | Jay & Ajay Associates</title>
         <meta name="description" content="Professional insights, tax updates, audit guidance, and corporate advisory from leading Chartered Accountants in Nepal." />
@@ -134,7 +134,7 @@ export default function Insights() {
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-royal-blue/30 rounded-full blur-2xl" />
               <h4 className="text-white font-bold text-xl mb-4 relative z-10">Professional Briefing</h4>
               <p className="text-text-secondary text-sm mb-6 relative z-10">Receive critical tax and regulatory updates directly from our partners.</p>
-              <input type="email" placeholder="Corporate email" className="w-full px-4 py-3 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-royal-blue mb-4 relative z-10" />
+              <input type="email" placeholder="Corporate email" className="w-full px-4 py-3 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-royal-blue mb-4 relative z-10" />
               <button className="w-full py-3 bg-royal-blue text-white rounded-xl font-semibold hover:bg-blue-600 transition-colors relative z-10">
                 Subscribe
               </button>
@@ -149,7 +149,7 @@ export default function Insights() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {recentArticles.map((article, index) => (
-                <Link key={index} to={article.path} className="animate-up group block border border-gray-100 dark:border-white/10 rounded-3xl p-8 hover:border-royal-blue/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all bg-white dark:bg-[#020A1A] flex flex-col justify-between h-full">
+                <Link key={index} to={article.path} className="animate-up group block border border-gray-100 dark:border-white/10 rounded-3xl p-8 hover:border-royal-blue/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all bg-white dark:bg-[#031B4E] flex flex-col justify-between h-full">
                   <div>
                     <div className="flex items-center justify-between mb-6">
                       <span className="text-xs font-bold uppercase tracking-wider text-royal-blue">{article.category}</span>

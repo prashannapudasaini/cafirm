@@ -71,7 +71,7 @@ const VisionMission = () => {
             </div>
             <div className="p-8 md:p-10 flex flex-col flex-grow">
               <div className="flex items-center space-x-4 mb-6">
-                <div className="p-3 bg-white/10 dark:bg-[#020A1A]/10 rounded-xl text-white border border-white/10">
+                <div className="p-3 bg-white/10 dark:bg-[#031B4E]/10 rounded-xl text-white border border-white/10">
                   <Target className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-heading font-semibold text-white">Our Mission</h3>

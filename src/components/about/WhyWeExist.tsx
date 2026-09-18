@@ -29,9 +29,9 @@ const WhyWeExist = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-8 md:py-10 bg-white dark:bg-[#020A1A] relative z-10 px-6">
+    <section ref={containerRef} className="py-8 md:py-10 bg-white dark:bg-[#031B4E] relative z-10 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="exist-panel relative rounded-[3rem] overflow-hidden shadow-[0_20px_80px_-20px_rgba(15,82,186,0.2)] bg-gradient-to-br from-white dark:from-[#0A1128] to-blue-50/50 border border-black/5">
+        <div className="exist-panel relative rounded-[3rem] overflow-hidden shadow-[0_20px_80px_-20px_rgba(15,82,186,0.2)] bg-gradient-to-br from-white dark:from-[#031B4E] to-blue-50/50 border border-black/5">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img 
@@ -39,7 +39,7 @@ const WhyWeExist = () => {
               alt="Executive consultation" 
               className="w-full h-full object-cover opacity-10"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-[#0A1128] via-white/95 dark:via-[#0A1128]/95 to-white/40 dark:to-[#020A1A]/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-[#031B4E] via-white/95 dark:via-[#031B4E]/95 to-white/40 dark:to-[#031B4E]/40" />
           </div>
 
           <div className="relative z-10 p-10 md:p-16 lg:p-24 max-w-3xl">

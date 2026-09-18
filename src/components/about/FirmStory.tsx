@@ -44,7 +44,7 @@ const FirmStory = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-8 md:py-10 lg:py-12 bg-white dark:bg-[#020A1A] relative">
+    <section ref={containerRef} className="py-8 md:py-10 lg:py-12 bg-white dark:bg-[#031B4E] relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           

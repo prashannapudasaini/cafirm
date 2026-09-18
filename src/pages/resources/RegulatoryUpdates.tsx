@@ -54,7 +54,7 @@ export default function RegulatoryUpdates() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-24">
       <Helmet>
         <title>Regulatory Updates | Resources | Jay & Ajay Associates</title>
         <meta name="description" content="Stay informed with the latest regulatory notices from IRD, NRB, OCR, and DOI in Nepal." />
@@ -62,7 +62,7 @@ export default function RegulatoryUpdates() {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-red-50 dark:bg-[#020A1A]/50 border border-red-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-red-600">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-red-50 dark:bg-[#031B4E]/50 border border-red-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-red-600">
             <Bell className="w-4 h-4" />
             <span>Compliance Alerts</span>
           </div>
@@ -82,7 +82,7 @@ export default function RegulatoryUpdates() {
 
         <div className="grid grid-cols-1 gap-6 mb-16">
           {updates.map((update, idx) => (
-            <div key={idx} className="animate-up bg-white dark:bg-[#0A1128] border border-gray-100 dark:border-white/10 rounded-[2rem] p-8 hover:shadow-lg hover:border-royal-blue/20 transition-all group">
+            <div key={idx} className="animate-up bg-white dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 rounded-[2rem] p-8 hover:shadow-lg hover:border-royal-blue/20 transition-all group">
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <div className="flex items-center space-x-4 mb-4 md:mb-0">
                   <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border ${update.color}`}>

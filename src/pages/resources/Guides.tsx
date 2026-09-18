@@ -58,7 +58,7 @@ export default function Guides() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-24">
       <Helmet>
         <title>Business Guides | Resources | Jay & Ajay Associates</title>
         <meta name="description" content="Authoritative reference materials and handbooks for operating businesses in Nepal." />
@@ -66,7 +66,7 @@ export default function Guides() {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-emerald-50 dark:bg-[#020A1A]/50 border border-emerald-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-emerald-600">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-emerald-50 dark:bg-[#031B4E]/50 border border-emerald-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-emerald-600">
             <BookOpen className="w-4 h-4" />
             <span>Knowledge Assets</span>
           </div>
@@ -80,9 +80,9 @@ export default function Guides() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {guides.map((guide, idx) => (
-            <div key={idx} className="animate-up group bg-white dark:bg-[#0A1128] border border-gray-100 dark:border-white/10 rounded-[2rem] overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-royal-blue/20 transition-all flex flex-col">
+            <div key={idx} className="animate-up group bg-white dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 rounded-[2rem] overflow-hidden hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-royal-blue/20 transition-all flex flex-col">
               <div className="h-48 overflow-hidden relative">
-                <div className="absolute top-4 left-4 z-10 bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary-dark-blue dark:text-white">
+                <div className="absolute top-4 left-4 z-10 bg-white/90 dark:bg-[#031B4E]/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary-dark-blue dark:text-white">
                   {guide.category}
                 </div>
                 <img src={guide.image} alt={guide.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />

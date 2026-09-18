@@ -19,7 +19,7 @@ export const RegulatoryPerspective = ({
   quoteText
 }: RegulatoryPerspectiveProps) => {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
+    <section className="py-20 bg-gray-50 dark:bg-[#031B4E]">
       <div className="max-w-7xl mx-auto px-6 animate-up">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -44,7 +44,7 @@ export const RegulatoryPerspective = ({
 
           <div className="relative">
             <div className="absolute inset-0 bg-royal-blue rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
-            <div className="bg-white dark:bg-[#020A1A] p-8 md:p-12 rounded-3xl shadow-xl relative z-10 border border-gray-100 dark:border-white/10">
+            <div className="bg-white dark:bg-[#031B4E] p-8 md:p-12 rounded-3xl shadow-xl relative z-10 border border-gray-100 dark:border-white/10">
               <ShieldCheck className="w-12 h-12 text-royal-blue mb-6" />
               <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Strategic Implication</h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed italic">

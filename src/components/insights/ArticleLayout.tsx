@@ -83,7 +83,7 @@ export const ArticleLayout = ({
   };
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen">
       <Helmet>
         <title>{title} | Insights | Jay & Ajay Associates</title>
         <meta name="description" content={metaDescription} />

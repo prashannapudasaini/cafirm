@@ -58,7 +58,7 @@ const Insights = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-10 bg-gray-50 dark:bg-[#0A1128] relative z-10 border-t border-black/5">
+    <section ref={containerRef} className="py-10 bg-gray-50 dark:bg-[#031B4E] relative z-10 border-t border-black/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div className="max-w-2xl">
@@ -77,7 +77,7 @@ const Insights = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article, idx) => (
-            <Link to={article.link} key={idx} className="insight-card group cursor-pointer flex flex-col h-full bg-white dark:bg-[#020A1A] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 block">
+            <Link to={article.link} key={idx} className="insight-card group cursor-pointer flex flex-col h-full bg-white dark:bg-[#031B4E] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 block">
               <div className="relative aspect-[16/10] overflow-hidden shrink-0">
                 <img 
                   src={article.image} 
@@ -85,7 +85,7 @@ const Insights = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur text-primary-dark-blue dark:text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
+                  <span className="px-3 py-1 bg-white/90 dark:bg-[#031B4E]/90 backdrop-blur text-primary-dark-blue dark:text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
                     {article.category}
                   </span>
                 </div>

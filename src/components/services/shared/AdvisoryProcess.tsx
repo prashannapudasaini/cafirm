@@ -32,7 +32,7 @@ export const AdvisoryProcess = ({
               <div className="text-5xl font-bold text-white/10 mb-4">0{idx + 1}</div>
               <h3 className="text-xl font-bold text-royal-blue mb-3">{step.title}</h3>
               <p className="text-sm text-gray-400 leading-relaxed">{step.description}</p>
-              {idx < 4 && <div className="hidden md:block absolute top-6 -right-3 w-6 h-[1px] bg-white/20 dark:bg-[#020A1A]/20"></div>}
+              {idx < 4 && <div className="hidden md:block absolute top-6 -right-3 w-6 h-[1px] bg-white/20 dark:bg-[#031B4E]/20"></div>}
             </div>
           ))}
         </div>

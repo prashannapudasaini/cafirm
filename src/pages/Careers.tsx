@@ -110,7 +110,7 @@ export default function Careers() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-10 md:pb-16">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-10 md:pb-16">
       <Helmet>
         <title>Careers | Jay & Ajay Associates - CA Firm Jobs Nepal</title>
         <meta name="description" content="Build a long-term career of impact at Jay & Ajay Associates. Explore professional opportunities in Audit, Tax, and Advisory in Nepal." />
@@ -137,7 +137,7 @@ export default function Careers() {
       </div>
 
       {/* 2. Our People, Our Strength */}
-      <div className="bg-gray-50 dark:bg-[#0A1128] py-10 md:py-16 border-y border-gray-100 dark:border-white/5">
+      <div className="bg-gray-50 dark:bg-[#031B4E] py-10 md:py-16 border-y border-gray-100 dark:border-white/5">
         <div className="max-w-4xl mx-auto px-6 text-center animate-up">
           <h2 className="text-3xl font-heading font-bold text-primary-dark-blue dark:text-white mb-6">Our People, Our Strength</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -159,7 +159,7 @@ export default function Careers() {
             const Icon = benefit.icon;
             return (
               <div key={index} className="animate-up bg-white dark:bg-[#131B33] rounded-2xl p-8 border border-gray-100 dark:border-white/10 hover:border-royal-blue/30 transition-colors shadow-sm">
-                <div className="w-12 h-12 rounded-xl bg-gray-50 dark:bg-[#020A1A] flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gray-50 dark:bg-[#031B4E] flex items-center justify-center mb-6">
                   <Icon className="w-6 h-6 text-royal-blue" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-3">{benefit.title}</h3>
@@ -206,11 +206,11 @@ export default function Careers() {
             {careerPath.map((step, idx) => (
               <div key={idx} className={`flex flex-col md:flex-row items-center justify-between w-full ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                 <div className="hidden md:block w-5/12"></div>
-                <div className="w-12 h-12 absolute left-4 md:left-1/2 -translate-x-1/2 rounded-full bg-white dark:bg-[#020A1A] border-4 border-royal-blue flex items-center justify-center z-10 shadow-lg">
+                <div className="w-12 h-12 absolute left-4 md:left-1/2 -translate-x-1/2 rounded-full bg-white dark:bg-[#031B4E] border-4 border-royal-blue flex items-center justify-center z-10 shadow-lg">
                   <span className="text-royal-blue font-bold">{idx + 1}</span>
                 </div>
                 <div className={`w-full md:w-5/12 pl-20 md:pl-0 ${idx % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
-                  <div className="bg-gray-50 dark:bg-[#0A1128] p-6 rounded-2xl border border-gray-100 dark:border-white/10 hover:border-royal-blue/50 transition-colors">
+                  <div className="bg-gray-50 dark:bg-[#031B4E] p-6 rounded-2xl border border-gray-100 dark:border-white/10 hover:border-royal-blue/50 transition-colors">
                     <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-2">{step.level}</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{step.desc}</p>
                   </div>
@@ -222,7 +222,7 @@ export default function Careers() {
       </div>
 
       {/* 6 & 7. Professional Development & Graduate Program */}
-      <div className="bg-gray-50 dark:bg-[#0A1128] py-10 md:py-16 border-y border-gray-100 dark:border-white/5">
+      <div className="bg-gray-50 dark:bg-[#031B4E] py-10 md:py-16 border-y border-gray-100 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex flex-col items-center mb-12 animate-up">
             <div className="flex bg-white dark:bg-[#131B33] p-1 rounded-xl shadow-sm border border-gray-200 dark:border-white/10 mb-12">
@@ -323,7 +323,7 @@ export default function Careers() {
           {values.map((val, idx) => {
             const Icon = val.icon;
             return (
-              <div key={idx} className="animate-up p-8 border-l-2 border-royal-blue bg-gray-50 dark:bg-[#0A1128] rounded-r-2xl">
+              <div key={idx} className="animate-up p-8 border-l-2 border-royal-blue bg-gray-50 dark:bg-[#031B4E] rounded-r-2xl">
                 <Icon className="w-8 h-8 text-royal-blue mb-4" />
                 <h3 className="text-lg font-bold text-primary-dark-blue dark:text-white mb-2">{val.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{val.description}</p>
@@ -334,7 +334,7 @@ export default function Careers() {
       </div>
 
       {/* 9. Application Process */}
-      <div className="bg-gray-50 dark:bg-[#0A1128] py-10 md:py-16 border-y border-gray-100 dark:border-white/5">
+      <div className="bg-gray-50 dark:bg-[#031B4E] py-10 md:py-16 border-y border-gray-100 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
             <h2 className="text-3xl font-heading font-bold text-primary-dark-blue dark:text-white mb-4">The Application Process</h2>
@@ -353,7 +353,7 @@ export default function Careers() {
               <div key={idx} className="animate-up relative">
                 {idx !== 3 && <div className="hidden md:block absolute top-8 left-1/2 w-full h-px bg-gray-300 dark:bg-gray-700"></div>}
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-white dark:bg-[#020A1A] border-4 border-royal-blue flex items-center justify-center text-xl font-bold text-primary-dark-blue dark:text-white mb-6">
+                  <div className="w-16 h-16 rounded-full bg-white dark:bg-[#031B4E] border-4 border-royal-blue flex items-center justify-center text-xl font-bold text-primary-dark-blue dark:text-white mb-6">
                     {process.step}
                   </div>
                   <h3 className="text-lg font-bold text-primary-dark-blue dark:text-white mb-2">{process.title}</h3>
@@ -377,7 +377,7 @@ export default function Careers() {
         {openings.length > 0 ? (
           <div className="space-y-4 animate-up">
             {openings.map((job, index) => (
-              <div key={index} className="group bg-white dark:bg-[#020A1A] border border-gray-200 dark:border-white/20 rounded-2xl p-6 md:p-8 hover:border-royal-blue hover:shadow-lg transition-all flex flex-col md:flex-row md:items-center justify-between cursor-pointer">
+              <div key={index} className="group bg-white dark:bg-[#031B4E] border border-gray-200 dark:border-white/20 rounded-2xl p-6 md:p-8 hover:border-royal-blue hover:shadow-lg transition-all flex flex-col md:flex-row md:items-center justify-between cursor-pointer">
                 <div className="mb-6 md:mb-0">
                   <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-3 group-hover:text-royal-blue transition-colors">{job.role}</h3>
                   <div className="flex flex-wrap gap-3">
@@ -396,7 +396,7 @@ export default function Careers() {
                   </div>
                 </div>
                 <div className="shrink-0">
-                  <button className="w-full md:w-auto px-6 py-3 bg-white dark:bg-[#020A1A] border border-gray-300 dark:border-white/20 text-primary-dark-blue dark:text-white font-bold rounded-xl group-hover:bg-royal-blue group-hover:border-royal-blue group-hover:text-white transition-colors flex items-center justify-center shadow-sm">
+                  <button className="w-full md:w-auto px-6 py-3 bg-white dark:bg-[#031B4E] border border-gray-300 dark:border-white/20 text-primary-dark-blue dark:text-white font-bold rounded-xl group-hover:bg-royal-blue group-hover:border-royal-blue group-hover:text-white transition-colors flex items-center justify-center shadow-sm">
                     Apply Now <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
                 </div>
@@ -404,7 +404,7 @@ export default function Careers() {
             ))}
           </div>
         ) : (
-          <div className="bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/10 rounded-2xl p-12 text-center animate-up">
+          <div className="bg-gray-50 dark:bg-[#031B4E] border border-gray-200 dark:border-white/10 rounded-2xl p-12 text-center animate-up">
             <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">We currently have no active vacancies.</h3>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               However, we welcome applications from talented professionals interested in future opportunities. Please join our Talent Community below, and our HR team will reach out when a suitable position aligns with your profile.
@@ -435,7 +435,7 @@ export default function Careers() {
           </div>
           
           <div className="lg:w-1/2 w-full relative z-10">
-            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-2xl border border-gray-100 dark:border-white/10">
+            <div className="bg-white dark:bg-[#031B4E] p-8 rounded-2xl shadow-2xl border border-gray-100 dark:border-white/10">
               <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-6">Submit Your Profile</h3>
               <form className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

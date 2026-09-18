@@ -53,7 +53,7 @@ const Certifications = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-8 md:py-10 bg-white dark:bg-[#020A1A] relative">
+    <section ref={containerRef} className="py-8 md:py-10 bg-white dark:bg-[#031B4E] relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
@@ -69,8 +69,8 @@ const Certifications = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {certifications.map((cert, idx) => (
-                <div key={idx} className="flex items-center space-x-3 bg-gray-50 dark:bg-[#0A1128] border border-gray-100 dark:border-white/10 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="p-2 bg-white dark:bg-[#020A1A] rounded-lg shadow-sm shrink-0">
+                <div key={idx} className="flex items-center space-x-3 bg-gray-50 dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className="p-2 bg-white dark:bg-[#031B4E] rounded-lg shadow-sm shrink-0">
                     {cert.icon}
                   </div>
                   <span className="text-sm font-semibold text-primary-dark-blue dark:text-white leading-snug">{cert.title}</span>
@@ -87,7 +87,7 @@ const Certifications = () => {
             />
             <div className="absolute inset-0 bg-primary-dark-blue/5 mix-blend-multiply" />
             
-            <div className="absolute top-6 right-6 w-20 h-20 bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur-md rounded-full shadow-2xl flex items-center justify-center animate-[spin_10s_linear_infinite]">
+            <div className="absolute top-6 right-6 w-20 h-20 bg-white/90 dark:bg-[#031B4E]/90 backdrop-blur-md rounded-full shadow-2xl flex items-center justify-center animate-[spin_10s_linear_infinite]">
               <svg viewBox="0 0 100 100" className="w-16 h-16 text-royal-blue opacity-80">
                 <path id="curve" fill="transparent" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
                 <text className="text-[14px] font-bold tracking-widest fill-current uppercase">

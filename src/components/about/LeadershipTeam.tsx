@@ -87,7 +87,7 @@ const LeadershipTeam = () => {
                 </div>
               </div>
               
-              <div className="p-8 flex flex-col flex-grow bg-white/5 dark:bg-[#020A1A]/5">
+              <div className="p-8 flex flex-col flex-grow bg-white/5 dark:bg-[#031B4E]/5">
                 <h3 className="text-2xl font-heading font-semibold text-white mb-1 group-hover:text-royal-blue transition-colors">{leader.name}</h3>
                 <p className="text-sm font-medium text-royal-blue mb-4 uppercase tracking-wider">{leader.role}</p>
                 <p className="text-sm text-text-secondary font-light leading-relaxed flex-grow">

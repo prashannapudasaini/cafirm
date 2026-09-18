@@ -17,7 +17,7 @@ export const TrustCredibility = ({
   items
 }: TrustCredibilityProps) => {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
+    <section className="py-20 bg-gray-50 dark:bg-[#031B4E]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-royal-blue/10 border border-royal-blue/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
@@ -34,7 +34,7 @@ export const TrustCredibility = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, idx) => (
-            <div key={idx} className="bg-white dark:bg-[#020A1A] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
+            <div key={idx} className="bg-white dark:bg-[#031B4E] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="flex items-start">
                 <CheckCircle2 className="w-6 h-6 text-royal-blue shrink-0 mr-4 mt-1" />
                 <div>

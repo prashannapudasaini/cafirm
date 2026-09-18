@@ -58,7 +58,7 @@ export default function FAQs() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-gray-50 dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-gray-50 dark:bg-[#031B4E] min-h-screen pt-32 pb-24">
       <Helmet>
         <title>Frequently Asked Questions | Resources | Jay & Ajay Associates</title>
         <meta name="description" content="Answers to common regulatory, tax, audit, and FDI questions in Nepal." />
@@ -66,7 +66,7 @@ export default function FAQs() {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-orange-50 dark:bg-[#020A1A]/50 border border-orange-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-orange-600">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-orange-50 dark:bg-[#031B4E]/50 border border-orange-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-orange-600">
             <HelpCircle className="w-4 h-4" />
             <span>Knowledge Base</span>
           </div>
@@ -85,7 +85,7 @@ export default function FAQs() {
           
           {/* Categories Sidebar */}
           <div className="lg:col-span-4">
-            <div className="bg-white dark:bg-[#0A1128] rounded-[2rem] p-6 shadow-sm border border-gray-100 dark:border-white/10 sticky top-32">
+            <div className="bg-white dark:bg-[#031B4E] rounded-[2rem] p-6 shadow-sm border border-gray-100 dark:border-white/10 sticky top-32">
               <h3 className="text-lg font-bold text-primary-dark-blue dark:text-white mb-4 px-4">Topics</h3>
               <div className="space-y-2">
                 {faqCategories.map((category, idx) => (
@@ -110,7 +110,7 @@ export default function FAQs() {
 
           {/* Accordion Questions */}
           <div className="lg:col-span-8">
-            <div className="bg-white dark:bg-[#0A1128] rounded-[2rem] p-8 md:p-12 shadow-sm border border-gray-100 dark:border-white/10">
+            <div className="bg-white dark:bg-[#031B4E] rounded-[2rem] p-8 md:p-12 shadow-sm border border-gray-100 dark:border-white/10">
               <h2 className="text-3xl font-heading font-bold text-primary-dark-blue dark:text-white mb-8 border-b border-gray-100 dark:border-white/10 pb-4">
                 {openCategory} FAQs
               </h2>
@@ -120,7 +120,7 @@ export default function FAQs() {
                   <div key={idx} className="border border-gray-100 dark:border-white/10 rounded-xl overflow-hidden transition-all duration-300">
                     <button
                       onClick={() => setOpenQuestion(openQuestion === idx ? null : idx)}
-                      className="w-full flex items-center justify-between p-6 text-left bg-white dark:bg-[#0A1128] hover:bg-gray-50 dark:hover:bg-[#131B33] transition-colors"
+                      className="w-full flex items-center justify-between p-6 text-left bg-white dark:bg-[#031B4E] hover:bg-gray-50 dark:hover:bg-[#131B33] transition-colors"
                     >
                       <span className={`font-semibold pr-8 ${openQuestion === idx ? 'text-royal-blue' : 'text-primary-dark-blue dark:text-white'}`}>
                         {faq.q}

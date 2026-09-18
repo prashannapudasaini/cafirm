@@ -45,7 +45,7 @@ export default function Downloads() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-24">
       <Helmet>
         <title>Forms & Downloads | Resources | Jay & Ajay Associates</title>
         <meta name="description" content="Download essential Nepalese tax forms, compliance checklists, and corporate templates." />
@@ -53,7 +53,7 @@ export default function Downloads() {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-50 dark:bg-[#020A1A]/50 border border-blue-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-royal-blue">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-50 dark:bg-[#031B4E]/50 border border-blue-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-royal-blue">
             <Download className="w-4 h-4" />
             <span>Document Library</span>
           </div>
@@ -67,7 +67,7 @@ export default function Downloads() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {downloads.map((section, idx) => (
-            <div key={idx} className="animate-up bg-white dark:bg-[#0A1128] border border-gray-100 dark:border-white/10 rounded-[2rem] p-8 shadow-sm">
+            <div key={idx} className="animate-up bg-white dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 rounded-[2rem] p-8 shadow-sm">
               <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-6 border-b border-gray-100 dark:border-white/10 pb-4">
                 {section.category}
               </h3>

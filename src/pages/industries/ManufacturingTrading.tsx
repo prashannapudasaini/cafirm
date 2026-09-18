@@ -18,7 +18,7 @@ export default function ManufacturingTrading() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen">
       
       {/* 1. Industry Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function ManufacturingTrading() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Factory className="w-4 h-4 text-royal-blue" />
               <span>Industry Expertise</span>
             </div>
@@ -42,7 +42,7 @@ export default function ManufacturingTrading() {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-20 bg-white dark:bg-[#020A1A]">
+      <section className="py-20 bg-white dark:bg-[#031B4E]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
           <div className="space-y-16 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             
@@ -104,15 +104,15 @@ export default function ManufacturingTrading() {
                 We partner with industrial houses to install rigorous financial discipline, transforming chaotic supply chains into streamlined, tax-efficient operations.
               </p>
               <div className="space-y-4">
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Cost & Inventory Audits</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We deploy specialized teams to physically verify massive inventory stockpiles across national depots. We reconstruct product costing models, identify exactly where manufacturing yield is being lost, and recommend protocols to optimize raw material procurement.</p>
                 </div>
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Strategic Tax Planning</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We analyze your entire supply chain to legally minimize customs duties, excise taxes, and VAT leakage. We represent large taxpayers during aggressive IRD assessments, utilizing deep precedents to defend transfer pricing policies and margin declarations.</p>
                 </div>
-                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                <div className="p-6 bg-gray-50 dark:bg-[#031B4E] rounded-xl border border-gray-100 dark:border-white/10">
                   <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Corporate Restructuring</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">As family conglomerates expand, commingled assets become a liability. We execute complex corporate demergers, separating risky manufacturing divisions from stable trading entities to ring-fence enterprise risk and optimize tax structures.</p>
                 </div>
@@ -159,19 +159,19 @@ export default function ManufacturingTrading() {
             <section>
               <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Business Outcomes</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Protected Margins:</strong> Prevent profit erosion by identifying the true cost of production and eliminating hidden supply chain inefficiencies.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Tax Defensibility:</strong> Face IRD audits with absolute confidence, backed by rigorously documented transfer pricing policies and precise VAT reconciliations.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Optimized Liquidity:</strong> Free up trapped cash by restructuring LC financing facilities and streamlining inventory management protocols.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#031B4E] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Generational Transition:</strong> Safely restructure complex, multi-generational family conglomerates into highly focused, tax-efficient corporate entities.</span>
                 </li>
@@ -194,7 +194,7 @@ export default function ManufacturingTrading() {
       </section>
 
       {/* 10. Industry Consultation CTA */}
-      <section className="py-24 bg-gray-50 dark:bg-[#0A1128] border-t border-gray-200 dark:border-white/20">
+      <section className="py-24 bg-gray-50 dark:bg-[#031B4E] border-t border-gray-200 dark:border-white/20">
         <div className="max-w-4xl mx-auto px-6 text-center animate-up">
           <Building2 className="w-12 h-12 text-royal-blue mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">

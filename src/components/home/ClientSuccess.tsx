@@ -51,7 +51,7 @@ const ClientSuccess = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-10 md:py-12 bg-white dark:bg-[#020A1A] relative z-10 border-t border-black/5">
+    <section ref={containerRef} className="py-10 md:py-12 bg-white dark:bg-[#031B4E] relative z-10 border-t border-black/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
@@ -64,7 +64,7 @@ const ClientSuccess = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {stories.map((story, idx) => (
-            <div key={idx} className="story-card bg-gray-50 dark:bg-[#0A1128] border border-gray-100 dark:border-white/10 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col relative overflow-hidden">
+            <div key={idx} className="story-card bg-gray-50 dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-royal-blue/5 rounded-bl-[100px] pointer-events-none" />
               
               <h3 className="text-lg font-heading font-semibold text-primary-dark-blue dark:text-white mb-8 border-b border-gray-200 dark:border-white/20 pb-4">

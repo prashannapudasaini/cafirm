@@ -3,7 +3,7 @@ import IndustriesList from '../components/home/Industries';
 
 export default function Industries() {
   return (
-    <div className="bg-white dark:bg-[#020A1A] min-h-screen">
+    <div className="bg-white dark:bg-[#031B4E] min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
@@ -11,7 +11,7 @@ export default function Industries() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#031B4E]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Building2 className="w-4 h-4 text-royal-blue" />
               <span>Sectors We Serve</span>
             </div>

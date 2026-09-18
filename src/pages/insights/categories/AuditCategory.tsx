@@ -43,7 +43,7 @@ export default function AuditCategory() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#031B4E] min-h-screen pt-32 pb-24">
       <Helmet>
         <title>Audit & Assurance Insights | Jay & Ajay Associates</title>
         <meta name="description" content="Discover professional insights on statutory audits, internal controls, and NFRS compliance in Nepal from leading Chartered Accountants." />
@@ -51,7 +51,7 @@ export default function AuditCategory() {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16 animate-up">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-50 dark:bg-[#020A1A]/50 border border-blue-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-royal-blue">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-blue-50 dark:bg-[#031B4E]/50 border border-blue-100 dark:border-white/10 rounded-full text-sm font-semibold tracking-wide uppercase mb-6 text-royal-blue">
             <ShieldCheck className="w-4 h-4" />
             <span>Category</span>
           </div>
@@ -66,7 +66,7 @@ export default function AuditCategory() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article, i) => (
             <Link key={i} to={article.path} className="group block h-full animate-up">
-              <div className="bg-white dark:bg-[#0A1128] border border-gray-100 dark:border-white/10 rounded-3xl overflow-hidden hover:border-royal-blue/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all h-full flex flex-col">
+              <div className="bg-white dark:bg-[#031B4E] border border-gray-100 dark:border-white/10 rounded-3xl overflow-hidden hover:border-royal-blue/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all h-full flex flex-col">
                 <div className="h-48 overflow-hidden relative">
                   <img src={article.image} alt={article.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
                 </div>

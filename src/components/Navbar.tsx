@@ -237,8 +237,8 @@ const Navbar = () => {
         <nav className={cn(
           "w-full rounded-none lg:rounded-full px-4 sm:px-6 h-[72px] flex items-center justify-between transition-all duration-500",
           isScrolled
-            ? "bg-white dark:bg-[#020A1A] lg:bg-transparent lg:bg-gradient-to-r from-white dark:from-[#0A1128] from-5% via-royal-blue via-20% to-primary-dark-blue shadow-lg lg:shadow-2xl border-b border-gray-100 dark:border-white/10 lg:border-white/10 lg:border"
-            : "bg-white/95 dark:bg-[#020A1A]/95 lg:bg-transparent backdrop-blur-md lg:bg-gradient-to-r from-white/95 dark:from-[#0A1128]/95 from-5% via-royal-blue/95 via-20% to-primary-dark-blue/95 border-b border-gray-100 dark:border-white/10 lg:border-white/10 lg:border"
+            ? "bg-white dark:bg-[#031B4E] lg:bg-transparent lg:bg-gradient-to-r from-white dark:from-[#031B4E] from-5% via-royal-blue via-20% to-primary-dark-blue shadow-lg lg:shadow-2xl border-b border-gray-100 dark:border-white/10 lg:border-white/10 lg:border"
+            : "bg-white/95 dark:bg-[#031B4E]/95 lg:bg-transparent backdrop-blur-md lg:bg-gradient-to-r from-white/95 dark:from-[#031B4E]/95 from-5% via-royal-blue/95 via-20% to-primary-dark-blue/95 border-b border-gray-100 dark:border-white/10 lg:border-white/10 lg:border"
         )}>
           <Link to="/" onClick={() => handleLinkClick('/')} className="flex items-center shrink-0">
             <img src={logo} alt="Jay & Ajay Associates" className="h-12 sm:h-14 w-auto relative z-10" />
@@ -261,7 +261,7 @@ const Navbar = () => {
                   onClick={() => handleLinkClick(link.path)}
                   className={cn(
                     "flex items-center space-x-1 px-5 py-2 text-base font-semibold transition-all duration-300 rounded-full",
-                    activeMenu === link.name ? "text-white bg-white/20 dark:bg-[#020A1A]/20 shadow-sm" : "text-white/95 hover:text-white hover:bg-white/15 dark:bg-[#020A1A]/15"
+                    activeMenu === link.name ? "text-white bg-white/20 dark:bg-[#031B4E]/20 shadow-sm" : "text-white/95 hover:text-white hover:bg-white/15 dark:bg-[#031B4E]/15"
                   )}
                 >
                   <span>{link.name}</span>
@@ -280,14 +280,14 @@ const Navbar = () => {
           <div className="hidden lg:flex shrink-0 items-center space-x-4">
             <button 
               onClick={toggleTheme} 
-              className="p-2 text-white/90 hover:text-white transition-colors rounded-full hover:bg-white/10 dark:bg-[#020A1A]/10"
+              className="p-2 text-white/90 hover:text-white transition-colors rounded-full hover:bg-white/10 dark:bg-[#031B4E]/10"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             <Link
               to="/contact"
-              className="px-6 py-2.5 text-sm font-medium bg-white dark:bg-[#020A1A] text-primary-dark-blue dark:text-white hover:bg-text-secondary rounded-full transition-all hover:scale-105 active:scale-95 shadow-sm"
+              className="px-6 py-2.5 text-sm font-medium bg-white dark:bg-[#031B4E] text-primary-dark-blue dark:text-white hover:bg-text-secondary rounded-full transition-all hover:scale-105 active:scale-95 shadow-sm"
             >
               Schedule Consultation
             </Link>
