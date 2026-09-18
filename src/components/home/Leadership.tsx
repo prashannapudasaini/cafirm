@@ -60,7 +60,7 @@ const Leadership = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-heading font-semibold text-white mb-6">
-            Meet Our <span className="text-gradient">Leadership</span>
+            Meet Our <span className="text-[#a5caff]">Leadership</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light">
             Guided by industry veterans who have shaped the financial landscapes of Fortune 500 companies.
@@ -73,7 +73,7 @@ const Leadership = () => {
               <img 
                 src={leader.image} 
                 alt={leader.name} 
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
               />
               
               {/* Glass overlay */}

@@ -77,10 +77,10 @@ const Hero = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[95vh] flex items-center pt-24 pb-12 overflow-hidden bg-gradient-to-br from-primary-dark-blue via-[#0a2f7a] to-white"
+      className="relative min-h-[95vh] flex items-center pt-24 pb-12 overflow-hidden bg-gradient-to-br from-primary-dark-blue via-[#0a2f7a] to-white dark:to-[#020A1A]"
     >
       {/* Subtle animated glass layers */}
-      <div className="hero-glass absolute top-0 right-0 w-[50vw] h-[50vw] bg-white/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="hero-glass absolute top-0 right-0 w-[50vw] h-[50vw] bg-white/10 dark:bg-[#020A1A]/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="hero-glass absolute bottom-0 left-0 w-[40vw] h-[40vw] bg-primary-dark-blue/20 rounded-full blur-[100px] pointer-events-none" />
 
       {/* 55/45 Layout */}
@@ -102,11 +102,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
-            <Link to="/contact" className="px-8 py-4 bg-white text-primary-dark-blue rounded-xl font-medium text-lg transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg flex items-center justify-center">
+            <Link to="/contact" className="px-8 py-4 bg-white dark:bg-[#020A1A] text-primary-dark-blue dark:text-white rounded-xl font-medium text-lg transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg flex items-center justify-center">
               Schedule Consultation
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link to="/services" className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-xl font-medium text-lg hover:bg-white/20 transition-all active:scale-[0.98] flex items-center justify-center">
+            <Link to="/services" className="px-8 py-4 bg-white/10 dark:bg-[#020A1A]/10 backdrop-blur-md border border-white/20 text-white rounded-xl font-medium text-lg hover:bg-white/20 dark:bg-[#020A1A]/20 transition-all active:scale-[0.98] flex items-center justify-center">
               Explore Services
             </Link>
           </div>
@@ -138,23 +138,23 @@ const Hero = () => {
             <img 
               src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1969&auto=format&fit=crop" 
               alt="Nepali CA professionals reviewing financial statements" 
-              className="w-full h-full object-cover grayscale mix-blend-luminosity opacity-80"
+              className="w-full h-full object-cover opacity-80"
             />
             <div className="absolute inset-0 bg-primary-dark-blue/20 mix-blend-multiply" />
           </div>
 
           {/* Floating Glass Cards */}
-          <div className="floating-card floating-card-1 absolute top-[15%] -left-[10%] bg-white/90 backdrop-blur-xl border border-white/50 p-4 rounded-xl shadow-xl flex items-center space-x-4">
+          <div className="floating-card floating-card-1 absolute top-[15%] -left-[10%] bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur-xl border border-white/50 p-4 rounded-xl shadow-xl flex items-center space-x-4">
             <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
               <FileText className="w-5 h-5 text-royal-blue" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-primary-dark-blue">Tax Advisory</p>
+              <p className="text-sm font-semibold text-primary-dark-blue dark:text-white">Tax Advisory</p>
             </div>
           </div>
 
           <div className="floating-card floating-card-2 absolute bottom-[25%] -right-[15%] bg-primary-dark-blue/90 backdrop-blur-xl border border-white/20 p-4 rounded-xl shadow-2xl flex items-center space-x-4">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-full bg-white/10 dark:bg-[#020A1A]/10 flex items-center justify-center shrink-0">
               <ShieldCheck className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -162,17 +162,17 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="floating-card floating-card-3 absolute top-[40%] -right-[10%] bg-white/90 backdrop-blur-xl border border-white/50 p-4 rounded-xl shadow-xl flex items-center space-x-4">
+          <div className="floating-card floating-card-3 absolute top-[40%] -right-[10%] bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur-xl border border-white/50 p-4 rounded-xl shadow-xl flex items-center space-x-4">
             <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
               <Building2 className="w-5 h-5 text-royal-blue" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-primary-dark-blue">Corporate Services</p>
+              <p className="text-sm font-semibold text-primary-dark-blue dark:text-white">Corporate Services</p>
             </div>
           </div>
 
           <div className="floating-card floating-card-4 absolute bottom-[10%] -left-[5%] bg-primary-dark-blue/90 backdrop-blur-xl border border-white/20 p-4 rounded-xl shadow-xl flex items-center space-x-4">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-full bg-white/10 dark:bg-[#020A1A]/10 flex items-center justify-center shrink-0">
               <TrendingUp className="w-5 h-5 text-white" />
             </div>
             <div>

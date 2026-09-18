@@ -18,7 +18,7 @@ export default function EthicalIndependent() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* Hero Section */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function EthicalIndependent() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <ShieldCheck className="w-4 h-4 text-royal-blue" />
               <span>Premium Advantage</span>
             </div>
@@ -42,12 +42,12 @@ export default function EthicalIndependent() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
-          <div className="space-y-12 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-12 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             {/* Executive Introduction */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Executive Introduction</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Executive Introduction</h3>
               <p className="mb-4">
                 In the realm of professional advisory, technical proficiency is merely the baseline; the true currency of our profession is trust. An audit report or a valuation is completely devoid of value if the market suspects that the advisor's independence was compromised.
               </p>
@@ -58,7 +58,7 @@ export default function EthicalIndependent() {
 
             {/* Core Discussion */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Cost of Compromised Integrity</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Cost of Compromised Integrity</h3>
               <p className="mb-4">
                 History is replete with corporate catastrophes born from the failure of independent oversight. When advisors prioritize the retention of lucrative client fees over their duty of objectivity, they become complicit in the destruction of enterprise value. A compromised audit may temporarily satisfy management, but it ultimately leaves the organization exposed to devastating regulatory backlash, shareholder litigation, and catastrophic reputational ruin.
               </p>
@@ -69,7 +69,7 @@ export default function EthicalIndependent() {
 
             {/* Nepal Business Context */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Governance in the Nepalese Market</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Governance in the Nepalese Market</h3>
               <p className="mb-4">
                 The Nepalese corporate sector is evolving rapidly. Regulatory bodies like the Securities Board of Nepal (SEBON) and the Nepal Rastra Bank (NRB) are aggressively tightening corporate governance requirements, demanding greater transparency from Boards of Directors. 
               </p>
@@ -83,7 +83,7 @@ export default function EthicalIndependent() {
 
             {/* Strategic Perspective */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">A Strategic Perspective</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">A Strategic Perspective</h3>
               <p className="mb-4">
                 Ethical independence is a powerful strategic asset. For a Board of Directors or an Audit Committee, attempting to govern an enterprise based on filtered, overly optimistic financial data is akin to flying blind.
               </p>
@@ -94,7 +94,7 @@ export default function EthicalIndependent() {
 
             {/* Business Benefits */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Practical Business Outcomes</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Practical Business Outcomes</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2.5 mr-3 bg-royal-blue rounded-full shrink-0"></span>
@@ -119,14 +119,14 @@ export default function EthicalIndependent() {
 
             {/* Closing Insight */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Final Assessment</h3>
-              <p className="bg-gray-50 p-8 rounded-2xl border border-gray-100 italic font-medium text-primary-dark-blue text-xl leading-relaxed text-center">
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Final Assessment</h3>
+              <p className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 italic font-medium text-primary-dark-blue dark:text-white text-xl leading-relaxed text-center">
                 "Technical expertise dictates what an advisor can do; ethical independence dictates what they will do. We protect your enterprise by guarding the absolute integrity of your financial truth."
               </p>
             </section>
           </div>
           
-          <div className="mt-16 pt-10 border-t border-gray-200">
+          <div className="mt-16 pt-10 border-t border-gray-200 dark:border-white/20">
              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-royal-blue text-white rounded-xl font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20">
                 Secure Independent Advisory
                 <ArrowRight className="ml-2 w-5 h-5" />

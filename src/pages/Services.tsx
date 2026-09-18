@@ -46,7 +46,7 @@ export default function Services() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-gray-50 min-h-screen">
+    <div ref={containerRef} className="bg-gray-50 dark:bg-[#0A1128] min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-primary-dark-blue overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-luminosity"></div>
@@ -54,7 +54,7 @@ export default function Services() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <h1 className="services-hero-text text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-white mb-6">
-            Premium Strategic <span className="text-royal-blue">Advisory Services</span>
+            Premium Strategic <span className="text-[#a5caff]">Advisory Services</span>
           </h1>
           <p className="services-hero-text text-xl text-text-secondary max-w-3xl mx-auto font-light leading-relaxed">
             Delivering deep regulatory expertise and business-focused intelligence to empower Nepal's most ambitious enterprises.
@@ -63,14 +63,14 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 dark:bg-[#0A1128]">
         <div className="max-w-7xl mx-auto px-6 services-grid">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesData.map((service, index) => (
               <div
                 key={index}
                 onClick={() => navigate(service.link)}
-                className="service-card bg-white rounded-2xl overflow-hidden group cursor-pointer flex flex-col shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 active:scale-[0.98]"
+                className="service-card bg-white dark:bg-[#020A1A] rounded-2xl overflow-hidden group cursor-pointer flex flex-col shadow-sm hover:shadow-xl border border-gray-100 dark:border-white/10 transition-all duration-300 active:scale-[0.98]"
               >
                 <div className="relative h-56 overflow-hidden shrink-0">
                   <img 
@@ -81,19 +81,19 @@ export default function Services() {
                   <div className="absolute inset-0 bg-primary-dark-blue/20 group-hover:opacity-0 transition-opacity duration-500" />
                   
                   {/* Floating Icon */}
-                  <div className="absolute bottom-4 left-4 w-14 h-14 bg-white/90 backdrop-blur-md rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="absolute bottom-4 left-4 w-14 h-14 bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur-md rounded-xl flex items-center justify-center shadow-lg">
                     {service.icon}
                   </div>
                 </div>
                 
                 <div className="p-8 flex-grow flex flex-col">
-                  <h3 className="text-2xl font-heading font-bold text-primary-dark-blue mb-4 group-hover:text-royal-blue transition-colors">
+                  <h3 className="text-2xl font-heading font-bold text-primary-dark-blue dark:text-white mb-4 group-hover:text-[#a5caff] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8 flex-grow">
                     {service.shortDesc}
                   </p>
-                  <div className="inline-flex items-center text-sm font-bold text-royal-blue mt-auto">
+                  <div className="inline-flex items-center text-sm font-bold text-[#a5caff] mt-auto">
                     Explore Service Details
                     <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
                   </div>

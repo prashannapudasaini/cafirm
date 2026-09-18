@@ -18,7 +18,7 @@ export default function ManufacturingTrading() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* 1. Industry Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function ManufacturingTrading() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Factory className="w-4 h-4 text-royal-blue" />
               <span>Industry Expertise</span>
             </div>
@@ -42,13 +42,13 @@ export default function ManufacturingTrading() {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
-          <div className="space-y-16 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-16 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             
             {/* 2. Industry Landscape in Nepal */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">The Industry Landscape in Nepal</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">The Industry Landscape in Nepal</h2>
               <p className="mb-4">
                 The manufacturing and trading sectors represent the historical core of Nepal’s formal economy, dominated largely by massive, multi-generational family conglomerates. These entities operate vast, diversified portfolios encompassing FMCG, cement, steel, automotive distributorships, and heavy machinery.
               </p>
@@ -62,35 +62,35 @@ export default function ManufacturingTrading() {
 
             {/* 3. Key Business Challenges */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Key Business Challenges</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Key Business Challenges</h2>
               <p className="mb-6">
                 Profit margins in trading and manufacturing are notoriously thin, meaning that operational inefficiencies or tax miscalculations can instantly destroy profitability:
               </p>
               <ul className="space-y-6">
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">Working Capital & Inventory Traps</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">Working Capital & Inventory Traps</strong>
                     Import-dependent businesses require massive upfront capital to open Letters of Credit (LCs). Inefficient inventory management, stock obsolescence, or delays at customs borders trap critical liquidity, forcing businesses to rely on expensive short-term bank financing.
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">Aggressive IRD Scrutiny</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">Aggressive IRD Scrutiny</strong>
                     Because trading and manufacturing involve high volumes of transactions, they are prime targets for Inland Revenue Department (IRD) audits. Issues such as the misclassification of Harmonized System (HS) codes at customs, improper VAT reconciliation, or undocumented inventory shrinkage frequently lead to massive statutory penalties.
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">Cost Accounting Complexities</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">Cost Accounting Complexities</strong>
                     For manufacturers, determining the true cost of production—allocating overheads, factoring in energy volatility, and managing byproducts/wastage—is highly complex. Inaccurate costing data leads to flawed pricing strategies and hidden margin erosion.
                   </div>
                 </li>
@@ -99,29 +99,29 @@ export default function ManufacturingTrading() {
 
             {/* 4. How We Support the Sector */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">How We Support the Sector</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">How We Support the Sector</h2>
               <p className="mb-6">
                 We partner with industrial houses to install rigorous financial discipline, transforming chaotic supply chains into streamlined, tax-efficient operations.
               </p>
               <div className="space-y-4">
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">Cost & Inventory Audits</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">We deploy specialized teams to physically verify massive inventory stockpiles across national depots. We reconstruct product costing models, identify exactly where manufacturing yield is being lost, and recommend protocols to optimize raw material procurement.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Cost & Inventory Audits</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We deploy specialized teams to physically verify massive inventory stockpiles across national depots. We reconstruct product costing models, identify exactly where manufacturing yield is being lost, and recommend protocols to optimize raw material procurement.</p>
                 </div>
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">Strategic Tax Planning</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">We analyze your entire supply chain to legally minimize customs duties, excise taxes, and VAT leakage. We represent large taxpayers during aggressive IRD assessments, utilizing deep precedents to defend transfer pricing policies and margin declarations.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Strategic Tax Planning</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We analyze your entire supply chain to legally minimize customs duties, excise taxes, and VAT leakage. We represent large taxpayers during aggressive IRD assessments, utilizing deep precedents to defend transfer pricing policies and margin declarations.</p>
                 </div>
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">Corporate Restructuring</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">As family conglomerates expand, commingled assets become a liability. We execute complex corporate demergers, separating risky manufacturing divisions from stable trading entities to ring-fence enterprise risk and optimize tax structures.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Corporate Restructuring</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">As family conglomerates expand, commingled assets become a liability. We execute complex corporate demergers, separating risky manufacturing divisions from stable trading entities to ring-fence enterprise risk and optimize tax structures.</p>
                 </div>
               </div>
             </section>
 
             {/* 5. Regulatory & Compliance Environment */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Regulatory & Compliance Environment</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Regulatory & Compliance Environment</h2>
               <p className="mb-4">
                 The regulatory burden on this sector is immense. The <strong>Value Added Tax (VAT) Act</strong> and <strong>Income Tax Act</strong> are the primary battlegrounds. The government frequently weaponizes the annual Finance Act to alter customs duties and excise rates overnight to manage the national trade deficit, requiring businesses to possess extreme financial agility.
               </p>
@@ -135,7 +135,7 @@ export default function ManufacturingTrading() {
 
             {/* 6. Strategic Opportunities */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Strategic Opportunities</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Strategic Opportunities</h2>
               <p className="mb-4">
                 The transition from trading to manufacturing—driven by protectionist government policies—offers massive opportunities for margin expansion. Trading houses that successfully vertically integrate by setting up domestic assembly lines (e.g., in automotive or electronics) can capture significant tax rebates and establish insurmountable competitive moats.
               </p>
@@ -157,21 +157,21 @@ export default function ManufacturingTrading() {
 
             {/* 8. Business Outcomes */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Business Outcomes</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Business Outcomes</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Protected Margins:</strong> Prevent profit erosion by identifying the true cost of production and eliminating hidden supply chain inefficiencies.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Tax Defensibility:</strong> Face IRD audits with absolute confidence, backed by rigorously documented transfer pricing policies and precise VAT reconciliations.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Optimized Liquidity:</strong> Free up trapped cash by restructuring LC financing facilities and streamlining inventory management protocols.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Generational Transition:</strong> Safely restructure complex, multi-generational family conglomerates into highly focused, tax-efficient corporate entities.</span>
                 </li>
@@ -179,8 +179,8 @@ export default function ManufacturingTrading() {
             </section>
 
             {/* 9. Related Services */}
-            <section className="border-t border-gray-200 pt-10">
-              <h2 className="text-2xl font-bold text-primary-dark-blue mb-6">Explore Related Services</h2>
+            <section className="border-t border-gray-200 dark:border-white/20 pt-10">
+              <h2 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-6">Explore Related Services</h2>
               <div className="flex flex-wrap gap-3">
                 <Link to="/services/tax-and-regulatory" className="px-4 py-2 bg-blue-50 text-royal-blue text-sm font-semibold rounded-lg hover:bg-blue-100 transition-colors">Tax & Customs Advisory</Link>
                 <Link to="/services/risk-and-compliance" className="px-4 py-2 bg-blue-50 text-royal-blue text-sm font-semibold rounded-lg hover:bg-blue-100 transition-colors">Inventory Audit</Link>
@@ -194,13 +194,13 @@ export default function ManufacturingTrading() {
       </section>
 
       {/* 10. Industry Consultation CTA */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200">
+      <section className="py-24 bg-gray-50 dark:bg-[#0A1128] border-t border-gray-200 dark:border-white/20">
         <div className="max-w-4xl mx-auto px-6 text-center animate-up">
           <Building2 className="w-12 h-12 text-royal-blue mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
             Streamline Your Industrial Operations
           </h2>
-          <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto">
             From defending complex tax positions at the LTO to conducting rigorous physical inventory audits across nationwide supply chains, we provide the financial oversight required to maximize margins in a volatile market.
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white rounded-xl font-bold text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20">

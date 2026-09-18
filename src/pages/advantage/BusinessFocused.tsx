@@ -18,7 +18,7 @@ export default function BusinessFocused() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* Hero Section */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function BusinessFocused() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Lightbulb className="w-4 h-4 text-royal-blue" />
               <span>Premium Advantage</span>
             </div>
@@ -42,12 +42,12 @@ export default function BusinessFocused() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
-          <div className="space-y-12 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-12 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             {/* Executive Introduction */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Executive Introduction</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Executive Introduction</h3>
               <p className="mb-4">
                 Traditional accounting firms often view their mandate through a narrow, retrospective lens: validating historical data to satisfy statutory requirements. While compliance is non-negotiable, a purely backward-looking approach provides zero strategic value to an executive team tasked with navigating future market volatility and driving commercial expansion.
               </p>
@@ -58,7 +58,7 @@ export default function BusinessFocused() {
 
             {/* Core Discussion */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Moving Beyond the Ledger</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Moving Beyond the Ledger</h3>
               <p className="mb-4">
                 A flawless statutory audit confirms that your financial statements are accurate; it does not tell you if your underlying business model is sustainable. When management only receives technical compliance reports, they are deprived of the analytical intelligence required to make critical operational decisions, such as whether to offshore production, how to structure a complex joint venture, or when to divest underperforming assets.
               </p>
@@ -69,7 +69,7 @@ export default function BusinessFocused() {
 
             {/* Nepal Business Context */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Driving Growth in Nepal’s Economy</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Driving Growth in Nepal’s Economy</h3>
               <p className="mb-4">
                 The Nepalese market is uniquely challenging. Businesses contend with highly constrained liquidity in the banking sector, fluctuating interest rates, complex foreign exchange regulations mandated by the Nepal Rastra Bank (NRB), and a frequently shifting tax regime dictated by the annual national budget. 
               </p>
@@ -83,7 +83,7 @@ export default function BusinessFocused() {
 
             {/* Strategic Perspective */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">A Strategic Perspective</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">A Strategic Perspective</h3>
               <p className="mb-4">
                 A business-focused advisor acts as a catalyst for executive decision-making. We recognize that the CEO and the Board of Directors are not interested in accounting theory; they are interested in commercial outcomes. 
               </p>
@@ -94,7 +94,7 @@ export default function BusinessFocused() {
 
             {/* Business Benefits */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Practical Business Outcomes</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Practical Business Outcomes</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2.5 mr-3 bg-royal-blue rounded-full shrink-0"></span>
@@ -119,14 +119,14 @@ export default function BusinessFocused() {
 
             {/* Closing Insight */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Final Assessment</h3>
-              <p className="bg-gray-50 p-8 rounded-2xl border border-gray-100 italic font-medium text-primary-dark-blue text-xl leading-relaxed text-center">
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Final Assessment</h3>
+              <p className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 italic font-medium text-primary-dark-blue dark:text-white text-xl leading-relaxed text-center">
                 "Compliance looks to the past to tell you where you have been. True advisory looks to the future to tell you where you can go—and precisely how to get there."
               </p>
             </section>
           </div>
           
-          <div className="mt-16 pt-10 border-t border-gray-200">
+          <div className="mt-16 pt-10 border-t border-gray-200 dark:border-white/20">
              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-royal-blue text-white rounded-xl font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20">
                 Explore Business Solutions
                 <ArrowRight className="ml-2 w-5 h-5" />

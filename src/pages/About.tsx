@@ -12,7 +12,7 @@ import FinalCTA from '../components/home/FinalCTA';
 
 export default function About() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white dark:bg-[#020A1A] min-h-screen">
       <AboutHero />
       <FirmStory />
       <VisionMission />

@@ -23,13 +23,13 @@ const Footer = () => {
             </p>
             <div className="flex flex-col space-y-2 mb-8">
               <a href="tel:+9779851311960" className="text-white hover:text-royal-blue transition-colors font-medium flex items-center">
-                <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mr-3">
+                <span className="w-8 h-8 rounded-full bg-white/10 dark:bg-[#020A1A]/10 flex items-center justify-center mr-3">
                   <Globe className="w-4 h-4" /> {/* Or Phone icon if available, but let's stick to what we import */}
                 </span>
                 +977 9851311960
               </a>
               <a href="mailto:info@jaa.com.np" className="text-white hover:text-royal-blue transition-colors font-medium flex items-center">
-                <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mr-3">
+                <span className="w-8 h-8 rounded-full bg-white/10 dark:bg-[#020A1A]/10 flex items-center justify-center mr-3">
                   <Mail className="w-4 h-4" />
                 </span>
                 info@jaa.com.np

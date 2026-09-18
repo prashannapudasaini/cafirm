@@ -45,7 +45,7 @@ const FirmStory = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-8 md:py-10 lg:py-12 bg-white relative">
+    <section ref={containerRef} className="py-8 md:py-10 lg:py-12 bg-white dark:bg-[#020A1A] relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
@@ -61,15 +61,15 @@ const FirmStory = () => {
 
           {/* Right: Content */}
           <div className="story-content flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-primary-dark-blue mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-8 leading-tight">
               Our Story
             </h2>
             
-            <p className="text-lg text-gray-700 leading-relaxed mb-6 font-light">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6 font-light">
               Jay & Ajay Associates was founded with a simple mission: to provide businesses with reliable financial guidance, transparent advisory services, and compliance solutions that enable sustainable growth.
             </p>
             
-            <p className="text-lg text-gray-700 leading-relaxed font-light border-l-4 border-royal-blue pl-6">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-light border-l-4 border-royal-blue pl-6">
               From startups to established enterprises, we partner with clients to simplify financial complexity and create long-term value through strategic expertise and professional integrity.
             </p>
           </div>

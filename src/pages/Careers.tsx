@@ -72,7 +72,7 @@ export default function Careers() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
@@ -80,10 +80,10 @@ export default function Careers() {
           <span className="px-4 py-1.5 rounded-full bg-royal-blue/10 text-royal-blue text-sm font-bold tracking-wide uppercase mb-6 inline-block">
             Join Our Team
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-dark-blue mb-8 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-8 leading-tight">
             Shape the Future of <br/><span className="text-royal-blue">Business in Nepal</span>
           </h1>
-          <p className="text-xl text-gray-600 font-light leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-400 font-light leading-relaxed">
             We are always looking for exceptional talent. Whether you are an experienced professional or a promising graduate, discover a career where you can make a profound impact.
           </p>
         </div>
@@ -101,19 +101,19 @@ export default function Careers() {
         {/* Why Join Us */}
         <div className="mb-24">
           <div className="text-center max-w-2xl mx-auto mb-16 animate-up">
-            <h2 className="text-3xl font-bold text-primary-dark-blue mb-4">Why Jay & Ajay Associates?</h2>
-            <p className="text-gray-600">We invest heavily in our people, providing the platform, tools, and mentorship needed to build an extraordinary career.</p>
+            <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-4">Why Jay & Ajay Associates?</h2>
+            <p className="text-gray-600 dark:text-gray-400">We invest heavily in our people, providing the platform, tools, and mentorship needed to build an extraordinary career.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <div key={index} className="animate-up bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-6">
+                <div key={index} className="animate-up bg-gray-50 dark:bg-[#0A1128] rounded-2xl p-8 border border-gray-100 dark:border-white/10 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 rounded-xl bg-white dark:bg-[#020A1A] shadow-sm flex items-center justify-center mb-6">
                     <Icon className="w-6 h-6 text-royal-blue" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary-dark-blue mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
+                  <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
               );
             })}
@@ -124,8 +124,8 @@ export default function Careers() {
         <div className="animate-up">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-4">Current Openings</h2>
-              <p className="text-gray-600">Find the role that matches your expertise and ambition.</p>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-4">Current Openings</h2>
+              <p className="text-gray-600 dark:text-gray-400">Find the role that matches your expertise and ambition.</p>
             </div>
             <div className="mt-6 md:mt-0">
               <span className="text-sm font-semibold text-royal-blue bg-royal-blue/10 px-4 py-2 rounded-full">
@@ -136,23 +136,23 @@ export default function Careers() {
 
           <div className="space-y-4">
             {openings.map((job, index) => (
-              <div key={index} className="group bg-white border border-gray-200 rounded-2xl p-6 md:p-8 hover:border-royal-blue hover:shadow-lg transition-all flex flex-col md:flex-row md:items-center justify-between cursor-pointer">
+              <div key={index} className="group bg-white dark:bg-[#020A1A] border border-gray-200 dark:border-white/20 rounded-2xl p-6 md:p-8 hover:border-royal-blue hover:shadow-lg transition-all flex flex-col md:flex-row md:items-center justify-between cursor-pointer">
                 <div className="mb-6 md:mb-0">
-                  <h3 className="text-2xl font-bold text-primary-dark-blue mb-3 group-hover:text-royal-blue transition-colors">{job.role}</h3>
+                  <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-3 group-hover:text-royal-blue transition-colors">{job.role}</h3>
                   <div className="flex flex-wrap gap-3">
-                    <span className="inline-flex items-center text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-md font-medium">
+                    <span className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-[#131B33] px-3 py-1 rounded-md font-medium">
                       {job.department}
                     </span>
-                    <span className="inline-flex items-center text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-md font-medium">
+                    <span className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-[#131B33] px-3 py-1 rounded-md font-medium">
                       {job.experience}
                     </span>
-                    <span className="inline-flex items-center text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-md font-medium">
+                    <span className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-[#131B33] px-3 py-1 rounded-md font-medium">
                       {job.type}
                     </span>
                   </div>
                 </div>
                 <div>
-                  <button className="w-full md:w-auto px-6 py-3 bg-white border-2 border-gray-200 text-primary-dark-blue font-bold rounded-xl group-hover:bg-royal-blue group-hover:border-royal-blue group-hover:text-white transition-colors flex items-center justify-center">
+                  <button className="w-full md:w-auto px-6 py-3 bg-white dark:bg-[#020A1A] border-2 border-gray-200 dark:border-white/20 text-primary-dark-blue dark:text-white font-bold rounded-xl group-hover:bg-royal-blue group-hover:border-royal-blue group-hover:text-white transition-colors flex items-center justify-center">
                     Apply Now <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
                 </div>
@@ -162,16 +162,16 @@ export default function Careers() {
         </div>
 
         {/* Application Process CTA */}
-        <div className="mt-24 animate-up bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-[2.5rem] p-12 text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Don't see a perfect fit?</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+        <div className="mt-24 animate-up bg-gradient-to-br from-gray-50 dark:from-[#0A1128] to-white dark:to-[#020A1A] border border-gray-200 dark:border-white/20 rounded-[2.5rem] p-12 text-center max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Don't see a perfect fit?</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             We are constantly growing and actively seeking talented individuals. Send us your resume, and our HR team will contact you when a suitable position opens up.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <a href="mailto:hr@jaa.com.np" className="px-8 py-4 bg-primary-dark-blue text-white rounded-xl font-bold hover:bg-royal-blue transition-colors shadow-lg flex items-center">
               Submit Resume
             </a>
-            <Link to="/contact" className="px-8 py-4 bg-white border border-gray-200 text-primary-dark-blue rounded-xl font-bold hover:bg-gray-50 transition-colors">
+            <Link to="/contact" className="px-8 py-4 bg-white dark:bg-[#020A1A] border border-gray-200 dark:border-white/20 text-primary-dark-blue dark:text-white rounded-xl font-bold hover:bg-gray-50 dark:bg-[#0A1128] transition-colors">
               Contact HR Team
             </Link>
           </div>

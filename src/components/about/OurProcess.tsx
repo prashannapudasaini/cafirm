@@ -74,13 +74,13 @@ const OurProcess = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-8 md:py-10 bg-white relative">
+    <section ref={containerRef} className="py-8 md:py-10 bg-white dark:bg-[#020A1A] relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
             Our <span className="text-royal-blue">Process</span>
           </h2>
-          <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 font-light max-w-2xl mx-auto">
             A systematic, structured approach to delivering financial excellence.
           </p>
         </div>
@@ -102,15 +102,15 @@ const OurProcess = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-primary-dark-blue/20 mix-blend-multiply" />
-                  <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur flex items-center justify-center font-heading font-bold text-primary-dark-blue shadow-md">
+                  <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur flex items-center justify-center font-heading font-bold text-primary-dark-blue dark:text-white shadow-md">
                     {step.num}
                   </div>
                 </div>
                 
-                <div className="hidden md:flex w-6 h-6 rounded-full bg-white border-4 border-royal-blue absolute top-[108px] z-20 shadow-md" />
+                <div className="hidden md:flex w-6 h-6 rounded-full bg-white dark:bg-[#020A1A] border-4 border-royal-blue absolute top-[108px] z-20 shadow-md" />
 
-                <h3 className="text-xl font-heading font-semibold text-primary-dark-blue mb-2 mt-2">{step.title}</h3>
-                <p className="text-sm text-gray-600 font-light px-2 leading-relaxed">
+                <h3 className="text-xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-2 mt-2">{step.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 font-light px-2 leading-relaxed">
                   {step.desc}
                 </p>
               </div>

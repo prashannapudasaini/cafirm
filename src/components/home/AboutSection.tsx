@@ -47,7 +47,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-10 md:py-12 bg-white relative">
+    <section ref={containerRef} className="py-10 md:py-12 bg-white dark:bg-[#020A1A] relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -62,11 +62,11 @@ const AboutSection = () => {
             <div className="absolute inset-0 bg-primary-dark-blue/10 mix-blend-multiply" />
 
             {/* Experience Badge */}
-            <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl flex items-center space-x-4">
+            <div className="absolute bottom-8 left-8 bg-white/90 dark:bg-[#020A1A]/90 backdrop-blur-md p-6 rounded-2xl shadow-xl flex items-center space-x-4">
               <Award className="w-10 h-10 text-royal-blue" />
               <div>
-                <p className="text-3xl font-heading font-bold text-primary-dark-blue">15+</p>
-                <p className="text-sm font-medium text-gray-600">Years of Excellence</p>
+                <p className="text-3xl font-heading font-bold text-primary-dark-blue dark:text-white">15+</p>
+                <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Years of Excellence</p>
               </div>
             </div>
           </div>
@@ -74,15 +74,15 @@ const AboutSection = () => {
           {/* Right: Content */}
           <div className="about-content flex flex-col justify-center">
             <h2 className="text-sm font-bold text-royal-blue uppercase tracking-widest mb-3">About The Firm</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-semibold text-primary-dark-blue mb-6 leading-tight">
+            <h3 className="text-4xl md:text-5xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6 leading-tight">
               Empowering Enterprise Growth & Corporate Governance.
             </h3>
 
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
               Jay & Ajay Associates is a trusted strategic partner to some of Nepal's most forward-thinking enterprises. We deliver premium advisory and assurance solutions rooted in excellence, integrity, and long-term client success.
             </p>
 
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
               Beyond traditional compliance, we provide practical, business-focused insights that help our clients navigate complex market dynamics, fortify their operations, and achieve sustainable strategic growth.
             </p>
 
@@ -92,8 +92,8 @@ const AboutSection = () => {
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-dark-blue mb-1">Strategic Advisory</h4>
-                  <p className="text-sm text-gray-600">Actionable business intelligence.</p>
+                  <h4 className="font-semibold text-primary-dark-blue dark:text-white mb-1">Strategic Advisory</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Actionable business intelligence.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -101,14 +101,14 @@ const AboutSection = () => {
                   <TrendingUp className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary-dark-blue mb-1">Sustainable Growth</h4>
-                  <p className="text-sm text-gray-600">Focused on long-term outcomes.</p>
+                  <h4 className="font-semibold text-primary-dark-blue dark:text-white mb-1">Sustainable Growth</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Focused on long-term outcomes.</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <Link to="/about" className="inline-flex items-center text-royal-blue font-semibold hover:text-primary-dark-blue transition-colors group">
+              <Link to="/about" className="inline-flex items-center text-royal-blue font-semibold hover:text-primary-dark-blue dark:text-white transition-colors group">
                 Discover Our Story
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

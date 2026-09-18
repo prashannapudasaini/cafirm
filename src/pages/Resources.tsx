@@ -53,15 +53,15 @@ export default function Resources() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen pt-32 pb-24">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 animate-up">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-dark-blue mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
             Client <span className="text-royal-blue">Resources</span>
           </h1>
-          <p className="text-xl text-gray-600 font-light leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-400 font-light leading-relaxed">
             A comprehensive hub of tools, templates, and knowledge to empower your financial decision-making.
           </p>
         </div>
@@ -71,24 +71,24 @@ export default function Resources() {
           {resourceCategories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <div key={index} className="animate-up group bg-white border border-gray-100 rounded-[2rem] p-10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-royal-blue/20 transition-all">
+              <div key={index} className="animate-up group bg-white dark:bg-[#020A1A] border border-gray-100 dark:border-white/10 rounded-[2rem] p-10 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-royal-blue/20 transition-all">
                 <div className="flex items-start justify-between mb-8">
                   <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${category.color} mb-4`}>
                     <Icon className="w-7 h-7" />
                   </div>
-                  <Link to={category.path} className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center group-hover:bg-royal-blue group-hover:border-royal-blue group-hover:text-white text-gray-400 transition-all">
+                  <Link to={category.path} className="w-10 h-10 rounded-full border border-gray-200 dark:border-white/20 flex items-center justify-center group-hover:bg-royal-blue group-hover:border-royal-blue group-hover:text-white text-gray-400 transition-all">
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">{category.title}</h3>
-                <p className="text-gray-600 mb-8 leading-relaxed">
+                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">{category.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
                   {category.description}
                 </p>
                 
                 <ul className="space-y-4">
                   {category.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-sm font-medium text-gray-700 hover:text-royal-blue transition-colors cursor-pointer">
+                    <li key={idx} className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-royal-blue transition-colors cursor-pointer">
                       <FileText className="w-4 h-4 text-gray-400 mr-3 shrink-0" />
                       {item}
                     </li>
@@ -111,7 +111,7 @@ export default function Resources() {
           </div>
           
           <div className="relative z-10 shrink-0">
-            <button className="px-8 py-4 bg-white text-primary-dark-blue rounded-xl font-bold hover:bg-gray-50 transition-colors shadow-lg flex items-center">
+            <button className="px-8 py-4 bg-white dark:bg-[#020A1A] text-primary-dark-blue dark:text-white rounded-xl font-bold hover:bg-gray-50 dark:bg-[#0A1128] transition-colors shadow-lg flex items-center">
               Login to Portal <ArrowRight className="ml-2 w-5 h-5" />
             </button>
           </div>

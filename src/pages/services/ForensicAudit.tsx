@@ -42,7 +42,7 @@ export default function ForensicAudit() {
   };
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* 1. Advisory Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -51,13 +51,13 @@ export default function ForensicAudit() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
-              <Search className="w-4 h-4 text-royal-blue" />
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+              <Search className="w-4 h-4 text-[#a5caff]" />
               <span>Investigative Advisory</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6 leading-tight">
               Forensic Audit & <br />
-              <span className="text-royal-blue">Fraud Investigation</span>
+              <span className="text-[#a5caff]">Fraud Investigation</span>
             </h1>
             <p className="text-xl text-gray-300 font-light leading-relaxed mb-10">
               When financial integrity is compromised, aggressive action is required. We deploy highly specialized forensic accountants to trace misappropriated assets, quantify financial damages, and provide litigation support.
@@ -73,44 +73,44 @@ export default function ForensicAudit() {
       </section>
 
       {/* 2. Business Challenges */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
               The Reality of Corporate Fraud
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
               Financial irregularities rarely surface through routine checks. By the time embezzlement or asset misappropriation is suspected, the financial and reputational damage is often already devastating. Swift, specialized intervention is critical.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-up">
+            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-6">
                 <ShieldAlert className="w-6 h-6 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue mb-4">Internal Embezzlement</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Internal Embezzlement</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
                 Collusion among employees or management to siphon funds through ghost employees, fictitious vendors, or manipulated expense reports is a pervasive threat in organizations with weak internal controls.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-up">
+            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
                 <FileSearch className="w-6 h-6 text-amber-600" />
               </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue mb-4">Financial Statement Fraud</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Financial Statement Fraud</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
                 Management may deliberately overstate revenues or understate liabilities to artificially inflate valuations prior to an acquisition, or to secure unauthorized credit from Banks and Financial Institutions (BFIs).
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-up">
+            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                 <Scale className="w-6 h-6 text-royal-blue" />
               </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue mb-4">Shareholder Disputes</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Shareholder Disputes</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
                 Complex joint ventures often break down over allegations of fund diversion or unequal profit distribution, requiring independent financial quantification before litigation can proceed.
               </p>
             </div>
@@ -119,10 +119,10 @@ export default function ForensicAudit() {
       </section>
 
       {/* 3. How We Help */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-20 lg:py-28 bg-white dark:bg-[#020A1A]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-4">
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
               Uncovering Financial Truth
             </h2>
             <div className="w-20 h-1 bg-royal-blue rounded-full"></div>
@@ -131,32 +131,32 @@ export default function ForensicAudit() {
           <div className="space-y-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
               <div>
-                <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Embezzlement & Fraud Investigation</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Embezzlement & Fraud Investigation</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                   We utilize advanced data analytics to identify red flags in payroll, vendor payments, and expense reimbursements. Our experts reconstruct tampered accounting records to map exactly how funds were siphoned and by whom.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 font-medium">Strategic Purpose:</span> Identify the perpetrators, quantify the exact loss, and provide actionable evidence for recovery.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 font-medium">Use Case:</span> Investigating a multi-million rupee procurement fraud within a manufacturing conglomerate.</li>
+                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Identify the perpetrators, quantify the exact loss, and provide actionable evidence for recovery.</li>
+                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> Investigating a multi-million rupee procurement fraud within a manufacturing conglomerate.</li>
                 </ul>
               </div>
-              <div className="bg-gray-100 rounded-2xl aspect-[4/3] overflow-hidden">
+              <div className="bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=2070&auto=format&fit=crop" alt="Forensic Investigation" className="w-full h-full object-cover" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
-              <div className="order-2 lg:order-1 bg-gray-100 rounded-2xl aspect-[4/3] overflow-hidden">
+              <div className="order-2 lg:order-1 bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2070&auto=format&fit=crop" alt="Litigation Support" className="w-full h-full object-cover" />
               </div>
               <div className="order-1 lg:order-2">
-                <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Litigation Support & Expert Witness</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Litigation Support & Expert Witness</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                   We translate complex financial data into compelling, court-ready evidence. Our senior forensic partners work closely with your legal counsel and provide expert testimony in commercial courts or arbitration panels.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 font-medium">Strategic Purpose:</span> Strengthen legal standing in commercial disputes and maximize the probability of asset recovery.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 font-medium">Use Case:</span> Acting as an independent expert witness in a hostile partner buyout dispute.</li>
+                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Strengthen legal standing in commercial disputes and maximize the probability of asset recovery.</li>
+                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> Acting as an independent expert witness in a hostile partner buyout dispute.</li>
                 </ul>
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function ForensicAudit() {
                 <div className="text-5xl font-bold text-white/10 mb-4">0{idx + 1}</div>
                 <h3 className="text-xl font-bold text-royal-blue mb-3">{step.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{step.desc}</p>
-                {idx < 3 && <div className="hidden md:block absolute top-6 -right-3 w-6 h-[1px] bg-white/20"></div>}
+                {idx < 3 && <div className="hidden md:block absolute top-6 -right-3 w-6 h-[1px] bg-white/20 dark:bg-[#020A1A]/20"></div>}
               </div>
             ))}
           </div>
@@ -195,27 +195,27 @@ export default function ForensicAudit() {
       </section>
 
       {/* 5. Regulatory Perspective */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
         <div className="max-w-7xl mx-auto px-6 animate-up">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-6">
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
                 The Legal & Regulatory Mandate
               </h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
                 Fraud is not merely a financial loss; it triggers severe statutory liabilities under Nepalese law that directors cannot ignore.
               </p>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue">Anti-Money Laundering (AML) Compliance</h4>
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">Anti-Money Laundering (AML) Compliance</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
                     Under the Money Laundering Prevention Act, companies are obligated to report suspicious transactions. A forensic audit provides the necessary evidence to file Suspicious Transaction Reports (STRs) with the Financial Information Unit (FIU).
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue">Banking Offense and Punishment Act</h4>
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">Banking Offense and Punishment Act</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
                     For Banks and Financial Institutions, any misappropriation of funds falls under banking offenses. Our forensic reports are frequently mandated by the NRB prior to initiating criminal proceedings.
                   </p>
                 </div>
@@ -224,10 +224,10 @@ export default function ForensicAudit() {
             
             <div className="relative">
               <div className="absolute inset-0 bg-royal-blue rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
-              <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl relative z-10 border border-gray-100">
+              <div className="bg-white dark:bg-[#020A1A] p-8 md:p-12 rounded-3xl shadow-xl relative z-10 border border-gray-100 dark:border-white/10">
                 <Search className="w-12 h-12 text-royal-blue mb-6" />
-                <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Strategic Implication</h3>
-                <p className="text-gray-600 leading-relaxed italic">
+                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Strategic Implication</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed italic">
                   "When fraud is suspected, inaction is complicity. A swift, independent forensic investigation is the only way a Board of Directors can fulfill their fiduciary duty and protect the enterprise from legal contagion."
                 </p>
               </div>
@@ -237,28 +237,28 @@ export default function ForensicAudit() {
       </section>
 
       {/* 8. FAQs */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-4">
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
               Frequently Asked Questions
             </h2>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden animate-up">
+              <div key={index} className="bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/20 rounded-xl overflow-hidden animate-up">
                 <button 
                   onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-100 transition-colors focus:outline-none"
+                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-100 dark:bg-[#131B33] transition-colors focus:outline-none"
                 >
-                  <span className="font-semibold text-primary-dark-blue pr-8">{faq.q}</span>
+                  <span className="font-semibold text-primary-dark-blue dark:text-white pr-8">{faq.q}</span>
                   <ChevronDown className={`w-5 h-5 text-royal-blue transform transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 <div 
                   className={`px-6 transition-all duration-300 ease-in-out ${openFaq === index ? 'pb-5 max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
                 >
-                  <p className="text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-t border-gray-200 dark:border-white/20 pt-4">
                     {faq.a}
                   </p>
                 </div>

@@ -18,7 +18,7 @@ export default function HydropowerRenewable() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* 1. Industry Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function HydropowerRenewable() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Zap className="w-4 h-4 text-royal-blue" />
               <span>Industry Expertise</span>
             </div>
@@ -42,13 +42,13 @@ export default function HydropowerRenewable() {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
-          <div className="space-y-16 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-16 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             
             {/* 2. Industry Landscape in Nepal */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">The Industry Landscape in Nepal</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">The Industry Landscape in Nepal</h2>
               <p className="mb-4">
                 Hydropower represents the absolute cornerstone of Nepal’s long-term economic strategy. With thousands of megawatts currently under construction and cross-border energy trade with India and Bangladesh rapidly expanding, the sector has transitioned from a domestic infrastructure initiative into a highly lucrative, export-oriented asset class.
               </p>
@@ -62,35 +62,35 @@ export default function HydropowerRenewable() {
 
             {/* 3. Key Business Challenges */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Key Business Challenges</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Key Business Challenges</h2>
               <p className="mb-6">
                 Constructing a hydropower project in the Himalayas involves immense geological and logistical hurdles. However, the financial and regulatory hurdles are equally formidable:
               </p>
               <ul className="space-y-6">
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">Capital Expenditure (CAPEX) Overruns</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">Capital Expenditure (CAPEX) Overruns</strong>
                     Due to geological surprises, supply chain disruptions, and bureaucratic delays, projects frequently exceed their initial budgets. Financing these overruns—while maintaining optimal debt-to-equity ratios—is a critical challenge.
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">Complex Tax Holidays & Exemptions</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">Complex Tax Holidays & Exemptions</strong>
                     The Industrial Enterprise Act provides specific tax holidays and VAT exemptions for energy projects. However, misclassifying project expenses or failing to secure the correct recommendation letters from the Department of Electricity Development (DoED) results in massive, unrecoverable tax leakage.
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">FDI Repatriation Friction</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">FDI Repatriation Friction</strong>
                     For international investors, navigating the Foreign Investment and Technology Transfer Act (FITTA) to secure approvals for equity injections, debt financing, and eventual dividend repatriation remains a heavily bureaucratic and time-consuming process.
                   </div>
                 </li>
@@ -99,29 +99,29 @@ export default function HydropowerRenewable() {
 
             {/* 4. How We Support the Sector */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">How We Support the Sector</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">How We Support the Sector</h2>
               <p className="mb-6">
                 We provide end-to-end financial advisory for IPPs—from the initial feasibility studies through construction, IPO, and commercial operation.
               </p>
               <div className="space-y-4">
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">Project Financing & Capital Structuring</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">We develop robust financial models to secure syndicate loans from domestic BFIs. We structure the capital to optimize the Weighted Average Cost of Capital (WACC) and ensure the project remains financially viable despite interest rate fluctuations.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Project Financing & Capital Structuring</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We develop robust financial models to secure syndicate loans from domestic BFIs. We structure the capital to optimize the Weighted Average Cost of Capital (WACC) and ensure the project remains financially viable despite interest rate fluctuations.</p>
                 </div>
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">Cost Audit & CAPEX Verification</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">During the construction phase, we deploy targeted cost audits. We verify contractor billings, ensure the correct capitalization of borrowing costs (as per NAS 23), and tightly monitor budget variances to prevent capital leakage.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Cost Audit & CAPEX Verification</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">During the construction phase, we deploy targeted cost audits. We verify contractor billings, ensure the correct capitalization of borrowing costs (as per NAS 23), and tightly monitor budget variances to prevent capital leakage.</p>
                 </div>
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">FDI Advisory & NRB Compliance</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">We act as the localized bridge for international investors. We handle the entire bureaucratic lifecycle of foreign investment—securing Department of Industry (DOI) approvals, managing NRB foreign exchange accounting, and facilitating frictionless capital repatriation.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">FDI Advisory & NRB Compliance</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We act as the localized bridge for international investors. We handle the entire bureaucratic lifecycle of foreign investment—securing Department of Industry (DOI) approvals, managing NRB foreign exchange accounting, and facilitating frictionless capital repatriation.</p>
                 </div>
               </div>
             </section>
 
             {/* 5. Regulatory & Compliance Environment */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Regulatory & Compliance Environment</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Regulatory & Compliance Environment</h2>
               <p className="mb-4">
                 Hydropower development is subject to oversight by multiple, often overlapping, authorities. Our role is to synthesize these requirements into a cohesive compliance strategy.
               </p>
@@ -135,7 +135,7 @@ export default function HydropowerRenewable() {
 
             {/* 6. Strategic Opportunities */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Strategic Opportunities</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Strategic Opportunities</h2>
               <p className="mb-4">
                 The most significant opportunity in the sector lies in the imminent opening of cross-border power trading markets. IPPs that can secure direct PPAs with Indian or Bangladeshi commercial entities will unlock tariff structures far more lucrative than domestic rates.
               </p>
@@ -157,21 +157,21 @@ export default function HydropowerRenewable() {
 
             {/* 8. Business Outcomes */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Business Outcomes</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Business Outcomes</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Preserved Capital:</strong> Avoid massive financial penalties and unrecoverable VAT by establishing strict cost controls and compliance protocols during the construction phase.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Successful IPOs:</strong> Ensure a heavily oversubscribed public offering by presenting SEBON-approved, meticulously audited financial statements and robust corporate governance.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Optimized Tax Strategy:</strong> Legally maximize all available statutory tax holidays and concessions to accelerate the payback period for promoters and investors.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>FDI Attraction:</strong> Provide international investors with the absolute transparency, IFRS alignment, and localized bureaucratic support required to deploy capital into Nepal safely.</span>
                 </li>
@@ -179,8 +179,8 @@ export default function HydropowerRenewable() {
             </section>
 
             {/* 9. Related Services */}
-            <section className="border-t border-gray-200 pt-10">
-              <h2 className="text-2xl font-bold text-primary-dark-blue mb-6">Explore Related Services</h2>
+            <section className="border-t border-gray-200 dark:border-white/20 pt-10">
+              <h2 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-6">Explore Related Services</h2>
               <div className="flex flex-wrap gap-3">
                 <Link to="/services/fdi-and-investment" className="px-4 py-2 bg-blue-50 text-royal-blue text-sm font-semibold rounded-lg hover:bg-blue-100 transition-colors">FDI Advisory</Link>
                 <Link to="/services/corporate-advisory" className="px-4 py-2 bg-blue-50 text-royal-blue text-sm font-semibold rounded-lg hover:bg-blue-100 transition-colors">Project Financing</Link>
@@ -194,13 +194,13 @@ export default function HydropowerRenewable() {
       </section>
 
       {/* 10. Industry Consultation CTA */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200">
+      <section className="py-24 bg-gray-50 dark:bg-[#0A1128] border-t border-gray-200 dark:border-white/20">
         <div className="max-w-4xl mx-auto px-6 text-center animate-up">
           <Building2 className="w-12 h-12 text-royal-blue mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
             Empower Your Energy Project
           </h2>
-          <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto">
             From navigating the complexities of FITTA to conducting rigorous CAPEX audits, we provide the strategic financial architecture required to bring your hydropower project to commercial operation on time and under budget.
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white rounded-xl font-bold text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20">

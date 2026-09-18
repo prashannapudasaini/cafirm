@@ -42,7 +42,7 @@ export default function TransferPricing() {
   };
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* 1. Advisory Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -51,13 +51,13 @@ export default function TransferPricing() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
-              <Network className="w-4 h-4 text-royal-blue" />
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+              <Network className="w-4 h-4 text-[#a5caff]" />
               <span>Premium Advisory Service</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold mb-6 leading-tight">
               Transfer Pricing & <br />
-              <span className="text-royal-blue">International Tax</span>
+              <span className="text-[#a5caff]">International Tax</span>
             </h1>
             <p className="text-xl text-gray-300 font-light leading-relaxed mb-10">
               Cross-border transactions are under unprecedented scrutiny by Nepalese tax authorities. We provide institutional-grade transfer pricing documentation, DTAA advisory, and aggressive tax defense to protect your multinational operations.
@@ -73,44 +73,44 @@ export default function TransferPricing() {
       </section>
 
       {/* 2. Business Challenges */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
               The Reality of Cross-Border Taxation
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
               For Multinational Corporations (MNCs) operating in Nepal, intercompany transactions are heavily targeted by the Large Taxpayers Office (LTO). Inadequate documentation leads to massive tax re-assessments and severe penalties.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-up">
+            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-6">
                 <ShieldAlert className="w-6 h-6 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue mb-4">Aggressive IRD Scrutiny</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Aggressive IRD Scrutiny</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
                 The LTO frequently challenges payments for royalties, IT services, and management fees to foreign parent companies, aggressively disallowing these as deductible expenses if they fail the arm's length test.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-up">
+            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
                 <FileSearch className="w-6 h-6 text-amber-600" />
               </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue mb-4">Lack of Comparables</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Lack of Comparables</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
                 A major challenge in Nepal is the lack of a robust public database for comparable uncontrolled transactions, making it extremely difficult to defend pricing models without highly specialized economic analysis.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 animate-up">
+            <div className="bg-white dark:bg-[#020A1A] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-white/10 animate-up">
               <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                 <Calculator className="w-6 h-6 text-royal-blue" />
               </div>
-              <h3 className="text-xl font-bold text-primary-dark-blue mb-4">Double Taxation Risks</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-primary-dark-blue dark:text-white mb-4">Double Taxation Risks</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
                 Without properly structuring transactions to leverage Double Taxation Avoidance Agreements (DTAAs), enterprises face the crippling reality of paying taxes on the same income in both Nepal and their home jurisdiction.
               </p>
             </div>
@@ -119,10 +119,10 @@ export default function TransferPricing() {
       </section>
 
       {/* 3. How We Help */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-20 lg:py-28 bg-white dark:bg-[#020A1A]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-4">
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
               Advanced International Tax Architecture
             </h2>
             <div className="w-20 h-1 bg-royal-blue rounded-full"></div>
@@ -131,32 +131,32 @@ export default function TransferPricing() {
           <div className="space-y-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
               <div>
-                <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Transfer Pricing Studies & Defense</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Transfer Pricing Studies & Defense</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                   We prepare robust Transfer Pricing (TP) documentation that acts as a fortress against IRD audits. We conduct Functional, Asset, and Risk (FAR) analyses and utilize global databases to establish defensible arm's length ranges for your intercompany transactions.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 font-medium">Strategic Purpose:</span> Preemptively defend the deductibility of intra-group service charges and royalties.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 font-medium">Use Case:</span> A foreign FMCG brand charging its Nepalese subsidiary a 3% royalty on sales.</li>
+                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Preemptively defend the deductibility of intra-group service charges and royalties.</li>
+                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> A foreign FMCG brand charging its Nepalese subsidiary a 3% royalty on sales.</li>
                 </ul>
               </div>
-              <div className="bg-gray-100 rounded-2xl aspect-[4/3] overflow-hidden">
+              <div className="bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop" alt="Transfer Pricing" className="w-full h-full object-cover" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-up">
-              <div className="order-2 lg:order-1 bg-gray-100 rounded-2xl aspect-[4/3] overflow-hidden">
+              <div className="order-2 lg:order-1 bg-gray-100 dark:bg-[#131B33] rounded-2xl aspect-[4/3] overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="DTAA Advisory" className="w-full h-full object-cover" />
               </div>
               <div className="order-1 lg:order-2">
-                <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">DTAA Optimization</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">DTAA Optimization</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                   We meticulously analyze Nepal's active tax treaties to ensure your entity legally minimizes Withholding Tax (WHT) on dividends, interest, and royalties. We guide foreign investors through the complex process of obtaining treaty benefits from the LTO.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 font-medium">Strategic Purpose:</span> Prevent capital erosion during the repatriation of profits to foreign holding companies.</li>
-                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 font-medium">Use Case:</span> Reducing withholding tax on dividend repatriation for an Indian joint venture partner.</li>
+                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Strategic Purpose:</span> Prevent capital erosion during the repatriation of profits to foreign holding companies.</li>
+                  <li className="flex items-start"><CheckCircle2 className="w-5 h-5 text-royal-blue mr-3 shrink-0 mt-0.5"/> <span className="text-gray-700 dark:text-gray-300 font-medium">Use Case:</span> Reducing withholding tax on dividend repatriation for an Indian joint venture partner.</li>
                 </ul>
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function TransferPricing() {
                 <div className="text-5xl font-bold text-white/10 mb-4">0{idx + 1}</div>
                 <h3 className="text-xl font-bold text-royal-blue mb-3">{step.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{step.desc}</p>
-                {idx < 3 && <div className="hidden md:block absolute top-6 -right-3 w-6 h-[1px] bg-white/20"></div>}
+                {idx < 3 && <div className="hidden md:block absolute top-6 -right-3 w-6 h-[1px] bg-white/20 dark:bg-[#020A1A]/20"></div>}
               </div>
             ))}
           </div>
@@ -195,27 +195,27 @@ export default function TransferPricing() {
       </section>
 
       {/* 5. Regulatory Perspective */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-[#0A1128]">
         <div className="max-w-7xl mx-auto px-6 animate-up">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-6">
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
                 The Regulatory Mandate
               </h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
                 The Nepalese government is aggressively closing loopholes related to cross-border profit shifting. Compliance requires mastery of intersecting regulatory frameworks.
               </p>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue">Section 33, Income Tax Act, 2058</h4>
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">Section 33, Income Tax Act, 2058</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
                     Provides the Inland Revenue Department with the absolute authority to reallocate, re-characterize, and adjust income or deductions between related parties to reflect an arm's length outcome.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-primary-dark-blue">Double Taxation Avoidance Agreements (DTAA)</h4>
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                  <h4 className="text-lg font-bold text-primary-dark-blue dark:text-white">Double Taxation Avoidance Agreements (DTAA)</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">
                     Nepal's bilateral treaties supersede domestic tax laws. We leverage these treaties to legally minimize withholding tax exposure for foreign investors and prevent dual taxation.
                   </p>
                 </div>
@@ -224,10 +224,10 @@ export default function TransferPricing() {
             
             <div className="relative">
               <div className="absolute inset-0 bg-royal-blue rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
-              <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl relative z-10 border border-gray-100">
+              <div className="bg-white dark:bg-[#020A1A] p-8 md:p-12 rounded-3xl shadow-xl relative z-10 border border-gray-100 dark:border-white/10">
                 <Network className="w-12 h-12 text-royal-blue mb-6" />
-                <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Strategic Implication</h3>
-                <p className="text-gray-600 leading-relaxed italic">
+                <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Strategic Implication</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed italic">
                   "In the eyes of the LTO, a lack of transfer pricing documentation is an admission of guilt. Proactive documentation is not just a compliance exercise; it is an insurance policy for your corporate profits."
                 </p>
               </div>
@@ -237,28 +237,28 @@ export default function TransferPricing() {
       </section>
 
       {/* 8. FAQs */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16 animate-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-4">
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-4">
               Frequently Asked Questions
             </h2>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden animate-up">
+              <div key={index} className="bg-gray-50 dark:bg-[#0A1128] border border-gray-200 dark:border-white/20 rounded-xl overflow-hidden animate-up">
                 <button 
                   onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-100 transition-colors focus:outline-none"
+                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-100 dark:bg-[#131B33] transition-colors focus:outline-none"
                 >
-                  <span className="font-semibold text-primary-dark-blue pr-8">{faq.q}</span>
+                  <span className="font-semibold text-primary-dark-blue dark:text-white pr-8">{faq.q}</span>
                   <ChevronDown className={`w-5 h-5 text-royal-blue transform transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 <div 
                   className={`px-6 transition-all duration-300 ease-in-out ${openFaq === index ? 'pb-5 max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
                 >
-                  <p className="text-gray-600 text-sm leading-relaxed border-t border-gray-200 pt-4">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-t border-gray-200 dark:border-white/20 pt-4">
                     {faq.a}
                   </p>
                 </div>

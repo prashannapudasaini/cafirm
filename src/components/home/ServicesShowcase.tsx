@@ -41,7 +41,7 @@ const ServicesShowcase = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-heading font-semibold text-white mb-4 leading-tight">
-              Premium Strategic <span className="text-gradient">Advisory Services</span>
+              Premium Strategic <span className="text-[#a5caff]">Advisory Services</span>
             </h2>
             <p className="text-lg text-text-secondary font-light">
               Transforming complex business challenges into opportunities for sustainable growth and operational excellence.
@@ -65,10 +65,10 @@ const ServicesShowcase = () => {
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-primary-dark-blue/40 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500" />
-                <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/20">
+                <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/10 dark:bg-[#020A1A]/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/20">
                   {service.icon}
                 </div>
               </div>
@@ -90,7 +90,7 @@ const ServicesShowcase = () => {
         </div>
         
         <div className="mt-10 md:hidden flex justify-center">
-          <Link to="/services" className="inline-flex items-center px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors">
+          <Link to="/services" className="inline-flex items-center px-6 py-3 bg-white/10 dark:bg-[#020A1A]/10 text-white rounded-lg hover:bg-white/20 dark:bg-[#020A1A]/20 transition-colors">
             View All Services
             <ArrowRight className="ml-2 w-4 h-4" />
           </Link>

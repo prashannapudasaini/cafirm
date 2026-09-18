@@ -50,7 +50,7 @@ const Industries = () => {
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-white mb-4 leading-tight">
               Deep Sector Expertise <br className="hidden md:block"/>
-              <span className="text-gradient">Driving Sector Growth</span>
+              <span className="text-[#a5caff]">Driving Sector Growth</span>
             </h2>
             <p className="text-lg text-text-secondary font-light">
               We bring specialized knowledge and global best practices to Nepal's key economic sectors, ensuring strategic alignment and regulatory confidence.
@@ -65,8 +65,7 @@ const Industries = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {industries.map((ind, idx) => (
             <Link to={`/industries/${ind.id}`} key={idx} className="industry-panel group relative h-48 sm:h-56 rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-deep-navy block">
-              <div className="absolute inset-0 bg-deep-navy/70 mix-blend-multiply z-10 transition-opacity duration-500 group-hover:opacity-30" />
-              <img src={ind.image} alt={ind.name} className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out" />
+              <img src={ind.image} alt={ind.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-in-out" />
               
               <div className="absolute inset-0 z-20 p-6 flex flex-col justify-end bg-gradient-to-t from-primary-dark-blue via-primary-dark-blue/60 to-transparent">
                 <div className="flex justify-between items-end transform transition-transform duration-500 group-hover:-translate-y-1">

@@ -89,7 +89,7 @@ const CoreValues = () => {
                 <img 
                   src={value.image} 
                   alt={value.title} 
-                  className="absolute inset-0 w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-primary-dark-blue/50 mix-blend-multiply" />
                 <div className="absolute inset-0 flex items-center justify-center">

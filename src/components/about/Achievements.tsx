@@ -98,7 +98,7 @@ const Achievements = () => {
               </div>
 
               <div className="relative z-10 p-8 flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-full bg-white/10 dark:bg-[#020A1A]/10 flex items-center justify-center mb-6">
                   {stat.icon}
                 </div>
                 <div className="flex items-baseline justify-center mb-2">

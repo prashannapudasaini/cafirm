@@ -18,7 +18,7 @@ export default function PartnerLed() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* Hero Section */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function PartnerLed() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <HeartHandshake className="w-4 h-4 text-royal-blue" />
               <span>Premium Advantage</span>
             </div>
@@ -42,12 +42,12 @@ export default function PartnerLed() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
-          <div className="space-y-12 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-12 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             {/* Executive Introduction */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Executive Introduction</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Executive Introduction</h3>
               <p className="mb-4">
                 In the professional services industry, the traditional model often relies on heavy delegation. Senior partners secure the engagement, but the actual execution is handed down to junior staff, with leadership only resurfacing for final signatures. While this model maximizes firm profitability, it fundamentally dilutes the quality of advisory provided to the client.
               </p>
@@ -58,7 +58,7 @@ export default function PartnerLed() {
 
             {/* Core Discussion */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Danger of the Delegation Deficit</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Danger of the Delegation Deficit</h3>
               <p className="mb-4">
                 When critical financial, tax, or operational audits are pushed too far down the corporate hierarchy, nuance is lost. Junior staff are highly capable of processing routine transactions, but they often lack the commercial perspective required to identify systemic risks or strategic opportunities hidden within the numbers. 
               </p>
@@ -69,7 +69,7 @@ export default function PartnerLed() {
 
             {/* Nepal Business Context */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Navigating Nepalese Complexities</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Navigating Nepalese Complexities</h3>
               <p className="mb-4">
                 The business landscape in Nepal is heavily relationship-driven and operationally nuanced. Legal frameworks are often subject to varying interpretations by different regulatory authorities. Resolving a complex tax dispute with the Large Taxpayers Office (LTO) or securing a specialized regulatory approval from the Nepal Rastra Bank (NRB) rarely involves a simple, linear process.
               </p>
@@ -80,7 +80,7 @@ export default function PartnerLed() {
 
             {/* Strategic Perspective */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">A Strategic Perspective</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">A Strategic Perspective</h3>
               <p className="mb-4">
                 A partner-led engagement fundamentally transforms the nature of the advisory relationship. Rather than a transactional exchange of services, it becomes a peer-to-peer strategic collaboration. When your Board of Directors or CEO interacts with our firm, they are engaging directly with their equals—seasoned business leaders who understand the pressures of executive management.
               </p>
@@ -91,7 +91,7 @@ export default function PartnerLed() {
 
             {/* Business Benefits */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Practical Business Outcomes</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Practical Business Outcomes</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2.5 mr-3 bg-royal-blue rounded-full shrink-0"></span>
@@ -116,14 +116,14 @@ export default function PartnerLed() {
 
             {/* Closing Insight */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Final Assessment</h3>
-              <p className="bg-gray-50 p-8 rounded-2xl border border-gray-100 italic font-medium text-primary-dark-blue text-xl leading-relaxed text-center">
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Final Assessment</h3>
+              <p className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 italic font-medium text-primary-dark-blue dark:text-white text-xl leading-relaxed text-center">
                 "Methodologies can be standardized, but judgment cannot be delegated. We commit our highest level of expertise to every engagement because your enterprise deserves nothing less than executive-level precision."
               </p>
             </section>
           </div>
           
-          <div className="mt-16 pt-10 border-t border-gray-200">
+          <div className="mt-16 pt-10 border-t border-gray-200 dark:border-white/20">
              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-royal-blue text-white rounded-xl font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20">
                 Engage Our Partners
                 <ArrowRight className="ml-2 w-5 h-5" />

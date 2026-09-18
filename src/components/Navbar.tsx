@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import { ChevronDown, Menu, X, ArrowRight, Sun, Moon } from 'lucide-react';
 import gsap from 'gsap';
 import { cn } from '../lib/utils';
+import { useTheme } from '../context/ThemeContext';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -176,6 +177,7 @@ const Navbar = () => {
   const lastScrollY = useRef(0);
   const location = useLocation();
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     setActiveMenu(null);
@@ -232,7 +234,7 @@ const Navbar = () => {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-[100] px-6 py-4 flex justify-center transition-transform duration-300",
+      "fixed top-0 left-0 right-0 z-[100] px-0 py-0 lg:px-6 lg:py-4 flex justify-center transition-transform duration-300",
       !isVisible ? "-translate-y-full" : "translate-y-0"
     )}>
       <div 
@@ -240,14 +242,19 @@ const Navbar = () => {
         onMouseLeave={handleMouseLeave}
       >
         <nav className={cn(
-          "w-full rounded-full px-6 h-[72px] flex items-center justify-between transition-all duration-500",
+          "w-full rounded-none lg:rounded-full px-4 sm:px-6 h-[72px] flex items-center justify-between transition-all duration-500",
           isScrolled
-            ? "bg-gradient-to-r from-white from-5% via-royal-blue via-20% to-primary-dark-blue shadow-2xl border border-white/10"
-            : "bg-gradient-to-r from-white/95 from-5% via-royal-blue/95 via-20% to-primary-dark-blue/95 backdrop-blur-md border border-white/10"
+            ? "bg-white dark:bg-[#020A1A] lg:bg-transparent lg:bg-gradient-to-r from-white dark:from-[#0A1128] from-5% via-royal-blue via-20% to-primary-dark-blue shadow-lg lg:shadow-2xl border-b border-gray-100 dark:border-white/10 lg:border-white/10 lg:border"
+            : "bg-white/95 dark:bg-[#020A1A]/95 lg:bg-transparent backdrop-blur-md lg:bg-gradient-to-r from-white/95 dark:from-[#0A1128]/95 from-5% via-royal-blue/95 via-20% to-primary-dark-blue/95 border-b border-gray-100 dark:border-white/10 lg:border-white/10 lg:border"
         )}>
           <Link to="/" onClick={() => handleLinkClick('/')} className="flex items-center shrink-0">
-            <img src={logo} alt="Jay & Ajay Associates" className="h-18 sm:h-12 w-auto relative z-10" />
+            <img src={logo} alt="Jay & Ajay Associates" className="h-12 sm:h-14 w-auto relative z-10" />
           </Link>
+
+          {/* Mobile Firm Name */}
+          <div className="lg:hidden flex-1 text-center font-heading font-bold text-[17px] sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-primary-dark-blue to-royal-blue px-1 whitespace-nowrap leading-none">
+            J. Ajay & Associates
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center space-x-2">
@@ -261,7 +268,7 @@ const Navbar = () => {
                   onClick={() => handleLinkClick(link.path)}
                   className={cn(
                     "flex items-center space-x-1 px-5 py-2 text-base font-semibold transition-all duration-300 rounded-full",
-                    activeMenu === link.name ? "text-white bg-white/20 shadow-sm" : "text-white/95 hover:text-white hover:bg-white/15"
+                    activeMenu === link.name ? "text-white bg-white/20 dark:bg-[#020A1A]/20 shadow-sm" : "text-white/95 hover:text-white hover:bg-white/15 dark:bg-[#020A1A]/15"
                   )}
                 >
                   <span>{link.name}</span>
@@ -277,22 +284,38 @@ const Navbar = () => {
           </div>
 
           {/* CTA */}
-          <div className="hidden lg:block shrink-0">
+          <div className="hidden lg:flex shrink-0 items-center space-x-4">
+            <button 
+              onClick={toggleTheme} 
+              className="p-2 text-white/90 hover:text-white transition-colors rounded-full hover:bg-white/10 dark:bg-[#020A1A]/10"
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <Link
               to="/contact"
-              className="px-6 py-2.5 text-sm font-medium bg-white text-primary-dark-blue hover:bg-text-secondary rounded-full transition-all hover:scale-105 active:scale-95 shadow-sm"
+              className="px-6 py-2.5 text-sm font-medium bg-white dark:bg-[#020A1A] text-primary-dark-blue dark:text-white hover:bg-text-secondary rounded-full transition-all hover:scale-105 active:scale-95 shadow-sm"
             >
               Schedule Consultation
             </Link>
           </div>
 
           {/* Mobile Toggle */}
-          <button
-            className="lg:hidden p-2 text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </button>
+          <div className="lg:hidden flex items-center space-x-1 shrink-0">
+            <button 
+              onClick={toggleTheme} 
+              className="p-2 text-primary-dark-blue dark:text-white transition-colors"
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+            <button
+              className="p-2 text-primary-dark-blue dark:text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </nav>
 
         {/* Mega Menu Container */}

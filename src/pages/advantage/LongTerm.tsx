@@ -18,7 +18,7 @@ export default function LongTerm() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* Hero Section */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function LongTerm() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Clock className="w-4 h-4 text-royal-blue" />
               <span>Premium Advantage</span>
             </div>
@@ -42,12 +42,12 @@ export default function LongTerm() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
-          <div className="space-y-12 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-12 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             {/* Executive Introduction */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Executive Introduction</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Executive Introduction</h3>
               <p className="mb-4">
                 In an era defined by rapid corporate turnover and hyper-commoditized consulting services, the true value of a professional advisory relationship has often been degraded to a transactional exchange of fees for reports. This short-term paradigm serves neither the client nor the advisor.
               </p>
@@ -58,7 +58,7 @@ export default function LongTerm() {
 
             {/* Core Discussion */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Value of Institutional Continuity</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Value of Institutional Continuity</h3>
               <p className="mb-4">
                 When businesses frequently cycle through different audit and advisory firms in search of marginal cost savings, they suffer a massive loss of institutional knowledge. Every new engagement requires a steep, inefficient learning curve. Crucial nuances regarding complex intercompany transactions, legacy tax disputes, or the intricacies of the firm's supply chain must be repeatedly explained and rediscovered.
               </p>
@@ -69,7 +69,7 @@ export default function LongTerm() {
 
             {/* Nepal Business Context */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Partnership in the Nepalese Context</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Partnership in the Nepalese Context</h3>
               <p className="mb-4">
                 The backbone of the Nepalese economy is built on large family-owned conglomerates and tightly-held private enterprises that are currently navigating complex, multi-generational transitions. As founders look to pass control to the next generation, they require advisors who understand both the unwritten familial dynamics and the formal requirements of corporate governance under the Companies Act. 
               </p>
@@ -83,7 +83,7 @@ export default function LongTerm() {
 
             {/* Strategic Perspective */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">A Strategic Perspective</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">A Strategic Perspective</h3>
               <p className="mb-4">
                 A long-term relationship transforms our role from an external observer to a deeply invested strategic ally. Because our success is inextricably linked to the sustained growth of our clients, our advisory is inherently forward-looking. 
               </p>
@@ -94,7 +94,7 @@ export default function LongTerm() {
 
             {/* Business Benefits */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">Practical Business Outcomes</h3>
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">Practical Business Outcomes</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2.5 mr-3 bg-royal-blue rounded-full shrink-0"></span>
@@ -119,14 +119,14 @@ export default function LongTerm() {
 
             {/* Closing Insight */}
             <section>
-              <h3 className="text-2xl font-bold text-primary-dark-blue mb-4">The Final Assessment</h3>
-              <p className="bg-gray-50 p-8 rounded-2xl border border-gray-100 italic font-medium text-primary-dark-blue text-xl leading-relaxed text-center">
+              <h3 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-4">The Final Assessment</h3>
+              <p className="bg-gray-50 dark:bg-[#0A1128] p-8 rounded-2xl border border-gray-100 dark:border-white/10 italic font-medium text-primary-dark-blue dark:text-white text-xl leading-relaxed text-center">
                 "A transactional advisor will tell you what happened yesterday. A long-term strategic partner will build the architecture to ensure you dominate tomorrow."
               </p>
             </section>
           </div>
           
-          <div className="mt-16 pt-10 border-t border-gray-200">
+          <div className="mt-16 pt-10 border-t border-gray-200 dark:border-white/20">
              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-royal-blue text-white rounded-xl font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20">
                 Start a Conversation
                 <ArrowRight className="ml-2 w-5 h-5" />

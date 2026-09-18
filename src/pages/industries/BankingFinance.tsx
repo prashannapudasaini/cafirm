@@ -18,7 +18,7 @@ export default function BankingFinance() {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-white min-h-screen">
+    <div ref={containerRef} className="bg-white dark:bg-[#020A1A] min-h-screen">
       
       {/* 1. Industry Hero */}
       <section className="relative bg-primary-dark-blue text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function BankingFinance() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl animate-up">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/10 dark:bg-[#020A1A]/10 border border-white/20 rounded-full text-sm font-semibold tracking-wide uppercase mb-6">
               <Landmark className="w-4 h-4 text-royal-blue" />
               <span>Industry Expertise</span>
             </div>
@@ -42,13 +42,13 @@ export default function BankingFinance() {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-[#020A1A]">
         <div className="max-w-4xl mx-auto px-6 animate-up">
-          <div className="space-y-16 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-16 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             
             {/* 2. Industry Landscape in Nepal */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">The Industry Landscape in Nepal</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">The Industry Landscape in Nepal</h2>
               <p className="mb-4">
                 The Nepalese banking and financial sector is experiencing a period of profound structural transformation. Driven by the Nepal Rastra Bank’s (NRB) aggressive push for consolidation through highly incentivized mergers and acquisitions, the landscape is rapidly shifting from a fragmented market of smaller institutions to an oligopoly of highly capitalized, systemically critical "Mega Banks."
               </p>
@@ -62,35 +62,35 @@ export default function BankingFinance() {
 
             {/* 3. Key Business Challenges */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Key Business Challenges</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Key Business Challenges</h2>
               <p className="mb-6">
                 Operating a BFI in Nepal is no longer merely about capturing deposits and deploying credit; it is an exercise in extreme risk management and regulatory navigation. The sector is currently grappling with several critical constraints:
               </p>
               <ul className="space-y-6">
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">Asset Quality Deterioration</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">Asset Quality Deterioration</strong>
                     Macroeconomic slowdowns directly impact the repayment capacity of corporate borrowers. BFIs are struggling to accurately classify loans and provision for Non-Performing Assets (NPAs) while maintaining capital adequacy.
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">Stringent NRB Directives</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">Stringent NRB Directives</strong>
                     The NRB’s frequent issuance of Unified Directives regarding working capital loans, CD ratios, and interest rate corridors creates a volatile compliance environment where misinterpretation can lead to severe institutional penalties.
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-gray-100 p-2 rounded-lg shrink-0 mr-4 mt-1">
+                  <div className="bg-gray-100 dark:bg-[#131B33] p-2 rounded-lg shrink-0 mr-4 mt-1">
                     <ShieldCheck className="w-5 h-5 text-royal-blue" />
                   </div>
                   <div>
-                    <strong className="block text-primary-dark-blue mb-1">NFRS 9 Implementation Complexity</strong>
+                    <strong className="block text-primary-dark-blue dark:text-white mb-1">NFRS 9 Implementation Complexity</strong>
                     Transitioning to the Expected Credit Loss (ECL) model under Nepal Financial Reporting Standard 9 (NFRS 9) requires highly sophisticated financial modeling and vast amounts of historical data, which many legacy IT systems cannot support.
                   </div>
                 </li>
@@ -99,29 +99,29 @@ export default function BankingFinance() {
 
             {/* 4. How We Support the Sector */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">How We Support the Sector</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">How We Support the Sector</h2>
               <p className="mb-6">
                 We act as a critical line of defense and a catalyst for strategic growth for commercial banks (Class A), development banks (Class B), finance companies (Class C), and microfinance institutions (Class D). Our multidisciplinary teams deliver targeted solutions:
               </p>
               <div className="space-y-4">
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">Assurance Services</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">We conduct rigorous statutory audits that satisfy both ICAN and NRB requirements. We go beyond the balance sheet to assess the true valuation of collateral, the integrity of loan files, and the mathematical accuracy of interest capitalization.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Assurance Services</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">We conduct rigorous statutory audits that satisfy both ICAN and NRB requirements. We go beyond the balance sheet to assess the true valuation of collateral, the integrity of loan files, and the mathematical accuracy of interest capitalization.</p>
                 </div>
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">Risk Advisory (IS Audit)</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">As BFIs digitize, cybersecurity is paramount. We conduct comprehensive Information Systems (IS) Audits, evaluating core banking software (CBS) controls, API vulnerabilities, and disaster recovery protocols to protect against systemic data breaches.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Risk Advisory (IS Audit)</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">As BFIs digitize, cybersecurity is paramount. We conduct comprehensive Information Systems (IS) Audits, evaluating core banking software (CBS) controls, API vulnerabilities, and disaster recovery protocols to protect against systemic data breaches.</p>
                 </div>
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                  <h3 className="font-bold text-primary-dark-blue mb-2">Corporate Advisory (M&A)</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">During bank mergers, we conduct exhaustive financial and tax due diligence. We facilitate the valuation of swap ratios and manage the complex post-merger integration of distinct corporate cultures and IT infrastructures.</p>
+                <div className="p-6 bg-gray-50 dark:bg-[#0A1128] rounded-xl border border-gray-100 dark:border-white/10">
+                  <h3 className="font-bold text-primary-dark-blue dark:text-white mb-2">Corporate Advisory (M&A)</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">During bank mergers, we conduct exhaustive financial and tax due diligence. We facilitate the valuation of swap ratios and manage the complex post-merger integration of distinct corporate cultures and IT infrastructures.</p>
                 </div>
               </div>
             </section>
 
             {/* 5. Regulatory & Compliance Environment */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Regulatory & Compliance Environment</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Regulatory & Compliance Environment</h2>
               <p className="mb-4">
                 The regulatory ecosystem governing BFIs is arguably the most complex in Nepal. A superficial reading of regulations is insufficient; institutions require proactive interpretation. 
               </p>
@@ -135,7 +135,7 @@ export default function BankingFinance() {
 
             {/* 6. Strategic Opportunities */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Strategic Opportunities</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Strategic Opportunities</h2>
               <p className="mb-4">
                 While heavily regulated, the sector presents vast opportunities for agile institutions. The ongoing digital transformation allows BFIs to drastically reduce overhead costs associated with physical branch networks. By migrating toward a robust omnichannel banking model, institutions can capture the vast unbanked demographic in rural provinces while serving tech-savvy urban millennials.
               </p>
@@ -157,21 +157,21 @@ export default function BankingFinance() {
 
             {/* 8. Business Outcomes */}
             <section>
-              <h2 className="text-3xl font-bold text-primary-dark-blue mb-6">Business Outcomes</h2>
+              <h2 className="text-3xl font-bold text-primary-dark-blue dark:text-white mb-6">Business Outcomes</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Regulatory Immunity:</strong> Eliminate the risk of NRB penalties through proactive compliance modeling and strict internal control environments.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Accurate Valuations:</strong> Ensure loan portfolios are accurately provisioned, protecting the institutional balance sheet from unexpected shocks.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Seamless Mergers:</strong> Execute highly complex M&A transactions with perfectly calibrated swap ratios and zero post-merger tax liabilities.</span>
                 </li>
-                <li className="flex items-start p-4 bg-gray-50 rounded-xl">
+                <li className="flex items-start p-4 bg-gray-50 dark:bg-[#0A1128] rounded-xl">
                   <CheckCircle2 className="w-5 h-5 text-royal-blue mt-1 mr-3 shrink-0" />
                   <span className="text-sm"><strong>Systemic Security:</strong> Fortify core banking systems against cyber threats, ensuring the absolute integrity of millions of daily transactions.</span>
                 </li>
@@ -179,8 +179,8 @@ export default function BankingFinance() {
             </section>
 
             {/* 9. Related Services */}
-            <section className="border-t border-gray-200 pt-10">
-              <h2 className="text-2xl font-bold text-primary-dark-blue mb-6">Explore Related Services</h2>
+            <section className="border-t border-gray-200 dark:border-white/20 pt-10">
+              <h2 className="text-2xl font-bold text-primary-dark-blue dark:text-white mb-6">Explore Related Services</h2>
               <div className="flex flex-wrap gap-3">
                 <Link to="/services/audit-and-assurance" className="px-4 py-2 bg-blue-50 text-royal-blue text-sm font-semibold rounded-lg hover:bg-blue-100 transition-colors">Statutory Audit</Link>
                 <Link to="/services/is-audit" className="px-4 py-2 bg-blue-50 text-royal-blue text-sm font-semibold rounded-lg hover:bg-blue-100 transition-colors">IS Audit</Link>
@@ -194,13 +194,13 @@ export default function BankingFinance() {
       </section>
 
       {/* 10. Industry Consultation CTA */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200">
+      <section className="py-24 bg-gray-50 dark:bg-[#0A1128] border-t border-gray-200 dark:border-white/20">
         <div className="max-w-4xl mx-auto px-6 text-center animate-up">
           <Building2 className="w-12 h-12 text-royal-blue mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue mb-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-dark-blue dark:text-white mb-6">
             Fortify Your Financial Institution
           </h2>
-          <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto">
             Partner with a firm that intimately understands the mechanics of Nepal’s banking sector. From complex NFRS 9 implementation to rigorous IS Audits, we provide the executive-level advisory required to safeguard your institution and drive sustainable profitability.
           </p>
           <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-royal-blue text-white rounded-xl font-bold text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/20">

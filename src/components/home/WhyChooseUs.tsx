@@ -80,7 +80,7 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-6 relative">
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-white mb-4">
-              The Premium <span className="text-gradient">Advantage</span>
+              The Premium <span className="text-[#a5caff]">Advantage</span>
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto font-light">
               We merge analytical rigor with forward-thinking strategies to deliver unparalleled advisory services for Nepal's most ambitious enterprises.
@@ -95,7 +95,7 @@ const WhyChooseUs = () => {
                   <img 
                     src={reason.image} 
                     alt={reason.title} 
-                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-primary-dark-blue/40 mix-blend-multiply" />
                 </div>

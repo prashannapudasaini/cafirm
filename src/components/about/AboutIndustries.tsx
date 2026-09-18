@@ -60,7 +60,7 @@ const AboutIndustries = () => {
               <img 
                 src={ind.image} 
                 alt={ind.name} 
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out" 
+                className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out" 
               />
               
               <div className="absolute inset-0 z-20 p-5 flex flex-col justify-end bg-gradient-to-t from-primary-dark-blue via-primary-dark-blue/80 to-transparent">
